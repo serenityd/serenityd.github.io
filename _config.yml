@@ -1,0 +1,39 @@
+title: Serenityd Blog
+subtitle:
+description:
+author: Serenityd
+language: zh-Hans
+timezone:
+
+theme: landfarz
+menu:
+  Home: /
+  Archives: /archives
+
+sidebar: right
+
+widgets:
+- search
+- category
+- recent_posts
+- tag
+- tagcloud
+
+# Duoshuo
+duoshuo_shortname: 
+
+fancybox: true
+
+google_analytics:
+rss: 
+google_site_verification: 
+baidu_site_verification: 
+icon: 
+
+post_asset_folder: true 
+
+deploy:
+  type: git
+  repository: git@github.com:serenityd/serenityd.github.io.git
+  branch: master
+  
