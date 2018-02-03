@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Python学习笔记（二） | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="字符串：一串字符显示或者打印出来文字信息导出编码：# -- coding: utf-8 --单引号，双引号，三引号不可变（immutable)Format字符串age = 3name = “Tom”print(“{0} was {1} years old”.format(name, age))" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="Python学习笔记（二）" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-21T12:28:05.000Z"><a href="/2017/06/21/2017-6-21-three/">2017-06-21</a></time>
+      
+      
+  
+    <h1 class="title">Python学习笔记（二）</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>字符串：<br>一串字符<br>显示或者打印出来文字信息<br>导出<br>编码：# -<em>- coding: utf-8 -</em>-<br>单引号，双引号，三引号<br>不可变（immutable)<br>Format字符串<br>age = 3<br>name = “Tom”<br>print(“{0} was {1} years old”.format(name, age))<a id="more"></a>
+联合：+: print(name + “ was “ + str(age) + “ years old”)<br>换行符: print(“What’s your name? \nTom”)</li>
+<li>字面常量（literal constant):<br>可以直接以字面的意义使用它们：<br>如：6，2.24，3.45e-3, “This is a string”<br>常量：不会被改变</li>
+<li>变量：<br>储存信息<br>属于identifier<br>identifier命名规则：<br>第一个字符必须是字母或者下划线<br>其余字符可以是字母，数字，或者下划线<br>区分大小写<br>如：合法：i, name_3_4, big_bang<br>不合法：2people, this is tom, my-name, &gt;123b_c2</li>
+<li>注释： # </li>
+<li>缩进(Indentation)</li>
+<li>列表相关<br>直接给出代码 以后参考备用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">Created on 2017.6.21</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">@author: Administrator</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#创建一个列表</span></span><br><span class="line">number_list = [1, 3, 5, 7, 9]</span><br><span class="line">string_list = [<span class="string">"abc"</span>, <span class="string">"bbc"</span>, <span class="string">"python"</span>]</span><br><span class="line">mixed_list = [<span class="string">'python'</span>, <span class="string">'java'</span>, 3, 12]</span><br><span class="line"><span class="comment">#访问列表中的值</span></span><br><span class="line">second_num = number_list[1]</span><br><span class="line">third_string = string_list[2]</span><br><span class="line">fourth_mix = mixed_list[3]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"second_num: &#123;0&#125; third_string: &#123;1&#125; fourth_mix: &#123;2&#125;"</span>.format(second_num, third_string, fourth_mix))</span><br><span class="line"><span class="comment">#更新列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"number_list before: "</span> + str(number_list))</span><br><span class="line">number_list[1] = 30</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"number_list after: "</span> + str(number_list))</span><br><span class="line"><span class="comment">#删除列表元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"mixed_list before delete: "</span> + str(mixed_list))</span><br><span class="line">del mixed_list[2]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"mixed_list after delete: "</span> + str(mixed_list))</span><br><span class="line"><span class="comment">#Python脚本语言</span></span><br><span class="line"><span class="built_in">print</span>(len([1,2,3])) <span class="comment">#长度</span></span><br><span class="line"><span class="built_in">print</span>([1,2,3] + [4,5,6]) <span class="comment">#组合</span></span><br><span class="line"><span class="built_in">print</span>([<span class="string">'Hello'</span>] * 4) <span class="comment">#重复</span></span><br><span class="line"><span class="built_in">print</span>(3 <span class="keyword">in</span> [1,2,3]) <span class="comment">#某元素是否在列表中</span></span><br><span class="line"><span class="comment">#列表的截取</span></span><br><span class="line">abcdlist=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</span><br><span class="line"><span class="built_in">print</span>(abcdlist[1])</span><br><span class="line"><span class="built_in">print</span>(abcdlist[-2])</span><br><span class="line"><span class="built_in">print</span>(abcdlist[1:])</span><br><span class="line"><span class="comment"># 列表操作包含以下函数:</span></span><br><span class="line"><span class="comment"># 1、cmp(list1, list2)：比较两个列表的元素 </span></span><br><span class="line"><span class="comment"># 2、len(list)：列表元素个数 </span></span><br><span class="line"><span class="comment"># 3、max(list)：返回列表元素最大值 </span></span><br><span class="line"><span class="comment"># 4、min(list)：返回列表元素最小值 </span></span><br><span class="line"><span class="comment"># 5、list(seq)：将元组转换为列表 </span></span><br><span class="line"><span class="comment"># 列表操作包含以下方法:</span></span><br><span class="line"><span class="comment"># 1、list.append(obj)：在列表末尾添加新的对象</span></span><br><span class="line"><span class="comment"># 2、list.count(obj)：统计某个元素在列表中出现的次数</span></span><br><span class="line"><span class="comment"># 3、list.extend(seq)：在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</span></span><br><span class="line"><span class="comment"># 4、list.index(obj)：从列表中找出某个值第一个匹配项的索引位置</span></span><br><span class="line"><span class="comment"># 5、list.insert(index, obj)：将对象插入列表</span></span><br><span class="line"><span class="comment"># 6、list.pop(obj=list[-1])：移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</span></span><br><span class="line"><span class="comment"># 7、list.remove(obj)：移除列表中某个值的第一个匹配项</span></span><br><span class="line"><span class="comment"># 8、list.reverse()：反向列表中元素</span></span><br><span class="line"><span class="comment"># 9、list.sort([func])：对原列表进行排序</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">second_num: 3 third_string: python fourth_mix: 12</span><br><span class="line">number_list before: [1, 3, 5, 7, 9]</span><br><span class="line">number_list after: [1, 30, 5, 7, 9]</span><br><span class="line">mixed_list before delete: [<span class="string">'python'</span>, <span class="string">'java'</span>, 3, 12]</span><br><span class="line">mixed_list after delete: [<span class="string">'python'</span>, <span class="string">'java'</span>, 12]</span><br><span class="line">3</span><br><span class="line">[1, 2, 3, 4, 5, 6]</span><br><span class="line">[<span class="string">'Hello'</span>, <span class="string">'Hello'</span>, <span class="string">'Hello'</span>, <span class="string">'Hello'</span>]</span><br><span class="line">True</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">[<span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/python/">python</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

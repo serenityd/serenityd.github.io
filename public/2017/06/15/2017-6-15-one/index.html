@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>LATEX学习笔记 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="首先给上一篇自己写的小短文各项内容基本都有1234567\documentclass[UTF-8]&amp;#123;ctexart&amp;#125;\usepackage&amp;#123;graphicx&amp;#125;\usepackage&amp;#123;float&amp;#125;\title &amp;#123;杂谈勾股定理&amp;#125;\author&amp;#123;张三&amp;#125;\date&amp;#123;\today&amp;#125;\bibliographystyle&amp;#123;plain&amp;#125;" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="LATEX学习笔记" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-15T02:59:38.000Z"><a href="/2017/06/15/2017-6-15-one/">2017-06-15</a></time>
+      
+      
+  
+    <h1 class="title">LATEX学习笔记</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>首先给上一篇自己写的小短文各项内容基本都有<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[UTF-8]&#123;ctexart&#125;</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;<span class="built_in">float</span>&#125;</span><br><span class="line">\title &#123;杂谈勾股定理&#125;</span><br><span class="line">\author&#123;张三&#125;</span><br><span class="line">\date&#123;\today&#125;</span><br><span class="line">\bibliographystyle&#123;plain&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line">\maketitle</span><br><span class="line">\begin&#123;abstract&#125;</span><br><span class="line">这是一篇关于勾股定理的小短文。</span><br><span class="line">\end&#123;abstract&#125;</span><br><span class="line">\tableofcontents</span><br><span class="line">\newtheorem&#123;thm&#125;&#123;定理&#125;</span><br><span class="line">\section&#123;勾股定理在古代&#125;</span><br><span class="line">西方称勾股定理为毕达哥拉斯定理，将勾股定理的发现归功于公元前 6 世纪的</span><br><span class="line">毕达哥拉斯学派。该学派得到了一个法则，可以求出可排成直角三角形三边的三</span><br><span class="line">元数组。毕达哥拉斯学派没有书面著作，该定理的严格表述和证明则见于欧几里</span><br><span class="line">德\footnote&#123;欧几里德,约公元前330--225年。&#125;《几何原本》的命题 47：“直角三角形斜边上的正方形等于丙直角边上的两</span><br><span class="line">个正方形之和。”证明是用\emph&#123;面积&#125;做的。</span><br><span class="line">我国《周神算经》栽商高(约公元前 12 世圮)答周公问:</span><br><span class="line">\begin&#123;quote&#125;</span><br><span class="line">    \zihao&#123;-5&#125;\kaishu 勾三股四弦定五。</span><br><span class="line">\end&#123;quote&#125;</span><br><span class="line">\begin&#123;table&#125;[h]</span><br><span class="line">    \centering</span><br><span class="line">    \begin&#123;tabular&#125;&#123;rrr&#125;</span><br><span class="line">    \hline</span><br><span class="line">    直角边<span class="variable">$a</span>$ &amp; 直角边<span class="variable">$b</span>$ &amp; 直角边<span class="variable">$c</span>$\\</span><br><span class="line">    \hline</span><br><span class="line">    3 &amp; 4 &amp; 5 \\</span><br><span class="line">    5 &amp; 12 &amp; 13\\</span><br><span class="line">    \hline</span><br><span class="line">    \end&#123;tabular&#125;</span><br><span class="line">\qquad</span><br><span class="line"><span class="variable">$a</span>^2+b^2=c^2$</span><br><span class="line">\end&#123;table&#125;</span><br><span class="line">图\ref&#123;fig:xiantu&#125;是我国古代对勾股定理的一种证明。</span><br><span class="line">\begin&#123;figure&#125;[ht]</span><br><span class="line">    \centering</span><br><span class="line">    \includegraphics[scale=0.6]&#123;11.png&#125;</span><br><span class="line">    \caption &#123;宋赵爽在《周神算经》注中作的弦图(仿制)，该图给出了勾股定理的一个极具对称美的证明。&#125;</span><br><span class="line">    \lable&#123;fig:xiantu&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;thm&#125;[勾股定理]</span><br><span class="line">    直角三角形的平方等于两腰的平方和。</span><br><span class="line">    可以用符号语言表述为:设直角三角形<span class="variable">$ABC</span>$,其中$\angle C=90^\circ$,则有</span><br><span class="line">    \begin&#123;equation&#125;</span><br><span class="line">        AB^2=BC^2+AC^2</span><br><span class="line">    \end&#123;equation&#125;</span><br><span class="line">\end&#123;thm&#125;</span><br><span class="line">\section&#123;勾股定理的近代形式&#125;</span><br><span class="line">\bibliography&#123;math&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>左对齐命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;\raggedright</span><br><span class="line">内容</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>花括号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;eqnarray&#125;</span><br><span class="line">x<span class="string">'_&#123;sj&#125;(k)=</span></span><br><span class="line"><span class="string">\begin&#123;cases&#125;</span></span><br><span class="line"><span class="string">-1&amp;\text&#123;$u'</span>_&#123;sj&#125;(k)&lt;-1$&#125;\\</span><br><span class="line">u<span class="string">'_&#123;sj&#125;(k)&amp;\text&#123;$-1\le u'</span>_&#123;sj&#125;(k)\le 1$&#125;\\</span><br><span class="line">1&amp;\text&#123;<span class="variable">$u</span><span class="string">'_&#123;sj&#125;(k)&gt;1$&#125;</span></span><br><span class="line"><span class="string">\end&#123;cases&#125;</span></span><br><span class="line"><span class="string">\end&#123;eqnarray&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>图片插入<br>.eps图片: 将word图片转为pdf ,再由pdf 转为ps的eps格式然后输入代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;center&#125;</span><br><span class="line">\includegraphics [scale=0.8,trim=0 0 0 0]&#123;2.eps&#125;\\</span><br><span class="line">\label&#123;Fig2&#125;</span><br><span class="line">&#123;\fontsize&#123;9.3pt&#125;&#123;11.6pt&#125;\selectfont 图~2~~水下航行器垂直面受力示意图\\</span><br><span class="line">Fig.~2~~Schematic diagram of force <span class="keyword">in</span> vertical plane of underwater vehicle&#125;</span><br><span class="line">\end&#123;center&#125;</span><br></pre></td></tr></table></figure></p>
+<p>截断命令<br>在文章中加入以下命令将文章截断显示在主页<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/LATEX/">LATEX</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

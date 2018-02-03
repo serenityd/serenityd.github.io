@@ -1,0 +1,666 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Página 3 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-30T13:21:16.000Z"><a href="/2017/06/30/2017-6-30-three/">2017-06-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/30/2017-6-30-three/">机器学习笔记（八）支持向量机（SVM）原理下</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>SVM算法特性：<br><img src="/2017/06/30/2017-6-30-three/1.png" alt=""><br>1.1训练好的模型的算法复杂度是由支持向量的个数决定的，而不是由数据的维度决定的。所以SVM不太容易产生overfitting<br>1.2SVM训练出来的模型完全依赖于支持向量(Support Vectors), 即使训练集里面所有非支持向量的点都被去除，重复训练过程，结果仍然会得到完全一样的模型。<br>1.3一个SVM如果训练得出的支持向量个数比较小，SVM训练出的模型比较容易被泛化。</li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/30/2017-6-30-three/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-30T13:20:56.000Z"><a href="/2017/06/30/2017-6-30-two/">2017-06-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/30/2017-6-30-two/">机器学习笔记（七）支持向量机（SVM）应用上</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>1 sklearn简单例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from sklearn import svm</span><br><span class="line">X = [[2, 0], [1, 1], [2,3]]</span><br><span class="line">y = [0, 0, 1]</span><br><span class="line">clf = svm.SVC(kernel = <span class="string">'linear'</span>)</span><br><span class="line">clf.fit(X, y)  </span><br><span class="line"><span class="built_in">print</span> clf</span><br><span class="line"><span class="comment"># get support vectors</span></span><br><span class="line"><span class="built_in">print</span> clf.support_vectors_</span><br><span class="line"><span class="comment"># get indices of support vectors</span></span><br><span class="line"><span class="built_in">print</span> clf.support_ </span><br><span class="line"><span class="comment"># get number of support vectors for each class</span></span><br><span class="line"><span class="built_in">print</span> clf.n_support_</span><br></pre></td></tr></table></figure></p>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/30/2017-6-30-two/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-30T02:39:50.000Z"><a href="/2017/06/30/2017-6-30-one/">2017-06-30</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/30/2017-6-30-one/">机器学习笔记（六）支持向量机（SVM）原理上</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>背景：<br>1.1 最早是由 Vladimir N. Vapnik 和 Alexey Ya. Chervonenkis 在1963年提出<br>1.2 目前的版本(soft margin)是由Corinna Cortes 和 Vapnik在1993年提出，并在1995年发表<br>1.3 深度学习（2012）出现之前，SVM被认为机器学习中近十几年来最成功，表现最好的算法</li>
+<li>机器学习的一般框架：<br>训练集 =&gt; 提取特征向量 =&gt; 结合一定的算法（分类器：比如决策树，KNN）=&gt;得到结果</li>
+<li>介绍：<br>3.1例子：<br><img src="/2017/06/30/2017-6-30-one/1.png" alt=""><br>两类？哪条线最好？</li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/30/2017-6-30-one/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T13:31:19.000Z"><a href="/2017/06/28/2017-6-28-two/">2017-06-28</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/28/2017-6-28-two/">机器学习笔记（五）最临近分类算法应用（KNN）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li><p>数据集介绍：<br>虹膜<br><img src="/2017/06/28/2017-6-28-two/1.png" alt=""><br>150个实例<br>萼片长度，萼片宽度，花瓣长度，花瓣宽度<br>(sepal length, sepal width, petal length and petal width）<br>类别：<br>Iris setosa, Iris versicolor, Iris virginica.<br><img src="/2017/06/28/2017-6-28-two/2.png" alt=""></p></li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/28/2017-6-28-two/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T13:31:09.000Z"><a href="/2017/06/28/2017-6-28-one/">2017-06-28</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/28/2017-6-28-one/">机器学习笔记（四）最临近分类算法原理（KNN）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>综述<br>1.1Cover和Hart在1968年提出了最初的邻近算法<br>1.2分类(classification)算法<br>1.3输入基于实例的学习(instance-based learning), 懒惰学习(lazy learning)</li>
+<li>例子：<br><img src="/2017/06/28/2017-6-28-one/1.png" alt=""><br></li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/28/2017-6-28-one/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T08:33:38.000Z"><a href="/2017/06/27/2017-6-27-four/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/27/2017-6-27-four/">Python学习笔记（七）END</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li><p>面向对象编程<br>Python支持面向对象编程<br>类(class)：现实世界中一些事物的封装 （如：学生）<br>类：属性 （如：名字，成绩）<br>类对象<br>实例对象<br>引用：通过引用对类的属性和方法进行操作<br>实例化：创建一个类的具体实例对象 （如：学生张三）</p></li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/27/2017-6-27-four/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/python/">python</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T08:24:39.000Z"><a href="/2017/06/27/2017-6-27-three/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/27/2017-6-27-three/">Python学习笔记（六）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>1.输入格式： input()<br>2.输出格式：print(),str(), format<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str_1 = input(<span class="string">"Enter a string: "</span>)</span><br><span class="line">str_2 = input(<span class="string">"Enter another string: "</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"str_1 is: "</span> + str_1 + <span class="string">". str_2 is :"</span> + str_2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"str_1 is &#123;&#125; + str_2 is &#123;&#125;"</span>.format(str_1, str_2))</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>写出文件</li>
+<li>读入文件</li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/27/2017-6-27-three/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/python/">python</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T07:22:31.000Z"><a href="/2017/06/27/2017-6-27-two/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/27/2017-6-27-two/">机器学习笔记（三）决策树算法代码与应用</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>Python</li>
+<li>Python机器学习的库：scikit-learn<br>2.1： 特性：<br>简单高效的数据挖掘和机器学习分析<br>对所有用户开放，根据不同需求高度可重用性<br>基于Numpy, SciPy和matplotlib<br>开源，商用级别：获得 BSD许可<br>2.2 覆盖问题领域：<br>分类（classification), 回归（regression), 聚类（clustering), 降维(dimensionality reduction)<br>模型选择(model selection), 预处理(preprocessing)</li>
+<li>使用用scikit-learn<br>安装scikit-learn: pip, easy_install, windows installer<br>安装必要package：numpy， SciPy和matplotlib， 可使用Anaconda (包含numpy, scipy等科学计算常用package）<br>安装注意问题：Python解释器版本（2.7 or 3.4？）, 32-bit or 64-bit系统</li>
+<li>例子：<br>文档： <a href="http://scikit-learn.org/stable/modules/tree.html" target="_blank" rel="noopener">http://scikit-learn.org/stable/modules/tree.html</a><br>DecesionTree 代码</li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/27/2017-6-27-two/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T01:59:43.000Z"><a href="/2017/06/27/2017-6-27-one/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/27/2017-6-27-one/">机器学习笔记（二）决策树算法原理</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>机器学习中分类和预测算法的评估：<br>准确率<br>速度<br>强壮行<br>可规模性<br>可解释性</li>
+<li>什么是决策树/判定树（decision tree)?<br>  判定树是一个类似于流程图的树结构：其中，每个内部结点表示在一个属性上的测试，每个分支代表一个属性输出，而每个树叶结点代表类或类分布。树的最顶层是根结点。<br><img src="/2017/06/27/2017-6-27-one/1.png" alt=""></li></ol>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/27/2017-6-27-one/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-26T13:24:29.000Z"><a href="/2017/06/26/2017-6-26-two/">2017-06-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/06/26/2017-6-26-two/">破解百度云限速</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>致敬制作PCS命令行来处理百度云限速的大神：github帐号@GangZhuo<br>完美的解决了坑爹Baidu限速和拉黑的限制，记录操作流程和简单命令<br>总的来说与Linux操作命令相同 在之前加上PCS即可。<br>Windows：<br>1、命令行版本：下载这个<a href="https://github.com/GangZhuo/BaiduPCS/releases/download/0.2.5/pcs-win32-0.2.5-db684dc.zip" target="_blank" rel="noopener">https://github.com/GangZhuo/BaiduPCS/releases/download/0.2.5/pcs-win32-0.2.5-db684dc.zip</a><br>然后复制到System32里面<br>2、检查是否安装成功：终端（windows命令行版本则打开cmd输入pcs，GUI版本双击打开）输入pcs，查看是否像我的一样，如果是，则安装成功。<br>3、这个时候先设置一下线程数量，这里给一个参考的设置线程数：<br>＜10m：5线程<br>＜50m：10线程<br>＜100m：25线程<br>＜500m：40线程<br>＜1G：70-80线程<br>＞2G：100线程（最多也是只能设置100线程）<br></p>
+      
+    </div>
+    
+    <footer>
+      <div class="alignleft">
+        <a href="/2017/06/26/2017-6-26-two/#more" class="more-link">More</a>
+      </div>
+    </footer>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/BaiduYun/">BaiduYun</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+
+<nav id="pagination">
+  
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Anterior</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Siguiente &raquo;</a>
+  </nav>
+
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

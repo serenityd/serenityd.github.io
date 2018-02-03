@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（十五）多元回归分析应用 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="例子一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（十五）多元回归分析应用" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-08-12T07:57:38.000Z"><a href="/2017/08/12/2017-8-12-two/">2017-08-12</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（十五）多元回归分析应用</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>例子<br>一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间   <a id="more"></a> 
+Driving Assignment X1=Miles Traveled X2=Number of Deliveries Y= Travel Time (Hours)<br>1    100    4    9.3<br>2    50    3    4.8<br>3    100    4    8.9<br>4    100    2    6.5<br>5    50    2    4.2<br>6    80    2    6.2<br>7    75    3    7.4<br>8    65    4    6.0<br>9    90    3    7.6<br>10    90    2    6.1<br>目的，求出b0, b1,…. bp：<br>y_hat=b0＋b１x1+b2x2+ … +bpxp</li>
+<li>Python代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">from numpy import genfromtxt</span><br><span class="line">from sklearn import linear_model</span><br><span class="line">dataPath = r<span class="string">"Delivery.csv"</span></span><br><span class="line">deliveryData = genfromtxt(dataPath,delimiter=<span class="string">','</span>)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"data"</span></span><br><span class="line"><span class="built_in">print</span> deliveryData</span><br><span class="line">x= deliveryData[:,:-1]</span><br><span class="line">y = deliveryData[:,-1]</span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line">lr = linear_model.LinearRegression()</span><br><span class="line">lr.fit(x, y)</span><br><span class="line"><span class="built_in">print</span> lr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"coefficients:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.coef_</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"intercept:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.intercept_</span><br><span class="line">xPredict = [102,6] </span><br><span class="line">yPredict = lr.predict(xPredict)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"predict:"</span>)</span><br><span class="line"><span class="built_in">print</span> yPredict</span><br><span class="line"><span class="comment"># 如果需要多个车型分开则增加N维二进制数组输入 然后预测 如：xPredict =  [90,2,0,0,1]</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="KMeans聚类算法python代码：" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（二十一）聚类(Clustering) K-means算法应用" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-18T01:51:50.000Z"><a href="/2017/09/18/2017-9-18-one/">2017-09-18</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>KMeans聚类算法python代码：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"><span class="comment"># Function: K Means</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># K-Means is an algorithm that takes in a dataset and a constant</span></span><br><span class="line"><span class="comment"># k and returns k centroids (which define clusters of data in the</span></span><br><span class="line"><span class="comment"># dataset which are similar to one another).</span></span><br><span class="line">def kmeans(X, k, maxIt):</span><br><span class="line">    </span><br><span class="line">    numPoints, numDim = X.shape</span><br><span class="line">    </span><br><span class="line">    dataSet = np.zeros((numPoints, numDim + 1))</span><br><span class="line">    dataSet[:, :-1] = X</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Initialize centroids randomly</span></span><br><span class="line">    centroids = dataSet[np.random.randint(numPoints, size = k), :]</span><br><span class="line">    centroids = dataSet[0:2, :]</span><br><span class="line">    <span class="comment">#Randomly assign labels to initial centorid</span></span><br><span class="line">    centroids[:, -1] = range(1, k +1)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Initialize book keeping vars.</span></span><br><span class="line">    iterations = 0</span><br><span class="line">    oldCentroids = None</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Run the main k-means algorithm</span></span><br><span class="line">    <span class="keyword">while</span> not shouldStop(oldCentroids, centroids, iterations, maxIt):</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"iteration: \n"</span>, iterations</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"dataSet: \n"</span>, dataSet</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"centroids: \n"</span>, centroids</span><br><span class="line">        <span class="comment"># Save old centroids for convergence test. Book keeping.</span></span><br><span class="line">        oldCentroids = np.copy(centroids)</span><br><span class="line">        iterations += 1</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Assign labels to each datapoint based on centroids</span></span><br><span class="line">        updateLabels(dataSet, centroids)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Assign centroids based on datapoint labels</span></span><br><span class="line">        centroids = getCentroids(dataSet, k)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># We can get the labels too by calling getLabels(dataSet, centroids)</span></span><br><span class="line">    <span class="built_in">return</span> dataSet</span><br><span class="line"><span class="comment"># Function: Should Stop</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Returns True or False if k-means is done. K-means terminates either</span></span><br><span class="line"><span class="comment"># because it has run a maximum number of iterations OR the centroids</span></span><br><span class="line"><span class="comment"># stop changing.</span></span><br><span class="line">def shouldStop(oldCentroids, centroids, iterations, maxIt):</span><br><span class="line">    <span class="keyword">if</span> iterations &gt; maxIt:</span><br><span class="line">        <span class="built_in">return</span> True</span><br><span class="line">    <span class="built_in">return</span> np.array_equal(oldCentroids, centroids)  </span><br><span class="line"><span class="comment"># Function: Get Labels</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Update a label for each piece of data in the dataset. </span></span><br><span class="line">def updateLabels(dataSet, centroids):</span><br><span class="line">    <span class="comment"># For each element in the dataset, chose the closest centroid. </span></span><br><span class="line">    <span class="comment"># Make that centroid the element's label.</span></span><br><span class="line">    numPoints, numDim = dataSet.shape</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0, numPoints):</span><br><span class="line">        dataSet[i, -1] = getLabelFromClosestCentroid(dataSet[i, :-1], centroids)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">def getLabelFromClosestCentroid(dataSetRow, centroids):</span><br><span class="line">    label = centroids[0, -1];</span><br><span class="line">    minDist = np.linalg.norm(dataSetRow - centroids[0, :-1])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1 , centroids.shape[0]):</span><br><span class="line">        dist = np.linalg.norm(dataSetRow - centroids[i, :-1])</span><br><span class="line">        <span class="keyword">if</span> dist &lt; minDist:</span><br><span class="line">            minDist = dist</span><br><span class="line">            label = centroids[i, -1]</span><br><span class="line">    <span class="built_in">print</span> <span class="string">"minDist:"</span>, minDist</span><br><span class="line">    <span class="built_in">return</span> label</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line"><span class="comment"># Function: Get Centroids</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Returns k random centroids, each of dimension n.</span></span><br><span class="line">def getCentroids(dataSet, k):</span><br><span class="line">    <span class="comment"># Each centroid is the geometric mean of the points that</span></span><br><span class="line">    <span class="comment"># have that centroid's label. Important: If a centroid is empty (no points have</span></span><br><span class="line">    <span class="comment"># that centroid's label) you should randomly re-initialize it.</span></span><br><span class="line">    result = np.zeros((k, dataSet.shape[1]))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1, k + 1):</span><br><span class="line">        oneCluster = dataSet[dataSet[:, -1] == i, :-1]</span><br><span class="line">        result[i - 1, :-1] = np.mean(oneCluster, axis = 0)</span><br><span class="line">        result[i - 1, -1] = i</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">return</span> result</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">x1 = np.array([1, 1])</span><br><span class="line">x2 = np.array([2, 1])</span><br><span class="line">x3 = np.array([4, 3])</span><br><span class="line">x4 = np.array([5, 4])</span><br><span class="line">testX = np.vstack((x1, x2, x3, x4))</span><br><span class="line"></span><br><span class="line">result = kmeans(testX, 2, 10)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"final result:"</span></span><br><span class="line"><span class="built_in">print</span> result</span><br></pre></td></tr></table></figure></p>
+<p>打印结果均为[1,1],[2,1]为一组，[4，3][5,4]为一组，与手算结果一致 </p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

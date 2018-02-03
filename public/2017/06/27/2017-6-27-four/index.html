@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Python学习笔记（七）END | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="面向对象编程Python支持面向对象编程类(class)：现实世界中一些事物的封装 （如：学生）类：属性 （如：名字，成绩）类对象实例对象引用：通过引用对类的属性和方法进行操作实例化：创建一个类的具体实例对象 （如：学生张三）" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="Python学习笔记（七）END" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T08:33:38.000Z"><a href="/2017/06/27/2017-6-27-four/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title">Python学习笔记（七）END</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li><p>面向对象编程<br>Python支持面向对象编程<br>类(class)：现实世界中一些事物的封装 （如：学生）<br>类：属性 （如：名字，成绩）<br>类对象<br>实例对象<br>引用：通过引用对类的属性和方法进行操作<br>实例化：创建一个类的具体实例对象 （如：学生张三）</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Python OO example</span></span><br><span class="line">class Student:</span><br><span class="line">    def __init__(self, name, grade):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.grade = grade</span><br><span class="line">        </span><br><span class="line">    def introduce(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"hi! I'm "</span> + self.name)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"my grade is: "</span> + str(self.grade))</span><br><span class="line">        </span><br><span class="line">    def improve(self, amount):</span><br><span class="line">        self.grade = self.grade + amount</span><br><span class="line">jim = Student(<span class="string">"jim"</span>, 86)</span><br><span class="line">jim.introduce()</span><br><span class="line">jim.improve(10)</span><br><span class="line">jim.introduce()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>装饰器(decorator)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># def add_candles(cake_func):</span></span><br><span class="line"><span class="comment">#     def insert_candles():</span></span><br><span class="line"><span class="comment">#         return cake_func() + " candles"</span></span><br><span class="line"><span class="comment">#     return insert_candles</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># def make_cake():</span></span><br><span class="line"><span class="comment">#     return "cake"</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># gift_func = add_candles(make_cake)</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># print(make_cake())</span></span><br><span class="line"><span class="comment"># print(gift_func())</span></span><br><span class="line"><span class="comment"># def add_candles(cake_func):</span></span><br><span class="line"><span class="comment">#     def insert_candles():</span></span><br><span class="line"><span class="comment">#         return cake_func() + " candles"</span></span><br><span class="line"><span class="comment">#     return insert_candles</span></span><br><span class="line"><span class="comment">#   </span></span><br><span class="line"><span class="comment"># def make_cake():</span></span><br><span class="line"><span class="comment">#     return "cake"</span></span><br><span class="line"><span class="comment">#   </span></span><br><span class="line"><span class="comment"># make_cake = add_candles(make_cake)</span></span><br><span class="line"><span class="comment">#   </span></span><br><span class="line"><span class="comment"># print(make_cake())</span></span><br><span class="line"><span class="comment"># # print(gift_func)</span></span><br><span class="line"><span class="comment"># def add_candles(cake_func):</span></span><br><span class="line"><span class="comment">#     def insert_candles():</span></span><br><span class="line"><span class="comment">#         return cake_func() + " and candles"</span></span><br><span class="line"><span class="comment">#     return insert_candles</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># @add_candles</span></span><br><span class="line"><span class="comment"># def make_cake():</span></span><br><span class="line"><span class="comment">#     return "cake"</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># # make_cake = add_candles(make_cake)</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># print(make_cake())</span></span><br><span class="line"><span class="comment"># # print(gift_func)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GUI： Graphical User Interface</p>
+</li>
+<li>tkinter: GUI library for Python</li>
+<li>GUI Example<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">from tkinter import *</span><br><span class="line">import tkinter.simpledialog as dl</span><br><span class="line">import tkinter.messagebox as mb</span><br><span class="line"><span class="comment">#tkinter GUI Input Output Example</span></span><br><span class="line"><span class="comment">#设置GUI</span></span><br><span class="line">root = Tk()</span><br><span class="line">w = Label(root, text = <span class="string">"Label Title"</span>)</span><br><span class="line">w.pack()</span><br><span class="line"> </span><br><span class="line"><span class="comment">#欢迎消息</span></span><br><span class="line">mb.showinfo(<span class="string">"Welcome"</span>, <span class="string">"Welcome Message"</span>)</span><br><span class="line">guess = dl.askinteger(<span class="string">"Number"</span>, <span class="string">"Enter a number"</span>)</span><br><span class="line"> </span><br><span class="line">output = <span class="string">'This is output message'</span></span><br><span class="line">mb.showinfo(<span class="string">"Output: "</span>, output)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>6.猜数字游戏代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># #设置GUI</span></span><br><span class="line"><span class="comment"># root = Tk()</span></span><br><span class="line"><span class="comment"># w = Label(root, text = "Guess Number Game")</span></span><br><span class="line"><span class="comment"># w.pack()</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># #欢迎消息</span></span><br><span class="line"><span class="comment"># mb.showinfo("Welcome", "Welcome to Guess Number Game")</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># #处理信息</span></span><br><span class="line"><span class="comment"># number = 59</span></span><br><span class="line"><span class="comment">#  </span></span><br><span class="line"><span class="comment"># while True:</span></span><br><span class="line"><span class="comment"># #让用户输入信息</span></span><br><span class="line"><span class="comment">#     guess = dl.askinteger("Number", "What's your guess?")</span></span><br><span class="line"><span class="comment">#        </span></span><br><span class="line"><span class="comment">#     if guess == number:</span></span><br><span class="line"><span class="comment">#         # New block starts here</span></span><br><span class="line"><span class="comment">#         output = 'Bingo! you guessed it right, but you do not win any prizes!'</span></span><br><span class="line"><span class="comment">#         mb.showinfo("Hint: ", output)</span></span><br><span class="line"><span class="comment">#         break</span></span><br><span class="line"><span class="comment">#         # New block ends here</span></span><br><span class="line"><span class="comment">#     elif guess &lt; number:</span></span><br><span class="line"><span class="comment">#         output = 'No, the number is a  higer than that'</span></span><br><span class="line"><span class="comment">#         mb.showinfo("Hint: ", output)</span></span><br><span class="line"><span class="comment">#     else:</span></span><br><span class="line"><span class="comment">#         output = 'No, the number is a  lower than that'</span></span><br><span class="line"><span class="comment">#         mb.showinfo("Hint: ", output)</span></span><br><span class="line"><span class="comment">#     </span></span><br><span class="line"><span class="comment"># print('Done')</span></span><br></pre></td></tr></table></figure></p>
+<p>7.网页编程介绍<br>7.1. 下载并安装python 2.7 32 bit<br>7.2. 下载并安装easy_install windows installer (python 2.7 32bit)<br>7.3. 安装 lpthw.web<br>   windows 命令行：  C:\Python27\Scripts\easy_install lpthw.web<br>7.4. 创建目录 C:\Users\plg519\Maizi\TeachingPython\gotoweb\bin<br>7.5. 目录下创建 app.py:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import web</span><br><span class="line">urls = (</span><br><span class="line">  <span class="string">'/'</span>, <span class="string">'index'</span></span><br><span class="line">)</span><br><span class="line">app = web.application(urls, globals())</span><br><span class="line">class index:</span><br><span class="line">    def GET(self):</span><br><span class="line">        greeting = <span class="string">"Hello World"</span></span><br><span class="line">        <span class="built_in">return</span> greeting</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure></p>
+<p>7.6. Windows cmd 运行：<br>cd  C:\Users\plg519\Maizi\TeachingPython\gotoweb\bin<br>C:\python27\python27 app.py<br>7.7. 打开浏览器：localhost：8080</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/python/">python</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

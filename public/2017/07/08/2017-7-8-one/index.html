@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（十二）简单线性回归原理 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="为什么需要统计量？统计量：描述数据特征1.1集中趋势衡量1.1.1均值（平均数，平均值）（mean）$\overline x = \sum_{i=1}^{n}x_i${6, 2, 9, 1, 2}(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 41.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量1.1.2.1给数据排序：1， 2， 2， 6， 91.1.2.2找出位置处于中间的变量：2当n为基数的时候：直接取位置处于中间的变量当n为偶数的时候，取中间两个量的平均值1.1.2众数 （mode）：数据中出现次数最多的数" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（十二）简单线性回归原理" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-07-08T05:36:21.000Z"><a href="/2017/07/08/2017-7-8-one/">2017-07-08</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（十二）简单线性回归原理</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>为什么需要统计量？<br>统计量：描述数据特征<br>1.1集中趋势衡量<br>1.1.1均值（平均数，平均值）（mean）<br>$\overline x = \sum_{i=1}^{n}x_i$<br>{6, 2, 9, 1, 2}<br>(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 4<br>1.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量<br>1.1.2.1给数据排序：1， 2， 2， 6， 9<br>1.1.2.2找出位置处于中间的变量：2<br>当n为基数的时候：直接取位置处于中间的变量<br>当n为偶数的时候，取中间两个量的平均值<br>1.1.2众数 （mode）：数据中出现次数最多的数<a id="more"></a>
+1.2<br>1.2.1离散程度衡量<br>1.2.1.1方差（variance)<br>$s^2=\frac{\sum_{i=1}^n(x_i-\overline x)^2}{n-1}$<br>{6, 2, 9, 1, 2}<br>(1) (6 - 4)^2 + (2 - 4) ^2 + (9 - 4)^2 + (1 - 4)^2 + (2 - 4)^2<br>= 4 + 4 + 25 + 9 + 4<br>= 46<br>(2) n - 1 = 5 - 1 = 4<br>(3) 46 / 4 = 11.5<br>1.2.1.2标准差 (standard deviation)<br>$s=\sqrt{s^2}$<br>s = sqrt(11.5) = 3.39  </li>
+<li>简单线性回归(Simple Linear Regression)<br>2.1很多做决定过过程通常是根据两个或者多个变量之间的关系<br>2.2回归分析(regression analysis)用来建立方程模拟两个或者多个变量之间如何关联<br>2.3被预测的变量叫做：因变量(dependent variable), y, 输出(output)<br>2.4被用来进行预测的变量叫做： 自变量(independent variable), x, 输入(input)</li>
+<li>简单线性回归介绍<br>3.1简单线性回归包含一个自变量(x)和一个因变量(y)<br>3.2以上两个变量的关系用一条直线来模拟<br>3.3如果包含两个以上的自变量，则称作多元回归分析(multiple regression)</li>
+<li>简单线性回归模型<br>4.1被用来描述因变量(y)和自变量(X)以及偏差(error)之间关系的方程叫做回归模型<br>4.2简单线性回归的模型是:<br>$y=\beta_0+\beta_1x+\varepsilon$     </li>
+<li>简单线性回归方程<br>E(y) = β0+β1x<br>这个方程对应的图像是一条直线，称作回归线<br>其中，β0是回归线的截距<br>β1是回归线的斜率<br>E(y)是在一个给定x值下y的期望值（均值）</li>
+<li>正向线性关系：<br><img src="/2017/07/08/2017-7-8-one/1.png" alt="">   </li>
+<li>负向线性关系：<br><img src="/2017/07/08/2017-7-8-one/2.png" alt=""></li>
+<li>无关系<br><img src="/2017/07/08/2017-7-8-one/3.png" alt=""></li>
+<li>估计的简单线性回归方程<br>ŷ=b0+b1x<br>这个方程叫做估计线性方程(estimated regression line)<br>其中，b0是估计线性方程的纵截距<br>b1是估计线性方程的斜率<br>ŷ是在自变量x等于一个给定值的时候，y的估计值</li>
+<li>线性回归分析流程：<br><img src="/2017/07/08/2017-7-8-one/4.png" alt="">    </li>
+<li>关于偏差ε的假定<br>11.1是一个随机的变量，均值为0<br>11.2ε的方差(variance)对于所有的自变量x是一样的<br>11.3ε的值是独立的<br>11.4ε满足正态分布</li>
+</ol>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（三）决策树算法代码与应用 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="Python
+Python机器学习的库：scikit-learn2.1： 特性：简单高效的数据挖掘和机器学习分析对所有用户开放，根据不同需求高度可重用性基于Numpy, SciPy和matplotlib开源，商用级别：获得 BSD许可2.2 覆盖问题领域：分类（classification), 回归（regression), 聚类（clustering), 降维(dimensionality reduction)模型选择(model selection), 预处理(preprocessing)
+使用用scikit-learn安装scikit-learn: pip, easy_install, windows installer安装必要package：numpy， SciPy和matplotlib， 可使用Anaconda (包含numpy, scipy等科学计算常用package）安装注意问题：Python解释器版本（2.7 or 3.4？）, 32-bit or 64-bit系统
+例子：文档： http://scikit-learn.org/stable/modules/tree.htmlDecesionTree 代码" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（三）决策树算法代码与应用" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-27T07:22:31.000Z"><a href="/2017/06/27/2017-6-27-two/">2017-06-27</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（三）决策树算法代码与应用</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>Python</li>
+<li>Python机器学习的库：scikit-learn<br>2.1： 特性：<br>简单高效的数据挖掘和机器学习分析<br>对所有用户开放，根据不同需求高度可重用性<br>基于Numpy, SciPy和matplotlib<br>开源，商用级别：获得 BSD许可<br>2.2 覆盖问题领域：<br>分类（classification), 回归（regression), 聚类（clustering), 降维(dimensionality reduction)<br>模型选择(model selection), 预处理(preprocessing)</li>
+<li>使用用scikit-learn<br>安装scikit-learn: pip, easy_install, windows installer<br>安装必要package：numpy， SciPy和matplotlib， 可使用Anaconda (包含numpy, scipy等科学计算常用package）<br>安装注意问题：Python解释器版本（2.7 or 3.4？）, 32-bit or 64-bit系统</li>
+<li>例子：<br>文档： <a href="http://scikit-learn.org/stable/modules/tree.html" target="_blank" rel="noopener">http://scikit-learn.org/stable/modules/tree.html</a><br>DecesionTree 代码<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.feature_extraction import DictVectorizer</span><br><span class="line">import csv</span><br><span class="line">from sklearn import tree</span><br><span class="line">from sklearn import preprocessing</span><br><span class="line">from sklearn.externals.six import StringIO</span><br><span class="line"><span class="comment">#Read in the csv file and put features into list of dict and list of class label</span></span><br><span class="line">allElectronicsData = open(r<span class="string">'C:\Users\Administrator\workspace\Machinelearning\DecesionTree\data.csv'</span>, <span class="string">'rb'</span>)</span><br><span class="line">reader = csv.reader(allElectronicsData)</span><br><span class="line">headers = reader.next()</span><br><span class="line"><span class="built_in">print</span>(headers)</span><br><span class="line">featureList = []</span><br><span class="line">labelList = []</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> reader:</span><br><span class="line">    labelList.append(row[len(row)-1])</span><br><span class="line">    rowDict = &#123;&#125; <span class="comment">#Dictionary </span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1, len(row)-1):</span><br><span class="line">        rowDict[headers[i]] = row[i]</span><br><span class="line">    featureList.append(rowDict)</span><br><span class="line"><span class="built_in">print</span>(labelList)</span><br><span class="line"><span class="comment">#Vetorize features</span></span><br><span class="line">vec = DictVectorizer()</span><br><span class="line">dummyX = vec.fit_transform(featureList) .toarray()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"dummyX: "</span> + str(dummyX))</span><br><span class="line"><span class="built_in">print</span>(vec.get_feature_names())</span><br><span class="line"><span class="comment">#vectorize class labels</span></span><br><span class="line">lb = preprocessing.LabelBinarizer()</span><br><span class="line">dummyY = lb.fit_transform(labelList)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"dummyY: "</span> + str(dummyY))</span><br><span class="line"><span class="comment">#Using decision tree for classification</span></span><br><span class="line"><span class="comment">#clf = tree.DecisionTreeClassifier()</span></span><br><span class="line">clf = tree.DecisionTreeClassifier(criterion=<span class="string">'entropy'</span>)</span><br><span class="line">clf = clf.fit(dummyX, dummyY)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"clf: "</span> + str(clf))</span><br><span class="line"><span class="comment"># Visualize model</span></span><br><span class="line">with open(<span class="string">"DataAfterDecesionTree.dot"</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f = tree.export_graphviz(clf, feature_names=vec.get_feature_names(), out_file=f)</span><br><span class="line"><span class="comment">#Predict   </span></span><br><span class="line">oneRowX = dummyX[0, :]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"oneRowX: "</span> + str(oneRowX))</span><br><span class="line">newRowX = oneRowX</span><br><span class="line">newRowX[0] = 1</span><br><span class="line">newRowX[2] = 0</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"newRowX: "</span> + str(newRowX))</span><br><span class="line">predictedY = clf.predict(newRowX)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"predictedY: "</span> + str(predictedY))</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>安装 Graphviz： <a href="http://www.graphviz.org/" target="_blank" rel="noopener">http://www.graphviz.org/</a><br>可以将决策树图形化直接输出决策树图形<br>配置环境变量<br>转化dot文件至pdf可视化决策树：dot -Tpdf iris.dot -o outpu.pdf</p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

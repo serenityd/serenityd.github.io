@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完） | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="hierarchical clustering聚类算法python代码：HierarchicalClustering.py" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-09-21T07:27:19.000Z"><a href="/2017/09/21/2017-9-21-two/">2017-09-21</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>hierarchical clustering聚类算法python代码：<br>HierarchicalClustering.py<br><a id="more"></a></p>
+<pre><code class="bash">from numpy import *
+
+<span class="string">""</span><span class="string">"</span>
+<span class="string">Code for hierarchical clustering, modified from </span>
+<span class="string">Programming Collective Intelligence by Toby Segaran </span>
+<span class="string">(O'Reilly Media 2007, page 33). </span>
+<span class="string">"</span><span class="string">""</span>
+
+class cluster_node:
+    def __init__(self,vec,left=None,right=None,distance=0.0,id=None,count=1):
+        self.left=left
+        self.right=right
+        self.vec=vec
+        self.id=id
+        self.distance=distance
+        self.count=count <span class="comment">#only used for weighted average </span>
+
+def L2dist(v1,v2):
+    <span class="built_in">return</span> sqrt(sum((v1-v2)**2))
+
+def L1dist(v1,v2):
+    <span class="built_in">return</span> sum(abs(v1-v2))
+
+<span class="comment"># def Chi2dist(v1,v2):</span>
+<span class="comment">#     return sqrt(sum((v1-v2)**2))</span>
+
+def hcluster(features,distance=L2dist):
+    <span class="comment">#cluster the rows of the "features" matrix</span>
+    distances={}
+    currentclustid=-1
+
+    <span class="comment"># clusters are initially just the individual rows</span>
+    clust=[cluster_node(array(features[i]),id=i) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(features))]
+
+    <span class="keyword">while</span> len(clust)&gt;1:
+        lowestpair=(0,1)
+        closest=distance(clust[0].vec,clust[1].vec)
+
+        <span class="comment"># loop through every pair looking for the smallest distance</span>
+        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust)):
+            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+1,len(clust)):
+                <span class="comment"># distances is the cache of distance calculations</span>
+                <span class="keyword">if</span> (clust[i].id,clust[j].id) not <span class="keyword">in</span> distances: 
+                    distances[(clust[i].id,clust[j].id)]=distance(clust[i].vec,clust[j].vec)
+
+                d=distances[(clust[i].id,clust[j].id)]
+
+                <span class="keyword">if</span> d&lt;closest:
+                    closest=d
+                    lowestpair=(i,j)
+
+        <span class="comment"># calculate the average of the two clusters</span>
+        mergevec=[(clust[lowestpair[0]].vec[i]+clust[lowestpair[1]].vec[i])/2.0 \
+            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust[0].vec))]
+
+        <span class="comment"># create the new cluster</span>
+        newcluster=cluster_node(array(mergevec),left=clust[lowestpair[0]],
+                             right=clust[lowestpair[1]],
+                             distance=closest,id=currentclustid)
+
+        <span class="comment"># cluster ids that weren't in the original set are negative</span>
+        currentclustid-=1
+        del clust[lowestpair[1]]
+        del clust[lowestpair[0]]
+        clust.append(newcluster)
+
+    <span class="built_in">return</span> clust[0]
+
+
+def extract_clusters(clust,dist):
+    <span class="comment"># extract list of sub-tree clusters from hcluster tree with distance&lt;dist</span>
+    clusters = {}
+    <span class="keyword">if</span> clust.distance&lt;dist:
+        <span class="comment"># we have found a cluster subtree</span>
+        <span class="built_in">return</span> [clust] 
+    <span class="keyword">else</span>:
+        <span class="comment"># check the right and left branches</span>
+        cl = []
+        cr = []
+        <span class="keyword">if</span> clust.left!=None: 
+            cl = extract_clusters(clust.left,dist=dist)
+        <span class="keyword">if</span> clust.right!=None: 
+            cr = extract_clusters(clust.right,dist=dist)
+        <span class="built_in">return</span> cl+cr 
+
+def get_cluster_elements(clust):
+    <span class="comment"># return ids for elements in a cluster sub-tree</span>
+    <span class="keyword">if</span> clust.id&gt;=0:
+        <span class="comment"># positive id means that this is a leaf</span>
+        <span class="built_in">return</span> [clust.id]
+    <span class="keyword">else</span>:
+        <span class="comment"># check the right and left branches</span>
+        cl = []
+        cr = []
+        <span class="keyword">if</span> clust.left!=None: 
+            cl = get_cluster_elements(clust.left)
+        <span class="keyword">if</span> clust.right!=None: 
+            cr = get_cluster_elements(clust.right)
+        <span class="built_in">return</span> cl+cr
+
+
+def printclust(clust,labels=None,n=0):
+    <span class="comment"># indent to make a hierarchy layout</span>
+    <span class="keyword">for</span> i <span class="keyword">in</span> range(n): <span class="built_in">print</span> <span class="string">' '</span>,
+    <span class="keyword">if</span> clust.id&lt;0:
+        <span class="comment"># negative id means that this is branch</span>
+        <span class="built_in">print</span> <span class="string">'-'</span>
+    <span class="keyword">else</span>:
+        <span class="comment"># positive id means that this is an endpoint</span>
+        <span class="keyword">if</span> labels==None: <span class="built_in">print</span> clust.id
+        <span class="keyword">else</span>: <span class="built_in">print</span> labels[clust.id]
+
+    <span class="comment"># now print the right and left branches</span>
+    <span class="keyword">if</span> clust.left!=None: printclust(clust.left,labels=labels,n=n+1)
+    <span class="keyword">if</span> clust.right!=None: printclust(clust.right,labels=labels,n=n+1)
+
+
+
+def getheight(clust):
+    <span class="comment"># Is this an endpoint? Then the height is just 1</span>
+    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 1
+
+    <span class="comment"># Otherwise the height is the same of the heights of</span>
+    <span class="comment"># each branch</span>
+    <span class="built_in">return</span> getheight(clust.left)+getheight(clust.right)
+
+def getdepth(clust):
+    <span class="comment"># The distance of an endpoint is 0.0</span>
+    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 0
+
+    <span class="comment"># The distance of a branch is the greater of its two sides</span>
+    <span class="comment"># plus its own distance</span>
+    <span class="built_in">return</span> max(getdepth(clust.left),getdepth(clust.right))+clust.distance
+</code></pre>
+<p>TestHClustering.py   </p>
+<pre><code class="bash">import os
+from PIL import Image , ImageDraw
+from HierarchicalClustering import hcluster
+from HierarchicalClustering import getheight
+from HierarchicalClustering import getdepth
+
+import numpy as np
+import os
+
+def drawdendrogram(clust,imlist, jpeg=<span class="string">'clusters.jpg'</span>):
+    h=getheight(clust)*20
+    w=1200
+    depth=getdepth(clust)
+    scaling=<span class="built_in">float</span>(w-150)/depth
+    img=Image.new(<span class="string">'RGB'</span>,(w,h),(255, 255, 255))
+    draw=ImageDraw.Draw(img)
+    draw.line((0,h/2,10,h/2),fill=(255,0,0))
+    drawnode(draw, clust, 10, int(h/2), scaling, imlist, img)
+    img.save(jpeg)
+
+def drawnode(draw,clust, x, y, scaling,imlist,img):
+    <span class="keyword">if</span> clust.id&lt;0:
+        h1=getheight(clust.left)*20
+        h2=getheight(clust.right)*20
+        top=y-(h1+h2)/2
+        bottom=y+(h1+h2)/2
+        ll=clust.distance*scaling
+        draw.line((x,top+h1/2,x,bottom-h2/2),fill=(255,0,0))
+        draw.line((x,top+h1/2,x+ll,top+h1/2),fill=(255,0,0))
+        draw.line((x,bottom-h2/2,x+ll,bottom-h2/2),fill=(255,0,0))
+        drawnode(draw,clust.left,x+ll,top+h1/2,scaling,imlist,img)
+        drawnode(draw,clust.right,x+ll,bottom-h2/2,scaling,imlist,img)
+    <span class="keyword">else</span>:
+        nodeim=Image.open(imlist[clust.id])
+        nodeim.thumbnail((20,20))
+        ns=nodeim.size
+        <span class="built_in">print</span> x,y-ns[1]//2
+        <span class="built_in">print</span> x+ns[0]
+        <span class="built_in">print</span>
+        img.paste(nodeim,(int(x),int(y-ns[1]//2),int(x+ns[0]),int(y+ns[1]-ns[1]//2))) 
+imlist=[]
+folderPath=r<span class="string">'C:\Users\Administrator\Desktop\picture'</span>
+<span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(folderPath):
+    <span class="keyword">if</span> os.path.splitext(filename)[1]==<span class="string">'.jpg'</span>:
+        imlist.append(os.path.join(folderPath,filename))
+n=len(imlist)
+features = np.zeros((n,3))
+<span class="keyword">for</span> i <span class="keyword">in</span> range(n):
+    im=np.array(Image.open(imlist[i]))
+    R=np.mean(im[:,:,0].flatten())
+    G=np.mean(im[:,:,1].flatten())
+    B=np.mean(im[:,:,2].flatten())
+    features[i]=np.array([R,G,B])
+tree=hcluster(features)
+drawdendrogram(tree,imlist,jpeg=<span class="string">'clusters.jpg'</span>)
+</code></pre>
+<p>归类结果：<br><img src="/2017/09/21/2017-9-21-two/1.jpg" alt=""></p>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

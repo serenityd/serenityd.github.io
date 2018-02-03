@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（十）神经网络原理 | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="背景:1.1以人脑中的神经网络为启发，历史上出现过很多不同版本1.2最著名的算法是1980年的 backpropagation 
+多层向前神经网络(Multilayer Feed-Forward Neural Network)2.1Backpropagation被使用在多层向前神经网络上2.2多层向前神经网络由以下部分组成：" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（十）神经网络原理" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-07-03T09:02:17.000Z"><a href="/2017/07/03/2017-7-3-one/">2017-07-03</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（十）神经网络原理</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li>背景:<br>1.1以人脑中的神经网络为启发，历史上出现过很多不同版本<br>1.2最著名的算法是1980年的 backpropagation </li>
+<li>多层向前神经网络(Multilayer Feed-Forward Neural Network)<br>2.1Backpropagation被使用在多层向前神经网络上<br>2.2多层向前神经网络由以下部分组成：<a id="more"></a>
+输入层(input layer), 隐藏层 (hidden layers), 输入层 (output layers)<br><img src="/2017/07/03/2017-7-3-one/1.png" alt=""><br>2.3每层由单元(units)组成<br>2.4输入层(input layer)是由训练集的实例特征向量传入<br>2.5经过连接结点的权重(weight)传入下一层，一层的输出是下一层的输入<br>2.6隐藏层的个数可以是任意的，输入层有一层，输出层有一层<br>2.7每个单元(unit)也可以被称作神经结点，根据生物学来源定义<br>2.8以上成为2层的神经网络（输入层不算）<br>2.8一层中加权的求和，然后根据非线性方程转化输出<br>2.9作为多层向前神经网络，理论上，如果有足够多的隐藏层(hidden layers) 和足够大的训练集, 可以模拟出任何方程</li>
+<li>设计神经网络结构<br>3.1使用神经网络训练数据之前，必须确定神经网络的层数，以及每层单元的个数<br>3.2特征向量在被传入输入层时通常被先标准化(normalize）到0和1之间 （为了加速学习过程）<br>3.3离散型变量可以被编码成每一个输入单元对应一个特征值可能赋的值<br>比如：特征值A可能取三个值（a0, a1, a2), 可以使用3个输入单元来代表A。<br>如果A=a0, 那么代表a0的单元值就取1, 其他取0；<br>如果A=a1, 那么代表a1de单元值就取1，其他取0，以此类推<br>3.4神经网络即可以用来做分类(classification）问题，也可以解决回归(regression)问题<br>3.4.1对于分类问题，如果是2类，可以用一个输出单元表示（0和1分别代表2类）<br>如果多余2类，每一个类别用一个输出单元表示<br>所以输入层的单元数量通常等于类别的数量<br>3.4.2没有明确的规则来设计最好有多少个隐藏层<br>3.4.2.1根据实验测试和误差，以及准确度来实验并改进</li>
+<li>交叉验证方法(Cross-Validation)<br><img src="/2017/07/03/2017-7-3-one/2.jpg" alt=""><br>K-fold cross validation </li>
+<li>Backpropagation算法<br>5.1通过迭代性的来处理训练集中的实例<br>5.2对比经过神经网络后输入层预测值(predicted value)与真实值(target value)之间<br>5.3反方向（从输出层=&gt;隐藏层=&gt;输入层）来以最小化误差(error)来更新每个连接的权重(weight)<br>5.4算法详细介绍<br>输入：D：数据集，l 学习率(learning rate)， 一个多层前向神经网络<br>输入：一个训练好的神经网络(a trained neural network)<br>5.4.1初始化权重(weights)和偏向(bias): 随机初始化在-1到1之间，或者-0.5到0.5之间，每个单元有<br>一个偏向<br>5.4.2对于每一个训练实例X，执行以下步骤：<br>5.4.2.1:由输入层向前传送<br><img src="/2017/07/03/2017-7-3-one/3.png" alt=""><br>$I_j=\sum_i w_{ij}O_i+\theta j$<br><img src="/2017/07/03/2017-7-3-one/4.png" alt=""><br>$O_j=\frac{1}{1+e^{I_j}}$<br>5.4.2.2根据误差(error)反向传送<br>对于输出层：<br>$Err_j=O_j(1-O_j)(T_j-O_j)$<br>对于隐藏层：<br>$Err_j=O_j(1-O_j)\sum{Err_kw_{jk}}$<br>$\bigtriangleup w_{ij}=(l) Err_jO_i$<br>权重更新：<br>$w_{ij}=w_{ij}+\bigtriangleup w_{ij}$<br>偏向更新<br>$\bigtriangleup \theta_j=(l) Err_j$<br>$\theta_j=\theta_j+\bigtriangleup \theta_j$<br>5.4.3终止条件<br>5.4.3.1权重的更新低于某个阈值<br>5.4.3.2预测的错误率低于某个阈值<br>5.4.3.3达到预设一定的循环次数</li>
+<li>Backpropagation 算法举例<br><img src="/2017/07/03/2017-7-3-one/5.png" alt=""><br>对于输出层：<br>$Err_j=O_j(1-O_j)(T_j-O_j)$<br>对于隐藏层：<br>$Err_j=O_j(1-O_j)\sum{Err_kw_{jk}}$<br>$\bigtriangleup w_{ij}=(l) Err_jO_i$<br>权重更新：<br>$w_{ij}=w_{ij}+\bigtriangleup w_{ij}$<br>偏向更新<br>$\bigtriangleup \theta_j=(l) Err_j$<br>$\theta_j=\theta_j+\bigtriangleup \theta_j$<br><img src="/2017/07/03/2017-7-3-one/6.png" alt=""></li>
+</ol>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>

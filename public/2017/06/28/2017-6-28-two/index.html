@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>机器学习笔记（五）最临近分类算法应用（KNN） | Serenityd Blog</title>
+  <meta name="author" content="Serenityd" />
+
+  
+  <meta name="description" content="数据集介绍：虹膜150个实例萼片长度，萼片宽度，花瓣长度，花瓣宽度(sepal length, sepal width, petal length and petal width）类别：Iris setosa, Iris versicolor, Iris virginica." />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="机器学习笔记（五）最临近分类算法应用（KNN）" />
+  <meta property="og:site_name" content="Serenityd Blog" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Serenityd Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Serenityd Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T13:31:19.000Z"><a href="/2017/06/28/2017-6-28-two/">2017-06-28</a></time>
+      
+      
+  
+    <h1 class="title">机器学习笔记（五）最临近分类算法应用（KNN）</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <ol>
+<li><p>数据集介绍：<br>虹膜<br><img src="/2017/06/28/2017-6-28-two/1.png" alt=""><br>150个实例<br>萼片长度，萼片宽度，花瓣长度，花瓣宽度<br>(sepal length, sepal width, petal length and petal width）<br>类别：<br>Iris setosa, Iris versicolor, Iris virginica.<br><img src="/2017/06/28/2017-6-28-two/2.png" alt=""></p>
+<a id="more"></a>
+</li>
+<li><p>利用Python的机器学习库sklearn: SkLearnExample.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from sklearn import neighbors</span><br><span class="line">from sklearn import datasets</span><br><span class="line">knn = neighbors.KNeighborsClassifier()</span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line"><span class="built_in">print</span> iris</span><br><span class="line">knn.fit(iris.data, iris.target)</span><br><span class="line">predictedLabel = knn.predict([[0.1, 0.2, 0.3, 0.4]])</span><br><span class="line"><span class="built_in">print</span> predictedLabel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自编代码KNN 实现Implementation:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example of kNN implemented from Scratch in Python</span></span><br><span class="line">import csv</span><br><span class="line">import random</span><br><span class="line">import math</span><br><span class="line">import operator</span><br><span class="line">def loadDataset(filename, split, trainingSet=[] , testSet=[]):</span><br><span class="line">    with open(filename, <span class="string">'rb'</span>) as csvfile:</span><br><span class="line">        lines = csv.reader(csvfile)</span><br><span class="line">        dataset = list(lines)</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(len(dataset)-1):</span><br><span class="line">            <span class="keyword">for</span> y <span class="keyword">in</span> range(4):</span><br><span class="line">                dataset[x][y] = <span class="built_in">float</span>(dataset[x][y])</span><br><span class="line">            <span class="keyword">if</span> random.random() &lt; split:</span><br><span class="line">                trainingSet.append(dataset[x])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                testSet.append(dataset[x])</span><br><span class="line">def euclideanDistance(instance1, instance2, length):</span><br><span class="line">    distance = 0</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(length):</span><br><span class="line">        distance += pow((instance1[x] - instance2[x]), 2)</span><br><span class="line">    <span class="built_in">return</span> math.sqrt(distance)</span><br><span class="line">def getNeighbors(trainingSet, testInstance, k):</span><br><span class="line">    distances = []</span><br><span class="line">    length = len(testInstance)-1</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(len(trainingSet)):</span><br><span class="line">        dist = euclideanDistance(testInstance, trainingSet[x], length)</span><br><span class="line">        distances.append((trainingSet[x], dist))</span><br><span class="line">    distances.sort(key=operator.itemgetter(1))</span><br><span class="line">    neighbors = []</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(k):</span><br><span class="line">        neighbors.append(distances[x][0])</span><br><span class="line">    <span class="built_in">return</span> neighbors</span><br><span class="line">def getResponse(neighbors):</span><br><span class="line">    classVotes = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(len(neighbors)):</span><br><span class="line">        response = neighbors[x][-1]</span><br><span class="line">        <span class="keyword">if</span> response <span class="keyword">in</span> classVotes:</span><br><span class="line">            classVotes[response] += 1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            classVotes[response] = 1</span><br><span class="line">    sortedVotes = sorted(classVotes.iteritems(), key=operator.itemgetter(1), reverse=True)</span><br><span class="line">    <span class="built_in">return</span> sortedVotes[0][0]</span><br><span class="line">def getAccuracy(testSet, predictions):</span><br><span class="line">    correct = 0</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(len(testSet)):</span><br><span class="line">        <span class="keyword">if</span> testSet[x][-1] == predictions[x]:</span><br><span class="line">            correct += 1</span><br><span class="line">    <span class="built_in">return</span> (correct/<span class="built_in">float</span>(len(testSet))) * 100.0</span><br><span class="line">    </span><br><span class="line">def main():</span><br><span class="line">    <span class="comment"># prepare data</span></span><br><span class="line">    trainingSet=[]</span><br><span class="line">    testSet=[]</span><br><span class="line">    split = 0.67</span><br><span class="line">    loadDataset(r<span class="string">'D:\MaiziEdu\DeepLearningBasics_MachineLearning\Datasets\iris.data.txt'</span>, split, trainingSet, testSet)</span><br><span class="line">    <span class="built_in">print</span> <span class="string">'Train set: '</span> + repr(len(trainingSet))</span><br><span class="line">    <span class="built_in">print</span> <span class="string">'Test set: '</span> + repr(len(testSet))</span><br><span class="line">    <span class="comment"># generate predictions</span></span><br><span class="line">    predictions=[]</span><br><span class="line">    k = 3</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(len(testSet)):</span><br><span class="line">        neighbors = getNeighbors(trainingSet, testSet[x], k)</span><br><span class="line">        result = getResponse(neighbors)</span><br><span class="line">        predictions.append(result)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'&gt; predicted='</span> + repr(result) + <span class="string">', actual='</span> + repr(testSet[x][-1]))</span><br><span class="line">    accuracy = getAccuracy(testSet, predictions)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'Accuracy: '</span> + repr(accuracy) + <span class="string">'%'</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/机器学习/">机器学习</a>
+  </div>
+
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Entradas Recientes</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
+      </li>
+    
+      <li>
+        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Etiquetas</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
+  
+    <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
+  
+    <li><a href="/tags/git/">git</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+  
+    <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
+  
+    <li><a href="/tags/机器学习/">机器学习</a><small>23</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">Nube de Etiquetas</h3>
+  <div class="entry">
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2018 Serenityd
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
