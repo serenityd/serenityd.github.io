@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>2018-02-03-one | Serenityd Blog</title>
+  <title>Hexo博客在VSCode下编写及git配置问题 | Serenityd Blog</title>
   <meta name="author" content="Serenityd" />
 
   
-  <meta name="description" content="//更改vs_code test图片 test公式 test$a^2=b^2+c^2$" />
+  <meta name="description" content="设置VSCode下git环境文件—首选项-设置用户设置下 添加git路径以及git-bash终端1234&amp;#123;    &#34;git.path&#34;: &#34;D:\\Program Files\\Git\\cmd&#34;,    &#34;terminal.integrated.shell.windows&#34;:&#34;D:\\ProgramFiles\\Git\\bin\\bash.exe&#34;,&amp;#125;" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="2018-02-03-one" />
+  <meta property="og:title" content="Hexo博客在VSCode下编写及git配置问题" />
   <meta property="og:site_name" content="Serenityd Blog" />
 
   
@@ -67,13 +67,19 @@
       
       
   
-    <h1 class="title">2018-02-03-one</h1>
+    <h1 class="title">Hexo博客在VSCode下编写及git配置问题</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>//更改<br>vs_code test<br>图片 test<br><img src="/2018/02/03/2018-02-03-one/1.jpg" alt=""><br>公式 test<br>$a^2=b^2+c^2$</p>
+        <p>设置VSCode下git环境<br>文件—首选项-设置<br>用户设置下 添加git路径以及git-bash终端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"git.path"</span>: <span class="string">"D:\\Program Files\\Git\\cmd"</span>,</span><br><span class="line">    <span class="string">"terminal.integrated.shell.windows"</span>:<span class="string">"D:\\ProgramFiles\\Git\\bin\\bash.exe"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>PS:<br>记录两天搭建环境过程中遇到的各种麻烦 好久不弄又出现一些新问题<br>一、图片加载问题<br>下面给出hexo图片公式加载环境设置<br>经过一番折腾发现加载图片必须满足一下条件<br>1、_config.yml中开启文件夹声明<br><code>post_asset_folder: true</code><br>2、npm安装图片插件<br><code>npm install hexo-asset-image --save</code><br>图片测试<br><img src="/2018/02/03/2018-02-03-one/1.jpg" alt=""><br>二、公式加载问题<br>此处分为两个小问题<br>一是公式插件加载问题<br>二是markdown斜线注释问题<br>1、公式插件按照网上教程加载hexo-math不成功，所以另辟蹊径采用mathjax.ejs文件建立公式环境到主题目录下mathjax.ejs:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><br><span class="line">MathJax.Hub.Config(&#123;</span><br><span class="line">    tex2jax: &#123;</span><br><span class="line">        inlineMath: [ [<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">"\\("</span>,<span class="string">"\\)"</span>]  ],</span><br><span class="line">        processEscapes: <span class="literal">true</span>,</span><br><span class="line">        skipTags: [<span class="string">'script'</span>, <span class="string">'noscript'</span>, <span class="string">'style'</span>, <span class="string">'textarea'</span>, <span class="string">'pre'</span>, <span class="string">'code'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">MathJax.Hub.Queue(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    var all = MathJax.Hub.getAllJax(), i;</span><br><span class="line">    <span class="keyword">for</span>(i=0; i &lt; all.length; i += 1) &#123;</span><br><span class="line">        all[i].SourceElement().parentNode.className += <span class="string">' has-jax'</span>;                 </span><br><span class="line">    &#125;       </span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>src地址需要更新到mathjax接口最新地址<br>然后加载启用判断在after_footer.ejs中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (page.mathjax)&#123; %&gt;</span><br><span class="line">&lt;%- partial(<span class="string">'mathjax'</span>) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2、斜线注释问题<br>在<code>node_modules\marked\lib\marked.js</code>中修改两处代码这样无需替换markdown环境<br>将451行和459行的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">escape: /^\\([\\`*&#123;&#125;\[\]()<span class="comment"># +\-.!_&gt;])/  </span></span><br><span class="line">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure></p>
+<p>替换为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()<span class="comment"># +\-.!_&gt;])/</span></span><br><span class="line">em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure></p>
+<p>这样文章只要开启公式就可以加载公式<br>公式 test<br>$a^2=b^2+c^2$</p>
 
       
     </div>
@@ -85,6 +91,11 @@
         </div>
         
         
+  
+  <div class="tags">
+    <a href="/tags/Hexo/">Hexo</a>
+  </div>
+
         <!-- partial('post/share') -->
       <div class="clearfix"></div>
     </footer>
@@ -110,7 +121,7 @@
   <ul class="entry">
     
       <li>
-        <a href="/2018/02/03/2018-02-03-one/">2018-02-03-one</a>
+        <a href="/2018/02/03/2018-02-03-one/">Hexo博客在VSCode下编写及git配置问题</a>
       </li>
     
       <li>
@@ -140,6 +151,8 @@
   
     <li><a href="/tags/BaiduYun/">BaiduYun</a><small>1</small></li>
   
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
     <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
   
     <li><a href="/tags/git/">git</a><small>1</small></li>
@@ -162,7 +175,7 @@
 <div class="widget tagcloud">
   <h3 class="title">Tag Cloud</h3>
   <div class="entry">
-    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
   </div>
 </div>
 
