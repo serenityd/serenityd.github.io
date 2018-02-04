@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
   
-  <title>Python学习笔记（一） | Serenityd Blog</title>
+  <title>Python学习笔记（一）变量数值类型 | Serenityd Blog</title>
   <meta name="author" content="Serenityd" />
 
   
-  <meta name="description" content="1、Package分为内部Package和外部Package，内部Package直接可以import,外部package需要pip install安装包再进行import2、Python数据类型总体：numerics, sequences, mappings, classes, instances, and exceptionsNumeric Types: int (包含boolean), float, complexint: unlimited length; float: 实现用double in C, 可查看 sys.float_info; complex: real(实部) &amp;amp; imaginary(虚部）,用z.real 和 z.imag来取两部分具体运算以及法则参见：https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex例子" />
+  <meta name="description" content="官方文档地址1、Package分为内部Package和外部Package，内部Package直接可以import,外部package需要pip install安装包再进行import2、Python数据类型官方文档中给出这样一句话The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions.总体：numerics(数值), sequences(序列), mappings(映射), classes(类), instances(实例), and exceptions(异常)Numeric Types: int (包含boolean), float, complexint: unlimited length; float: 实现用double in C, 可查看 sys.float_info; complex: real(实部) &amp;amp; imaginary(虚部）,用z.real 和 z.imag来取两部分具体运算以及法则参见：https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex例子" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="Python学习笔记（一）" />
+  <meta property="og:title" content="Python学习笔记（一）变量数值类型" />
   <meta property="og:site_name" content="Serenityd Blog" />
 
   
@@ -35,13 +35,13 @@
 
 
   <!-- baidu webmaster push -->
-  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+  <script src='//push.zhanzhang.baidu.com/push.js'></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">Serenityd Blog</a></h1>
   <h2><a href="/"></a></h2>
 </div>
@@ -67,15 +67,16 @@
       
       
   
-    <h1 class="title">Python学习笔记（一）</h1>
+    <h1 class="title">Python学习笔记（一）变量数值类型</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>1、Package分为内部Package和外部Package，内部Package直接可以import,外部package需要pip install安装包再进行import<br>2、Python数据类型<br>总体：numerics, sequences, mappings, classes, instances, and exceptions<br>Numeric Types: int (包含boolean), float, complex<br>int: unlimited length; float: 实现用double in C, 可查看 sys.float_info; complex: real(实部) &amp; imaginary(虚部）,用z.real 和 z.imag来取两部分<br>具体运算以及法则参见：<a href="https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex" target="_blank" rel="noopener">https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex</a><br>例子<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">a = 3</span><br><span class="line">b = 4</span><br><span class="line">c = 5.66</span><br><span class="line">d = 8.0</span><br><span class="line">e = complex(c, d)</span><br><span class="line">f = complex(<span class="built_in">float</span>(a), <span class="built_in">float</span>(b))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"a is type"</span> , <span class="built_in">type</span>(a))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"b is type"</span> , <span class="built_in">type</span>(b))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"c is type"</span> , <span class="built_in">type</span>(c))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"d is type"</span> , <span class="built_in">type</span>(d))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e is type"</span> , <span class="built_in">type</span>(e))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"f is type"</span> , <span class="built_in">type</span>(f))</span><br><span class="line"><span class="built_in">print</span>(a + b)</span><br><span class="line"><span class="built_in">print</span>(d / c)</span><br><span class="line"><span class="built_in">print</span> (b / a)</span><br><span class="line"><span class="built_in">print</span> (b // a)</span><br><span class="line"><span class="built_in">print</span> (e)</span><br><span class="line"><span class="built_in">print</span> (e + f)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e's real part is: "</span> , e.real)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e's imaginary part is: "</span> , e.imag)</span><br><span class="line"><span class="built_in">print</span> (sys.float_info)</span><br></pre></td></tr></table></figure></p>
+        <p><a href="https://docs.python.org/3.6/library/" target="_blank" rel="noopener">官方文档地址</a><br>1、Package分为内部Package和外部Package，内部Package直接可以import,外部package需要pip install安装包再进行import<br>2、Python数据类型<br>官方文档中给出这样一句话<br><code>The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions.</code><br>总体：numerics(数值), sequences(序列), mappings(映射), classes(类), instances(实例), and exceptions(异常)<br>Numeric Types: int (包含boolean), float, complex<br>int: unlimited length; float: 实现用double in C, 可查看 sys.float_info; complex: real(实部) &amp; imaginary(虚部）,用z.real 和 z.imag来取两部分<br>具体运算以及法则参见：<a href="https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex" target="_blank" rel="noopener">https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex</a><br>例子<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">a = 3</span><br><span class="line">b = 4</span><br><span class="line">c = 5.66</span><br><span class="line">d = 8.0</span><br><span class="line">e = complex(c, d)</span><br><span class="line">f = complex(<span class="built_in">float</span>(a), <span class="built_in">float</span>(b))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"a is type"</span> , <span class="built_in">type</span>(a))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"b is type"</span> , <span class="built_in">type</span>(b))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"c is type"</span> , <span class="built_in">type</span>(c))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"d is type"</span> , <span class="built_in">type</span>(d))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e is type"</span> , <span class="built_in">type</span>(e))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"f is type"</span> , <span class="built_in">type</span>(f))</span><br><span class="line"><span class="built_in">print</span>(a + b)</span><br><span class="line"><span class="built_in">print</span>(d / c)</span><br><span class="line"><span class="built_in">print</span> (b / a)</span><br><span class="line"><span class="built_in">print</span> (b // a)</span><br><span class="line"><span class="built_in">print</span> (e)</span><br><span class="line"><span class="built_in">print</span> (e + f)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e's real part is: "</span> , e.real)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">"e's imaginary part is: "</span> , e.imag)</span><br><span class="line"><span class="built_in">print</span> (sys.float_info)</span><br></pre></td></tr></table></figure></p>
 <p>输出结果为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a is <span class="built_in">type</span> &lt;class <span class="string">'int'</span>&gt;</span><br><span class="line">b is <span class="built_in">type</span> &lt;class <span class="string">'int'</span>&gt;</span><br><span class="line">c is <span class="built_in">type</span> &lt;class <span class="string">'float'</span>&gt;</span><br><span class="line">d is <span class="built_in">type</span> &lt;class <span class="string">'float'</span>&gt;</span><br><span class="line">e is <span class="built_in">type</span> &lt;class <span class="string">'complex'</span>&gt;</span><br><span class="line">f is <span class="built_in">type</span> &lt;class <span class="string">'complex'</span>&gt;</span><br><span class="line">7</span><br><span class="line">1.4134275618374559</span><br><span class="line">1.3333333333333333</span><br><span class="line">1</span><br><span class="line">(5.66+8j)</span><br><span class="line">(8.66+12j)</span><br><span class="line">e<span class="string">'s real part is:  5.66</span></span><br><span class="line"><span class="string">e'</span>s imaginary part is:  8.0</span><br><span class="line">sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)</span><br></pre></td></tr></table></figure></p>
-<p>PS:编译快捷键Ctrl+F11</p>
+<p>PS:编译快捷键Ctrl+F11<br>python值可以为None 空值<br>python查看保留字方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import keyword</span><br><span class="line"><span class="built_in">print</span>(keyword.kwlist)</span><br></pre></td></tr></table></figure></p>
+<p>堆内存和栈内存大致可以i理解为 栈内存存放引用 堆内存中存放数据<br>附图<br><img src="/2017/06/21/2017-6-21-two/1.jpg" alt=""> </p>
 
       
     </div>
@@ -104,7 +105,7 @@
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
 </div>
@@ -113,27 +114,27 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
     
       <li>
-        <a href="/2018/02/03/2018-02-03-one/">Hexo博客在VSCode下编写及git配置问题</a>
+        <a href="/2018/02/04/2018-2-4-two/">Markdown语法</a>
+      </li>
+    
+      <li>
+        <a href="/2018/02/04/2018-2-4-one/">vim命令图示</a>
+      </li>
+    
+      <li>
+        <a href="/2018/02/03/2018-2-3-two/">linux下搭建python3环境</a>
+      </li>
+    
+      <li>
+        <a href="/2018/02/03/2018-2-3-one/">Hexo博客在VSCode下编写及git配置问题</a>
       </li>
     
       <li>
         <a href="/2017/11/10/2017-11-10-one/">git学习笔记</a>
-      </li>
-    
-      <li>
-        <a href="/2017/09/21/2017-9-21-two/">机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</a>
-      </li>
-    
-      <li>
-        <a href="/2017/09/21/2017-9-21-one/">机器学习笔记（二十二）hierarchical clustering 层次聚类</a>
-      </li>
-    
-      <li>
-        <a href="/2017/09/18/2017-9-18-one/">机器学习笔记（二十一）聚类(Clustering) K-means算法应用</a>
       </li>
     
   </ul>
@@ -151,13 +152,19 @@
   
     <li><a href="/tags/LATEX/">LATEX</a><small>2</small></li>
   
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
     <li><a href="/tags/git/">git</a><small>1</small></li>
   
     <li><a href="/tags/github/">github</a><small>1</small></li>
   
-    <li><a href="/tags/hexo/">hexo</a><small>4</small></li>
+    <li><a href="/tags/hexo/">hexo</a><small>5</small></li>
+  
+    <li><a href="/tags/linux/">linux</a><small>2</small></li>
   
     <li><a href="/tags/python/">python</a><small>8</small></li>
+  
+    <li><a href="/tags/vim/">vim</a><small>1</small></li>
   
     <li><a href="/tags/多肉植物/">多肉植物</a><small>1</small></li>
   
@@ -169,9 +176,9 @@
 
   
 <div class="widget tagcloud">
-  <h3 class="title">Tag Cloud</h3>
+  <h3 class="title">Tag-Cloud</h3>
   <div class="entry">
-    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
+    <a href="/tags/BaiduYun/" style="font-size: 10px;">BaiduYun</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/LATEX/" style="font-size: 12.5px;">LATEX</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 12.5px;">linux</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/多肉植物/" style="font-size: 10px;">多肉植物</a> <a href="/tags/机器学习/" style="font-size: 20px;">机器学习</a>
   </div>
 </div>
 
@@ -202,6 +209,6 @@
 </script>
 
 
-<div id='bg'></div>
+<div id='bg'></div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
