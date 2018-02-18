@@ -7,7 +7,6 @@
     
     
     
-    
   <url>
     <loc>http://dnysu.cn/2018/02/04/2018-2-4-one/</loc>
     <lastmod>2018-02-17T06:02:33.699Z</lastmod>
@@ -336,14 +335,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
+    <loc>http://dnysu.cn/2017/07/03/2017-7-3-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>git学习笔记</title>
-        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
+        <title>解决hexo数学公式编辑不正确的问题</title>
+        <pubTime>2017-07-03T12:58:10.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>hexo</tag>
          
          
            
@@ -353,14 +352,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/07/08/2017-7-8-one/</loc>
+    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十二）简单线性回归原理</title>
-        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
+        <title>LATEX学习笔记</title>
+        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>LATEX</tag>
          
          
            
@@ -404,14 +403,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/08/12/2017-8-12-two/</loc>
+    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十五）多元回归分析应用</title>
-        <pubTime>2017-08-12T07:57:38.000Z</pubTime>
+        <title>多电脑间github同步hexo博文</title>
+        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>hexo</tag>
          
          
            
@@ -421,14 +420,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
+    <loc>http://dnysu.cn/2017/08/12/2017-8-12-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>多电脑间github同步hexo博文</title>
-        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
+        <title>机器学习笔记（十五）多元回归分析应用</title>
+        <pubTime>2017-08-12T07:57:38.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -557,6 +556,23 @@
 
     
   <url>
+    <loc>http://dnysu.cn/2017/09/21/2017-9-21-two/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
+        <pubTime>2017-09-21T07:27:19.000Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://dnysu.cn/2017/09/21/2017-9-21-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
@@ -574,14 +590,31 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/21/2017-9-21-two/</loc>
+    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
-        <pubTime>2017-09-21T07:27:19.000Z</pubTime>
+        <title>git学习笔记</title>
+        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/06/23/2017-6-23-one/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习笔记（三）</title>
+        <pubTime>2017-06-23T01:11:37.000Z</pubTime>
+        
+        <tag>python</tag>
          
          
            
@@ -608,14 +641,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/23/2017-6-23-one/</loc>
+    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>Python学习笔记（三）</title>
-        <pubTime>2017-06-23T01:11:37.000Z</pubTime>
+        <title>机器学习笔记（一）</title>
+        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -644,23 +677,6 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（一）</title>
-        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://dnysu.cn/2017/06/14/flower/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
@@ -669,23 +685,6 @@
         <pubTime>2017-06-14T01:31:24.000Z</pubTime>
         
         <tag>多肉植物</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>LATEX学习笔记</title>
-        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
-        
-        <tag>LATEX</tag>
          
          
            
@@ -746,14 +745,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/07/03/2017-7-3-two/</loc>
+    <loc>http://dnysu.cn/2017/07/08/2017-7-8-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>解决hexo数学公式编辑不正确的问题</title>
-        <pubTime>2017-07-03T12:58:10.000Z</pubTime>
+        <title>机器学习笔记（十二）简单线性回归原理</title>
+        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>机器学习</tag>
          
          
            
