@@ -85,11 +85,11 @@
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习笔记（二）字符串 列表">
-<meta property="og:url" content="http://yoursite.com/2017/06/21/2017-6-21-three/index.html">
+<meta property="og:url" content="http://dnysu.cn/2017/06/21/2017-6-21-three/index.html">
 <meta property="og:site_name" content="Serenityd Blog">
 <meta property="og:description" content="1. 字符串：一串字符显示或者打印出来文字信息导出编码：# -- coding: utf-8 --单引号，双引号，三引号不可变（immutable)Format字符串age = 3name = “Tom”print(“{0} was {1} years old”.format(name, age))">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-14T14:41:15.257Z">
+<meta property="og:updated_time" content="2018-02-16T09:56:21.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习笔记（二）字符串 列表">
 <meta name="twitter:description" content="1. 字符串：一串字符显示或者打印出来文字信息导出编码：# -- coding: utf-8 --单引号，双引号，三引号不可变（immutable)Format字符串age = 3name = “Tom”print(“{0} was {1} years old”.format(name, age))">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/21/2017-6-21-three/"/>
+  <link rel="canonical" href="http://dnysu.cn/2017/06/21/2017-6-21-three/"/>
 
 
 
@@ -173,7 +173,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">凡心所向 素履可往</p>
       
   </div>
 
@@ -203,6 +203,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -219,6 +229,26 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言">
+          <a href="/bbs/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
+            
+            留言
           </a>
         </li>
       
@@ -289,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/21/2017-6-21-three/">
+    <link itemprop="mainEntityOfPage" href="http://dnysu.cn/2017/06/21/2017-6-21-three/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Serenityd">
@@ -334,8 +364,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-02-14T22:41:15+08:00">
-                2018-02-14
+              <time title="更新于" itemprop="dateModified" datetime="2018-02-16T17:56:21+08:00">
+                2018-02-16
               </time>
             
           </span>
@@ -400,30 +430,30 @@
 
       
         <h1 id="1-字符串："><a href="#1-字符串：" class="headerlink" title="1. 字符串："></a>1. 字符串：</h1><p>一串字符<br>显示或者打印出来文字信息<br>导出<br>编码：# -<em>- coding: utf-8 -</em>-<br>单引号，双引号，三引号<br>不可变（immutable)<br>Format字符串<br>age = 3<br>name = “Tom”<br>print(“{0} was {1} years old”.format(name, age))<br><a id="more"></a><br>联合：+: print(name + “ was “ + str(age) + “ years old”)<br>换行符: print(“What’s your name? \nTom”)<br>补充:字符串的函数操作</p>
-<h1 id="1-1-find"><a href="#1-1-find" class="headerlink" title="1.1 find"></a>1.1 find</h1><ul>
+<h2 id="1-1-find"><a href="#1-1-find" class="headerlink" title="1.1 find"></a>1.1 find</h2><ul>
 <li>str.find(sub[, start[, end]])</li>
 <li>Return the lowest index in the string where substring sub is found within the slice s[start:end]. Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found.</li>
 <li>sub[, start[, end]]表示后两个参数可选<br>[]内的参数可缺省三种形式</li>
 <li>find(sub=a)</li>
 <li>find(sub=a,start=b)</li>
-<li>find(sub=a,start=b,end=c)<h1 id="1-2-index"><a href="#1-2-index" class="headerlink" title="1.2 index"></a>1.2 index</h1></li>
+<li>find(sub=a,start=b,end=c)<h2 id="1-2-index"><a href="#1-2-index" class="headerlink" title="1.2 index"></a>1.2 index</h2></li>
 <li>str.index(sub[, start[, end]])</li>
 <li>Like find(), but raise ValueError when the substring is not found.</li>
-<li>以上两项若从右侧找rfind() rindex()<h1 id="1-3-count"><a href="#1-3-count" class="headerlink" title="1.3 count"></a>1.3 count</h1></li>
+<li>以上两项若从右侧找rfind() rindex()<h2 id="1-3-count"><a href="#1-3-count" class="headerlink" title="1.3 count"></a>1.3 count</h2></li>
 <li>str.count(sub[, start[, end]])</li>
 <li>Return the number of non-overlapping occurrences of substring sub in the range [start, end]. Optional arguments start and end are interpreted as in slice notation.</li>
-<li>默认全部替换,若有count,则替换不超过count次<h1 id="1-4-replace"><a href="#1-4-replace" class="headerlink" title="1.4 replace"></a>1.4 replace</h1></li>
+<li>默认全部替换,若有count,则替换不超过count次<h2 id="1-4-replace"><a href="#1-4-replace" class="headerlink" title="1.4 replace"></a>1.4 replace</h2></li>
 <li>str.replace(old, new[, count])</li>
-<li>Return a copy of the string with all occurrences of substring old replaced by new. If the optional argument count is given, only the first count occurrences are replaced.<h1 id="1-5-split"><a href="#1-5-split" class="headerlink" title="1.5 split"></a>1.5 split</h1></li>
+<li>Return a copy of the string with all occurrences of substring old replaced by new. If the optional argument count is given, only the first count occurrences are replaced.<h2 id="1-5-split"><a href="#1-5-split" class="headerlink" title="1.5 split"></a>1.5 split</h2></li>
 <li>str.split(sep=None, maxsplit=-1)</li>
 <li>Return a list of the words in the string, using sep as the delimiter string. If maxsplit is given, at most maxsplit splits are done (thus, the list will have at most maxsplit+1 elements). If maxsplit is not specified or -1, then there is no limit on the number of splits (all possible splits are made).  </li>
-<li>If sep is given, consecutive delimiters are not grouped together and are deemed to delimit empty strings (for example, ‘1,,2’.split(‘,’) returns [‘1’, ‘’, ‘2’]). The sep argument may consist of multiple characters (for example, ‘1&lt;&gt;2&lt;&gt;3’.split(‘&lt;&gt;’) returns [‘1’, ‘2’, ‘3’]). Splitting an empty string with a specified separator returns [‘’].<h1 id="1-6-partition"><a href="#1-6-partition" class="headerlink" title="1.6 partition"></a>1.6 partition</h1></li>
+<li>If sep is given, consecutive delimiters are not grouped together and are deemed to delimit empty strings (for example, ‘1,,2’.split(‘,’) returns [‘1’, ‘’, ‘2’]). The sep argument may consist of multiple characters (for example, ‘1&lt;&gt;2&lt;&gt;3’.split(‘&lt;&gt;’) returns [‘1’, ‘2’, ‘3’]). Splitting an empty string with a specified separator returns [‘’].<h2 id="1-6-partition"><a href="#1-6-partition" class="headerlink" title="1.6 partition"></a>1.6 partition</h2></li>
 <li>str.partition(sep)</li>
-<li>Split the string at the first occurrence of sep, and return a 3-tuple containing the part before the separator, the separator itself, and the part after the separator. If the separator is not found, return a 3-tuple containing the string itself, followed by two empty strings.<h1 id="1-7-capitalize"><a href="#1-7-capitalize" class="headerlink" title="1.7 capitalize"></a>1.7 capitalize</h1></li>
+<li>Split the string at the first occurrence of sep, and return a 3-tuple containing the part before the separator, the separator itself, and the part after the separator. If the separator is not found, return a 3-tuple containing the string itself, followed by two empty strings.<h2 id="1-7-capitalize"><a href="#1-7-capitalize" class="headerlink" title="1.7 capitalize"></a>1.7 capitalize</h2></li>
 <li>str.capitalize()</li>
-<li>Return a copy of the string with its first character capitalized and the rest lowercased.<h1 id="1-8-title"><a href="#1-8-title" class="headerlink" title="1.8  title"></a>1.8  title</h1></li>
+<li>Return a copy of the string with its first character capitalized and the rest lowercased.<h2 id="1-8-title"><a href="#1-8-title" class="headerlink" title="1.8  title"></a>1.8  title</h2></li>
 <li>str.title()</li>
-<li>Return a titlecased version of the string where words start with an uppercase character and the remaining characters are lowercase.<h1 id="1-9-其他"><a href="#1-9-其他" class="headerlink" title="1.9 其他"></a>1.9 其他</h1></li>
+<li>Return a titlecased version of the string where words start with an uppercase character and the remaining characters are lowercase.<h2 id="1-9-其他"><a href="#1-9-其他" class="headerlink" title="1.9 其他"></a>1.9 其他</h2></li>
 <li>startswith</li>
 <li>endswith</li>
 <li>lower</li>
@@ -460,7 +490,26 @@
     
 
     
+    
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Serenityd
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://dnysu.cn/2017/06/21/2017-6-21-three/" title="Python学习笔记（二）字符串 列表">http://dnysu.cn/2017/06/21/2017-6-21-three/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 
+      </div>
+    
     
 
     <footer class="post-footer">
@@ -510,33 +559,35 @@
 
 
     <div class="post-spread">
-      
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-<span class="jiathis_txt">分享到：</span>
-<a class="jiathis_button_fav">收藏夹</a>
-<a class="jiathis_button_copy">复制网址</a>
-<a class="jiathis_button_email">邮件</a>
-<a class="jiathis_button_weixin">微信</a>
-<a class="jiathis_button_qzone">QQ空间</a>
-<a class="jiathis_button_tqq">腾讯微博</a>
-<a class="jiathis_button_douban">豆瓣</a>
-<a class="jiathis_button_share">一键分享</a>
-
-<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-<a class="jiathis_counter_style"></a>
+      <!--MOB SHARE BEGIN-->
+<div class="-mob-share-ui-button -mob-share-open">分享</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-renren"><p>人人网</p></li>
+        <li class="-mob-share-kaixin"><p>开心网</p></li>
+        <li class="-mob-share-douban"><p>豆瓣</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-pocket"><p>Pocket</p></li>
+        <li class="-mob-share-google"><p>Google+</p></li>
+        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+        <li class="-mob-share-linkedin"><p>Linkedin</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
 </div>
-<script type="text/javascript" >
-var jiathis_config={
-  data_track_clickback:true,
-  summary:"",
-  shortUrl:false,
-  hideMore:false
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-      
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=2440ddf4f082a"></script>
+<!--MOB SHARE END-->
+
     </div>
   </div>
 
@@ -594,7 +645,7 @@ var jiathis_config={
                 alt="Serenityd" />
             
               <p class="site-author-name" itemprop="name">Serenityd</p>
-              <p class="site-description motion-element" itemprop="description">诗万卷，酒千觞，几曾着眼看侯王</p>
+              <p class="site-description motion-element" itemprop="description">人生如逆旅 我亦是行人</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -651,6 +702,24 @@ var jiathis_config={
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://docs.python.org/3.6/library/" title="Python帮助文档" target="_blank">Python帮助文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://markdown.xiaoshujiang.com/" title="小书匠markdown" target="_blank">小书匠markdown</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -667,7 +736,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字符串："><span class="nav-text">1. 字符串：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1-find"><span class="nav-text">1.1 find</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2-index"><span class="nav-text">1.2 index</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3-count"><span class="nav-text">1.3 count</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-4-replace"><span class="nav-text">1.4 replace</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-5-split"><span class="nav-text">1.5 split</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-6-partition"><span class="nav-text">1.6 partition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-7-capitalize"><span class="nav-text">1.7 capitalize</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-8-title"><span class="nav-text">1.8  title</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-9-其他"><span class="nav-text">1.9 其他</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-字面常量（literal-constant"><span class="nav-text">2. 字面常量（literal constant):</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-变量："><span class="nav-text">3. 变量：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-注释："><span class="nav-text">4. 注释：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-缩进-Indentation"><span class="nav-text">5. 缩进(Indentation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-列表相关"><span class="nav-text">6. 列表相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-切片"><span class="nav-text">7. 切片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-字符串："><span class="nav-text">1. 字符串：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-find"><span class="nav-text">1.1 find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-index"><span class="nav-text">1.2 index</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-count"><span class="nav-text">1.3 count</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-replace"><span class="nav-text">1.4 replace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-split"><span class="nav-text">1.5 split</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-partition"><span class="nav-text">1.6 partition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-capitalize"><span class="nav-text">1.7 capitalize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-title"><span class="nav-text">1.8  title</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-其他"><span class="nav-text">1.9 其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-字面常量（literal-constant"><span class="nav-text">2. 字面常量（literal constant):</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-变量："><span class="nav-text">3. 变量：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-注释："><span class="nav-text">4. 注释：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-缩进-Indentation"><span class="nav-text">5. 缩进(Indentation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-列表相关"><span class="nav-text">6. 列表相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-切片"><span class="nav-text">7. 切片</span></a></li></ol></div>
             
 
           </div>
@@ -684,7 +753,6 @@ var jiathis_config={
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>

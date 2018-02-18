@@ -1,10 +1,10 @@
 title: Serenityd Blog
-subtitle:
-description: 诗万卷，酒千觞，几曾着眼看侯王
+subtitle: 凡心所向 素履可往
+description: 人生如逆旅 我亦是行人
 author: Serenityd
 language: zh-Hans
 timezone:
-
+url: http://dnysu.cn/
 theme: next
 menu_icons:
   enable: true

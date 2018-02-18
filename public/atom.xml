@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Serenityd Blog</title>
   
-  
+  <subtitle>凡心所向 素履可往</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://dnysu.cn/"/>
   <updated>2018-02-10T13:35:12.829Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://dnysu.cn/</id>
   
   <author>
     <name>Serenityd</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Markdown语法</title>
-    <link href="http://yoursite.com/2018/02/04/2018-2-4-two/"/>
-    <id>http://yoursite.com/2018/02/04/2018-2-4-two/</id>
+    <link href="http://dnysu.cn/2018/02/04/2018-2-4-two/"/>
+    <id>http://dnysu.cn/2018/02/04/2018-2-4-two/</id>
     <published>2018-02-04T14:38:57.000Z</published>
     <updated>2018-02-10T13:35:12.829Z</updated>
     
@@ -36,18 +36,18 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://dnysu.cn/tags/hexo/"/>
     
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://dnysu.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>vim命令图示</title>
-    <link href="http://yoursite.com/2018/02/04/2018-2-4-one/"/>
-    <id>http://yoursite.com/2018/02/04/2018-2-4-one/</id>
+    <link href="http://dnysu.cn/2018/02/04/2018-2-4-one/"/>
+    <id>http://dnysu.cn/2018/02/04/2018-2-4-one/</id>
     <published>2018-02-04T14:38:45.000Z</published>
-    <updated>2018-02-04T15:05:24.314Z</updated>
+    <updated>2018-02-17T06:02:33.699Z</updated>
     
     <content type="html"><![CDATA[<p>vi命令图示 备用<br><a id="more"></a><br><img src="/2018/02/04/2018-2-4-one/1.png" alt=""><br><img src="/2018/02/04/2018-2-4-one/2.png" alt=""> </p>]]></content>
     
@@ -58,16 +58,16 @@
     </summary>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="linux" scheme="http://dnysu.cn/tags/linux/"/>
     
-      <category term="vim" scheme="http://yoursite.com/tags/vim/"/>
+      <category term="vim" scheme="http://dnysu.cn/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>linux下搭建python3环境</title>
-    <link href="http://yoursite.com/2018/02/03/2018-2-3-two/"/>
-    <id>http://yoursite.com/2018/02/03/2018-2-3-two/</id>
+    <link href="http://dnysu.cn/2018/02/03/2018-2-3-two/"/>
+    <id>http://dnysu.cn/2018/02/03/2018-2-3-two/</id>
     <published>2018-02-03T08:31:27.000Z</published>
     <updated>2018-02-04T14:58:16.800Z</updated>
     
@@ -83,14 +83,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="linux" scheme="http://dnysu.cn/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客在VSCode下编写及git配置问题</title>
-    <link href="http://yoursite.com/2018/02/03/2018-2-3-one/"/>
-    <id>http://yoursite.com/2018/02/03/2018-2-3-one/</id>
+    <link href="http://dnysu.cn/2018/02/03/2018-2-3-one/"/>
+    <id>http://dnysu.cn/2018/02/03/2018-2-3-one/</id>
     <published>2018-02-03T05:51:28.000Z</published>
     <updated>2018-02-03T08:31:41.575Z</updated>
     
@@ -103,14 +103,14 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://dnysu.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>git学习笔记</title>
-    <link href="http://yoursite.com/2017/11/10/2017-11-10-one/"/>
-    <id>http://yoursite.com/2017/11/10/2017-11-10-one/</id>
+    <link href="http://dnysu.cn/2017/11/10/2017-11-10-one/"/>
+    <id>http://dnysu.cn/2017/11/10/2017-11-10-one/</id>
     <published>2017-11-10T09:02:57.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -123,14 +123,14 @@
     </summary>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+      <category term="git" scheme="http://dnysu.cn/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
-    <link href="http://yoursite.com/2017/09/21/2017-9-21-two/"/>
-    <id>http://yoursite.com/2017/09/21/2017-9-21-two/</id>
+    <link href="http://dnysu.cn/2017/09/21/2017-9-21-two/"/>
+    <id>http://dnysu.cn/2017/09/21/2017-9-21-two/</id>
     <published>2017-09-21T07:27:19.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -143,14 +143,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（二十二）hierarchical clustering 层次聚类</title>
-    <link href="http://yoursite.com/2017/09/21/2017-9-21-one/"/>
-    <id>http://yoursite.com/2017/09/21/2017-9-21-one/</id>
+    <link href="http://dnysu.cn/2017/09/21/2017-9-21-one/"/>
+    <id>http://dnysu.cn/2017/09/21/2017-9-21-one/</id>
     <published>2017-09-21T07:12:50.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -163,14 +163,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用</title>
-    <link href="http://yoursite.com/2017/09/18/2017-9-18-one/"/>
-    <id>http://yoursite.com/2017/09/18/2017-9-18-one/</id>
+    <link href="http://dnysu.cn/2017/09/18/2017-9-18-one/"/>
+    <id>http://dnysu.cn/2017/09/18/2017-9-18-one/</id>
     <published>2017-09-18T01:51:50.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -183,14 +183,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
-    <link href="http://yoursite.com/2017/09/15/2017-9-15-one/"/>
-    <id>http://yoursite.com/2017/09/15/2017-9-15-one/</id>
+    <link href="http://dnysu.cn/2017/09/15/2017-9-15-one/"/>
+    <id>http://dnysu.cn/2017/09/15/2017-9-15-one/</id>
     <published>2017-09-15T02:47:16.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -205,14 +205,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
-    <link href="http://yoursite.com/2017/09/14/2017-9-14-two/"/>
-    <id>http://yoursite.com/2017/09/14/2017-9-14-two/</id>
+    <link href="http://dnysu.cn/2017/09/14/2017-9-14-two/"/>
+    <id>http://dnysu.cn/2017/09/14/2017-9-14-two/</id>
     <published>2017-09-14T07:31:24.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -225,14 +225,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十八）回归中的相关度和R平方值</title>
-    <link href="http://yoursite.com/2017/09/14/2017-9-14-one/"/>
-    <id>http://yoursite.com/2017/09/14/2017-9-14-one/</id>
+    <link href="http://dnysu.cn/2017/09/14/2017-9-14-one/"/>
+    <id>http://dnysu.cn/2017/09/14/2017-9-14-one/</id>
     <published>2017-09-14T01:42:49.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -246,14 +246,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十七）非线性回归应用</title>
-    <link href="http://yoursite.com/2017/09/13/2017-9-13-two/"/>
-    <id>http://yoursite.com/2017/09/13/2017-9-13-two/</id>
+    <link href="http://dnysu.cn/2017/09/13/2017-9-13-two/"/>
+    <id>http://dnysu.cn/2017/09/13/2017-9-13-two/</id>
     <published>2017-09-13T08:27:31.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -266,14 +266,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Latex符号大全</title>
-    <link href="http://yoursite.com/2017/09/13/2017-9-13-one/"/>
-    <id>http://yoursite.com/2017/09/13/2017-9-13-one/</id>
+    <link href="http://dnysu.cn/2017/09/13/2017-9-13-one/"/>
+    <id>http://dnysu.cn/2017/09/13/2017-9-13-one/</id>
     <published>2017-09-13T01:42:49.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -289,14 +289,14 @@
     </summary>
     
     
-      <category term="LATEX" scheme="http://yoursite.com/tags/LATEX/"/>
+      <category term="LATEX" scheme="http://dnysu.cn/tags/LATEX/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十六）非线性回归原理</title>
-    <link href="http://yoursite.com/2017/09/12/2017-9-12-one/"/>
-    <id>http://yoursite.com/2017/09/12/2017-9-12-one/</id>
+    <link href="http://dnysu.cn/2017/09/12/2017-9-12-one/"/>
+    <id>http://dnysu.cn/2017/09/12/2017-9-12-one/</id>
     <published>2017-09-12T07:03:47.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -310,14 +310,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>多电脑间github同步hexo博文</title>
-    <link href="http://yoursite.com/2017/08/31/2017-8-31-one/"/>
-    <id>http://yoursite.com/2017/08/31/2017-8-31-one/</id>
+    <link href="http://dnysu.cn/2017/08/31/2017-8-31-one/"/>
+    <id>http://dnysu.cn/2017/08/31/2017-8-31-one/</id>
     <published>2017-08-31T03:26:00.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -333,14 +333,14 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://dnysu.cn/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十五）多元回归分析应用</title>
-    <link href="http://yoursite.com/2017/08/12/2017-8-12-two/"/>
-    <id>http://yoursite.com/2017/08/12/2017-8-12-two/</id>
+    <link href="http://dnysu.cn/2017/08/12/2017-8-12-two/"/>
+    <id>http://dnysu.cn/2017/08/12/2017-8-12-two/</id>
     <published>2017-08-12T07:57:38.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -354,14 +354,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十四）多元回归分析</title>
-    <link href="http://yoursite.com/2017/08/12/2017-8-12-one/"/>
-    <id>http://yoursite.com/2017/08/12/2017-8-12-one/</id>
+    <link href="http://dnysu.cn/2017/08/12/2017-8-12-one/"/>
+    <id>http://dnysu.cn/2017/08/12/2017-8-12-one/</id>
     <published>2017-08-12T07:36:18.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -378,14 +378,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十三）简单线性回归应用</title>
-    <link href="http://yoursite.com/2017/07/08/2017-7-8-two/"/>
-    <id>http://yoursite.com/2017/07/08/2017-7-8-two/</id>
+    <link href="http://dnysu.cn/2017/07/08/2017-7-8-two/"/>
+    <id>http://dnysu.cn/2017/07/08/2017-7-8-two/</id>
     <published>2017-07-08T08:35:16.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -399,14 +399,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十二）简单线性回归原理</title>
-    <link href="http://yoursite.com/2017/07/08/2017-7-8-one/"/>
-    <id>http://yoursite.com/2017/07/08/2017-7-8-one/</id>
+    <link href="http://dnysu.cn/2017/07/08/2017-7-8-one/"/>
+    <id>http://dnysu.cn/2017/07/08/2017-7-8-one/</id>
     <published>2017-07-08T05:36:21.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -420,14 +420,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习笔记（十一）神经网络应用</title>
-    <link href="http://yoursite.com/2017/07/03/2017-7-3-three/"/>
-    <id>http://yoursite.com/2017/07/03/2017-7-3-three/</id>
+    <link href="http://dnysu.cn/2017/07/03/2017-7-3-three/"/>
+    <id>http://dnysu.cn/2017/07/03/2017-7-3-three/</id>
     <published>2017-07-03T13:08:39.000Z</published>
     <updated>2018-01-13T08:07:57.000Z</updated>
     
@@ -442,7 +442,7 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
