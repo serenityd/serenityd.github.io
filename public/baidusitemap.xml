@@ -165,14 +165,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/27/2017-6-27-four/</loc>
+    <loc>http://dnysu.cn/2017/06/27/2017-6-27-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>Python学习笔记（七）END</title>
-        <pubTime>2017-06-27T08:33:38.000Z</pubTime>
+        <title>机器学习笔记（二）决策树算法原理</title>
+        <pubTime>2017-06-27T01:59:43.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -216,23 +216,6 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/28/2017-6-28-two/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（五）最临近分类算法应用（KNN）</title>
-        <pubTime>2017-06-28T13:31:19.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://dnysu.cn/2017/06/28/2017-6-28-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
@@ -250,12 +233,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/30/2017-6-30-one/</loc>
+    <loc>http://dnysu.cn/2017/06/28/2017-6-28-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（六）支持向量机（SVM）原理上</title>
-        <pubTime>2017-06-30T02:39:50.000Z</pubTime>
+        <title>机器学习笔记（五）最临近分类算法应用（KNN）</title>
+        <pubTime>2017-06-28T13:31:19.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -267,12 +250,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/30/2017-6-30-two/</loc>
+    <loc>http://dnysu.cn/2017/06/30/2017-6-30-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（七）支持向量机（SVM）应用上</title>
-        <pubTime>2017-06-30T13:20:56.000Z</pubTime>
+        <title>机器学习笔记（六）支持向量机（SVM）原理上</title>
+        <pubTime>2017-06-30T02:39:50.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -318,6 +301,23 @@
 
     
   <url>
+    <loc>http://dnysu.cn/2017/06/30/2017-6-30-two/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习笔记（七）支持向量机（SVM）应用上</title>
+        <pubTime>2017-06-30T13:20:56.000Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://dnysu.cn/2017/07/03/2017-7-3-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
@@ -352,14 +352,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
+    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>git学习笔记</title>
-        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
+        <title>LATEX学习笔记</title>
+        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>LATEX</tag>
          
          
            
@@ -437,14 +437,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/12/2017-9-12-one/</loc>
+    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十六）非线性回归原理</title>
-        <pubTime>2017-09-12T07:03:47.000Z</pubTime>
+        <title>多电脑间github同步hexo博文</title>
+        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>hexo</tag>
          
          
            
@@ -454,14 +454,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
+    <loc>http://dnysu.cn/2017/09/12/2017-9-12-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>多电脑间github同步hexo博文</title>
-        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
+        <title>机器学习笔记（十六）非线性回归原理</title>
+        <pubTime>2017-09-12T07:03:47.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -505,23 +505,6 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/14/2017-9-14-two/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
-        <pubTime>2017-09-14T07:31:24.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://dnysu.cn/2017/09/14/2017-9-14-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
@@ -539,12 +522,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/15/2017-9-15-one/</loc>
+    <loc>http://dnysu.cn/2017/09/14/2017-9-14-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
-        <pubTime>2017-09-15T02:47:16.000Z</pubTime>
+        <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
+        <pubTime>2017-09-14T07:31:24.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -556,12 +539,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/18/2017-9-18-one/</loc>
+    <loc>http://dnysu.cn/2017/09/15/2017-9-15-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用</title>
-        <pubTime>2017-09-18T01:51:50.000Z</pubTime>
+        <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
+        <pubTime>2017-09-15T02:47:16.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -607,14 +590,31 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
+    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>LATEX学习笔记</title>
-        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
+        <title>git学习笔记</title>
+        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
         
-        <tag>LATEX</tag>
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/09/18/2017-9-18-one/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用</title>
+        <pubTime>2017-09-18T01:51:50.000Z</pubTime>
+        
+        <tag>机器学习</tag>
          
          
            
@@ -632,6 +632,57 @@
         <pubTime>2017-06-23T01:11:37.000Z</pubTime>
         
         <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/06/15/2017-6-15-two/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo+网易云跟帖+自定义打赏设置</title>
+        <pubTime>2017-06-15T04:40:45.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习笔记（一）</title>
+        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/06/14/flower/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>写在前面的话</title>
+        <pubTime>2017-06-14T01:31:24.000Z</pubTime>
+        
+        <tag>多肉植物</tag>
          
          
            
@@ -677,65 +728,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/14/flower/</loc>
+    <loc>http://dnysu.cn/2017/06/27/2017-6-27-four/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>写在前面的话</title>
-        <pubTime>2017-06-14T01:31:24.000Z</pubTime>
+        <title>Python学习笔记（七）END</title>
+        <pubTime>2017-06-27T08:33:38.000Z</pubTime>
         
-        <tag>多肉植物</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017/06/15/2017-6-15-two/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo+网易云跟帖+自定义打赏设置</title>
-        <pubTime>2017-06-15T04:40:45.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（一）</title>
-        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017/06/27/2017-6-27-one/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二）决策树算法原理</title>
-        <pubTime>2017-06-27T01:59:43.000Z</pubTime>
-        
-        <tag>机器学习</tag>
+        <tag>python</tag>
          
          
            
