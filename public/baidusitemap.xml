@@ -199,12 +199,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/27/2017-6-27-two/</loc>
+    <loc>http://dnysu.cn/2017/06/28/2017-6-28-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（三）决策树算法代码与应用</title>
-        <pubTime>2017-06-27T07:22:31.000Z</pubTime>
+        <title>机器学习笔记（四）最临近分类算法原理（KNN）</title>
+        <pubTime>2017-06-28T13:31:09.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -216,12 +216,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/28/2017-6-28-one/</loc>
+    <loc>http://dnysu.cn/2017/06/27/2017-6-27-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（四）最临近分类算法原理（KNN）</title>
-        <pubTime>2017-06-28T13:31:09.000Z</pubTime>
+        <title>机器学习笔记（三）决策树算法代码与应用</title>
+        <pubTime>2017-06-27T07:22:31.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -352,33 +352,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/14/2017-6-14-one/</loc>
+    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>Hexo+github+个人域名搭建个人博客</title>
-        <pubTime>2017-06-14T08:40:58.000Z</pubTime>
+        <title>LATEX学习笔记</title>
+        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017/07/08/2017-7-8-one/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十二）简单线性回归原理</title>
-        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
-        
-        <tag>机器学习</tag>
+        <tag>LATEX</tag>
          
          
            
@@ -394,6 +375,23 @@
         <display>
         <title>机器学习笔记（十三）简单线性回归应用</title>
         <pubTime>2017-07-08T08:35:16.000Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017/07/08/2017-7-8-one/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习笔记（十二）简单线性回归原理</title>
+        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -422,14 +420,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/08/12/2017-8-12-two/</loc>
+    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十五）多元回归分析应用</title>
-        <pubTime>2017-08-12T07:57:38.000Z</pubTime>
+        <title>多电脑间github同步hexo博文</title>
+        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>hexo</tag>
          
          
            
@@ -439,14 +437,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/08/31/2017-8-31-one/</loc>
+    <loc>http://dnysu.cn/2017/08/12/2017-8-12-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>多电脑间github同步hexo博文</title>
-        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
+        <title>机器学习笔记（十五）多元回归分析应用</title>
+        <pubTime>2017-08-12T07:57:38.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -490,12 +488,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/13/2017-9-13-two/</loc>
+    <loc>http://dnysu.cn/2017/09/14/2017-9-14-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十七）非线性回归应用</title>
-        <pubTime>2017-09-13T08:27:31.000Z</pubTime>
+        <title>机器学习笔记（十八）回归中的相关度和R平方值</title>
+        <pubTime>2017-09-14T01:42:49.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -507,12 +505,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/09/14/2017-9-14-one/</loc>
+    <loc>http://dnysu.cn/2017/09/13/2017-9-13-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十八）回归中的相关度和R平方值</title>
-        <pubTime>2017-09-14T01:42:49.000Z</pubTime>
+        <title>机器学习笔记（十七）非线性回归应用</title>
+        <pubTime>2017-09-13T08:27:31.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -643,14 +641,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
+    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>git学习笔记</title>
-        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
+        <title>机器学习笔记（一）</title>
+        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -660,14 +658,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/23/2017-6-23-two/</loc>
+    <loc>http://dnysu.cn/2017/11/10/2017-11-10-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（一）</title>
-        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
+        <title>git学习笔记</title>
+        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>git</tag>
          
          
            
@@ -694,14 +692,16 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017/06/15/2017-6-15-one/</loc>
+    <loc>http://dnysu.cn/2017/06/14/2017-6-14-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>LATEX学习笔记</title>
-        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
+        <title>Hexo+github+个人域名搭建个人博客</title>
+        <pubTime>2017-06-14T08:40:58.000Z</pubTime>
         
-        <tag>LATEX</tag>
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
          
          
            
