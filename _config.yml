@@ -11,7 +11,7 @@ menu_icons:
   home: /
   archives: /archives
   tags: /tags
-
+permalink: :title/
 sidebar:
   position: left
   display: post
