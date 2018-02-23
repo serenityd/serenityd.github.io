@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dnysu.cn/"/>
-  <updated>2018-02-10T13:35:12.829Z</updated>
+  <updated>2018-02-23T15:21:00.337Z</updated>
   <id>http://dnysu.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>codingpage</title>
+    <link href="http://dnysu.cn/codingpage-1/"/>
+    <id>http://dnysu.cn/codingpage-1/</id>
+    <published>2018-02-23T15:21:00.000Z</published>
+    <updated>2018-02-23T15:21:00.337Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>codingpage</title>
+    <link href="http://dnysu.cn/codingpage/"/>
+    <id>http://dnysu.cn/codingpage/</id>
+    <published>2018-02-23T15:20:41.000Z</published>
+    <updated>2018-02-23T15:20:41.165Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Markdown语法</title>
@@ -58,9 +86,9 @@
     </summary>
     
     
-      <category term="vim" scheme="http://dnysu.cn/tags/vim/"/>
-    
       <category term="linux" scheme="http://dnysu.cn/tags/linux/"/>
+    
+      <category term="vim" scheme="http://dnysu.cn/tags/vim/"/>
     
   </entry>
   
@@ -395,49 +423,6 @@
     
       &lt;ol&gt;
 &lt;li&gt;简单线性回归模型举例：&lt;br&gt;汽车卖家做电视广告数量与卖出的汽车数量：&lt;br&gt;&lt;img src=&quot;/2017-7-8-two/1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;1.1 如何练处适合简单线性回归模型的最佳回归线？&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记（十二）简单线性回归原理</title>
-    <link href="http://dnysu.cn/2017-7-8-one/"/>
-    <id>http://dnysu.cn/2017-7-8-one/</id>
-    <published>2017-07-08T05:36:21.000Z</published>
-    <updated>2018-01-13T08:07:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>为什么需要统计量？<br>统计量：描述数据特征<br>1.1集中趋势衡量<br>1.1.1均值（平均数，平均值）（mean）<br>$\overline x = \sum_{i=1}^{n}x_i$<br>{6, 2, 9, 1, 2}<br>(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 4<br>1.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量<br>1.1.2.1给数据排序：1， 2， 2， 6， 9<br>1.1.2.2找出位置处于中间的变量：2<br>当n为基数的时候：直接取位置处于中间的变量<br>当n为偶数的时候，取中间两个量的平均值<br>1.1.2众数 （mode）：数据中出现次数最多的数<a id="more"></a>1.2<br>1.2.1离散程度衡量<br>1.2.1.1方差（variance)<br>$s^2=\frac{\sum_{i=1}^n(x_i-\overline x)^2}{n-1}$<br>{6, 2, 9, 1, 2}<br>(1) (6 - 4)^2 + (2 - 4) ^2 + (9 - 4)^2 + (1 - 4)^2 + (2 - 4)^2<br>= 4 + 4 + 25 + 9 + 4<br>= 46<br>(2) n - 1 = 5 - 1 = 4<br>(3) 46 / 4 = 11.5<br>1.2.1.2标准差 (standard deviation)<br>$s=\sqrt{s^2}$<br>s = sqrt(11.5) = 3.39  </li><li>简单线性回归(Simple Linear Regression)<br>2.1很多做决定过过程通常是根据两个或者多个变量之间的关系<br>2.2回归分析(regression analysis)用来建立方程模拟两个或者多个变量之间如何关联<br>2.3被预测的变量叫做：因变量(dependent variable), y, 输出(output)<br>2.4被用来进行预测的变量叫做： 自变量(independent variable), x, 输入(input)</li><li>简单线性回归介绍<br>3.1简单线性回归包含一个自变量(x)和一个因变量(y)<br>3.2以上两个变量的关系用一条直线来模拟<br>3.3如果包含两个以上的自变量，则称作多元回归分析(multiple regression)</li><li>简单线性回归模型<br>4.1被用来描述因变量(y)和自变量(X)以及偏差(error)之间关系的方程叫做回归模型<br>4.2简单线性回归的模型是:<br>$y=\beta_0+\beta_1x+\varepsilon$     </li><li>简单线性回归方程<br>E(y) = β0+β1x<br>这个方程对应的图像是一条直线，称作回归线<br>其中，β0是回归线的截距<br>β1是回归线的斜率<br>E(y)是在一个给定x值下y的期望值（均值）</li><li>正向线性关系：<br><img src="/2017-7-8-one/1.png" alt="">   </li><li>负向线性关系：<br><img src="/2017-7-8-one/2.png" alt=""></li><li>无关系<br><img src="/2017-7-8-one/3.png" alt=""></li><li>估计的简单线性回归方程<br>ŷ=b0+b1x<br>这个方程叫做估计线性方程(estimated regression line)<br>其中，b0是估计线性方程的纵截距<br>b1是估计线性方程的斜率<br>ŷ是在自变量x等于一个给定值的时候，y的估计值</li><li>线性回归分析流程：<br><img src="/2017-7-8-one/4.png" alt="">    </li><li>关于偏差ε的假定<br>11.1是一个随机的变量，均值为0<br>11.2ε的方差(variance)对于所有的自变量x是一样的<br>11.3ε的值是独立的<br>11.4ε满足正态分布</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;为什么需要统计量？&lt;br&gt;统计量：描述数据特征&lt;br&gt;1.1集中趋势衡量&lt;br&gt;1.1.1均值（平均数，平均值）（mean）&lt;br&gt;$\overline x = \sum_{i=1}^{n}x_i$&lt;br&gt;{6, 2, 9, 1, 2}&lt;br&gt;(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 4&lt;br&gt;1.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量&lt;br&gt;1.1.2.1给数据排序：1， 2， 2， 6， 9&lt;br&gt;1.1.2.2找出位置处于中间的变量：2&lt;br&gt;当n为基数的时候：直接取位置处于中间的变量&lt;br&gt;当n为偶数的时候，取中间两个量的平均值&lt;br&gt;1.1.2众数 （mode）：数据中出现次数最多的数&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记（十一）神经网络应用</title>
-    <link href="http://dnysu.cn/2017-7-3-three/"/>
-    <id>http://dnysu.cn/2017-7-3-three/</id>
-    <published>2017-07-03T13:08:39.000Z</published>
-    <updated>2018-01-13T08:07:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>关于非线性转化方程(non-linear transformation function)<br>sigmoid函数(S 曲线)用来作为activation function:<br>1.1双曲函数(tanh)<br>1.2逻辑函数(logistic function)</li><li><p>用类实现一个简单的神经网络算法</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def tanh(x):  </span><br><span class="line">    <span class="built_in">return</span> np.tanh(x)</span><br><span class="line">def tanh_deriv(x):  </span><br><span class="line">    <span class="built_in">return</span> 1.0 - np.tanh(x)*np.tanh(x)</span><br><span class="line">def logistic(x):  </span><br><span class="line">    <span class="built_in">return</span> 1/(1 + np.exp(-x))</span><br><span class="line">def logistic_derivative(x):  </span><br><span class="line">    <span class="built_in">return</span> logistic(x)*(1-logistic(x))</span><br><span class="line">class NeuralNetwork:   </span><br><span class="line">    def __init__(self, layers, activation=<span class="string">'tanh'</span>):  </span><br><span class="line">        <span class="string">""</span><span class="string">"  </span></span><br><span class="line"><span class="string">        :param layers: A list containing the number of units in each layer.</span></span><br><span class="line"><span class="string">        Should be at least two values  </span></span><br><span class="line"><span class="string">        :param activation: The activation function to be used. Can be</span></span><br><span class="line"><span class="string">        "</span>logistic<span class="string">" or "</span>tanh<span class="string">"  </span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span>  </span><br><span class="line">        <span class="keyword">if</span> activation == <span class="string">'logistic'</span>:  </span><br><span class="line">            self.activation = logistic  </span><br><span class="line">            self.activation_deriv = logistic_derivative  </span><br><span class="line">        <span class="keyword">elif</span> activation == <span class="string">'tanh'</span>:  </span><br><span class="line">            self.activation = tanh  </span><br><span class="line">            self.activation_deriv = tanh_deriv</span><br><span class="line">    </span><br><span class="line">        self.weights = []  </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(1, len(layers) - 1):  </span><br><span class="line">            self.weights.append((2*np.random.random((layers[i - 1] + 1, layers[i] + 1))-1)*0.25)  </span><br><span class="line">            self.weights.append((2*np.random.random((layers[i] + 1, layers[i + 1]))-1)*0.25)</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">    def fit(self, X, y, learning_rate=0.2, epochs=10000):         </span><br><span class="line">        X = np.atleast_2d(X)         </span><br><span class="line">        temp = np.ones([X.shape[0], X.shape[1]+1])         </span><br><span class="line">        temp[:, 0:-1] = X  <span class="comment"># adding the bias unit to the input layer         </span></span><br><span class="line">        X = temp         </span><br><span class="line">        y = np.array(y)</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(epochs):  </span><br><span class="line">            i = np.random.randint(X.shape[0])  </span><br><span class="line">            a = [X[i]]</span><br><span class="line">    </span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> range(len(self.weights)):  <span class="comment">#going forward network, for each layer</span></span><br><span class="line">                a.append(self.activation(np.dot(a[l], self.weights[l])))  <span class="comment">#Computer the node value for each layer (O_i) using activation function</span></span><br><span class="line">            error = y[i] - a[-1]  <span class="comment">#Computer the error at the top layer</span></span><br><span class="line">            deltas = [error * self.activation_deriv(a[-1])] <span class="comment">#For output layer, Err calculation (delta is updated error)</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">#Staring backprobagation</span></span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> range(len(a) - 2, 0, -1): <span class="comment"># we need to begin at the second to last layer </span></span><br><span class="line">                <span class="comment">#Compute the updated error (i,e, deltas) for each node going from top layer to input layer </span></span><br><span class="line">                deltas.append(deltas[-1].dot(self.weights[l].T)*self.activation_deriv(a[l]))  </span><br><span class="line">            deltas.reverse()  </span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self.weights)):  </span><br><span class="line">                layer = np.atleast_2d(a[i])  </span><br><span class="line">                delta = np.atleast_2d(deltas[i])  </span><br><span class="line">                self.weights[i] += learning_rate * layer.T.dot(delta)</span><br><span class="line">                </span><br><span class="line">                </span><br><span class="line">    def predict(self, x):         </span><br><span class="line">        x = np.array(x)         </span><br><span class="line">        temp = np.ones(x.shape[0]+1)         </span><br><span class="line">        temp[0:-1] = x         </span><br><span class="line">        a = temp         </span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> range(0, len(self.weights)):             </span><br><span class="line">            a = self.activation(np.dot(a, self.weights[l]))         </span><br><span class="line">        <span class="built_in">return</span> a</span><br></pre></td></tr></table></figure></li><li><p>简单非线性关系数据集测试(XOR):<br>X:                  Y<br>0 0                 0<br>0 1                 1<br>1 0                 1<br>1 1                 0</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from NeuralNetwork import NeuralNetwork</span><br><span class="line">import numpy as np</span><br><span class="line">nn = NeuralNetwork([2,2,1], <span class="string">'tanh'</span>)     </span><br><span class="line">X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])     </span><br><span class="line">y = np.array([0, 1, 1, 0])     </span><br><span class="line">nn.fit(X, y)     </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [[0, 0], [0, 1], [1, 0], [1,1]]:    </span><br><span class="line">    <span class="built_in">print</span>(i, nn.predict(i))</span><br></pre></td></tr></table></figure></li><li><p>手写数字识别：<br>每个图片8x8<br>识别数字：0,1,2,3,4,5,6,7,8,9</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np </span><br><span class="line">from sklearn.datasets import load_digits </span><br><span class="line">from sklearn.metrics import confusion_matrix, classification_report </span><br><span class="line">from sklearn.preprocessing import LabelBinarizer </span><br><span class="line">from NeuralNetwork import NeuralNetwork</span><br><span class="line">from sklearn.cross_validation import train_test_split</span><br><span class="line">digits = load_digits()  </span><br><span class="line">X = digits.data  </span><br><span class="line">y = digits.target  </span><br><span class="line">X -= X.min() <span class="comment"># normalize the values to bring them into the range 0-1  </span></span><br><span class="line">X /= X.max()</span><br><span class="line">nn = NeuralNetwork([64,100,10],<span class="string">'logistic'</span>)  </span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y)  </span><br><span class="line">labels_train = LabelBinarizer().fit_transform(y_train)  </span><br><span class="line">labels_test = LabelBinarizer().fit_transform(y_test)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"start fitting"</span></span><br><span class="line">nn.fit(X_train,labels_train,epochs=3000)  </span><br><span class="line">predictions = []  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(X_test.shape[0]):  </span><br><span class="line">    o = nn.predict(X_test[i] )  </span><br><span class="line">    predictions.append(np.argmax(o))  </span><br><span class="line"><span class="built_in">print</span> confusion_matrix(y_test,predictions)  </span><br><span class="line"><span class="built_in">print</span> classification_report(y_test,predictions)</span><br></pre></td></tr></table></figure></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;关于非线性转化方程(non-linear transformation function)&lt;br&gt;sigmoid函数(S 曲线)用来作为activation function:&lt;br&gt;1.1双曲函数(tanh)&lt;br&gt;1.2逻辑函数(logistic function)&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用类实现一个简单的神经网络算法&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     

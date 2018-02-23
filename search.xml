@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[codingpage]]></title>
+    <url>%2Fcodingpage-1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[codingpage]]></title>
+    <url>%2Fcodingpage%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown语法]]></title>
     <url>%2F2018-2-4-two%2F</url>
     <content type="text"><![CDATA[备用快速传送门]]></content>
@@ -14,8 +24,8 @@
     <url>%2F2018-2-4-one%2F</url>
     <content type="text"><![CDATA[vi命令图示 备用]]></content>
       <tags>
-        <tag>vim</tag>
         <tag>linux</tag>
+        <tag>vim</tag>
       </tags>
   </entry>
   <entry>
