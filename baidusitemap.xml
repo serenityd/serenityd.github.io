@@ -371,12 +371,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-7-8-two/</loc>
+    <loc>http://dnysu.cn/2017-7-8-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十三）简单线性回归应用</title>
-        <pubTime>2017-07-08T08:35:16.000Z</pubTime>
+        <title>机器学习笔记（十二）简单线性回归原理</title>
+        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -388,12 +388,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-7-8-one/</loc>
+    <loc>http://dnysu.cn/2017-7-8-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十二）简单线性回归原理</title>
-        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
+        <title>机器学习笔记（十三）简单线性回归应用</title>
+        <pubTime>2017-07-08T08:35:16.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -439,14 +439,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-9-12-one/</loc>
+    <loc>http://dnysu.cn/2017-8-31-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十六）非线性回归原理</title>
-        <pubTime>2017-09-12T07:03:47.000Z</pubTime>
+        <title>多电脑间github同步hexo博文</title>
+        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>hexo</tag>
          
          
            
@@ -456,14 +456,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-8-31-one/</loc>
+    <loc>http://dnysu.cn/2017-9-12-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>多电脑间github同步hexo博文</title>
-        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
+        <title>机器学习笔记（十六）非线性回归原理</title>
+        <pubTime>2017-09-12T07:03:47.000Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>机器学习</tag>
          
          
            
