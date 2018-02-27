@@ -267,12 +267,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-6-30-two/</loc>
+    <loc>http://dnysu.cn/2017-6-30-three/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（七）支持向量机（SVM）应用上</title>
-        <pubTime>2017-06-30T13:20:56.000Z</pubTime>
+        <title>机器学习笔记（八）支持向量机（SVM）原理下</title>
+        <pubTime>2017-06-30T13:21:16.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -284,12 +284,12 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-6-30-three/</loc>
+    <loc>http://dnysu.cn/2017-6-30-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（八）支持向量机（SVM）原理下</title>
-        <pubTime>2017-06-30T13:21:16.000Z</pubTime>
+        <title>机器学习笔记（七）支持向量机（SVM）应用上</title>
+        <pubTime>2017-06-30T13:20:56.000Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -352,14 +352,16 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-11-10-one/</loc>
+    <loc>http://dnysu.cn/2017-6-14-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>git学习笔记</title>
-        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
+        <title>Hexo+github+个人域名搭建个人博客</title>
+        <pubTime>2017-06-14T08:40:58.000Z</pubTime>
         
-        <tag>git</tag>
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
          
          
            
@@ -471,14 +473,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-9-13-one/</loc>
+    <loc>http://dnysu.cn/2017-9-13-two/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>Latex符号大全</title>
-        <pubTime>2017-09-13T01:42:49.000Z</pubTime>
+        <title>机器学习笔记（十七）非线性回归应用</title>
+        <pubTime>2017-09-13T08:27:31.000Z</pubTime>
         
-        <tag>LATEX</tag>
+        <tag>机器学习</tag>
          
          
            
@@ -488,14 +490,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-9-13-two/</loc>
+    <loc>http://dnysu.cn/2017-9-13-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>机器学习笔记（十七）非线性回归应用</title>
-        <pubTime>2017-09-13T08:27:31.000Z</pubTime>
+        <title>Latex符号大全</title>
+        <pubTime>2017-09-13T01:42:49.000Z</pubTime>
         
-        <tag>机器学习</tag>
+        <tag>LATEX</tag>
          
          
            
@@ -624,33 +626,14 @@
 
     
   <url>
-    <loc>http://dnysu.cn/2017-6-23-one/</loc>
+    <loc>http://dnysu.cn/2017-11-10-one/</loc>
     <lastmod>2018-01-13T08:07:57.000Z</lastmod>
     <data>
         <display>
-        <title>Python学习笔记（三）</title>
-        <pubTime>2017-06-23T01:11:37.000Z</pubTime>
+        <title>git学习笔记</title>
+        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
         
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dnysu.cn/2017-6-14-one/</loc>
-    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo+github+个人域名搭建个人博客</title>
-        <pubTime>2017-06-14T08:40:58.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
+        <tag>git</tag>
          
          
            
@@ -668,6 +651,23 @@
         <pubTime>2017-06-23T06:33:37.000Z</pubTime>
         
         <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dnysu.cn/2017-6-23-one/</loc>
+    <lastmod>2018-01-13T08:07:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习笔记（三）</title>
+        <pubTime>2017-06-23T01:11:37.000Z</pubTime>
+        
+        <tag>python</tag>
          
          
            
