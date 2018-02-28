@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="1、元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意 #创建只有一个元素的tuple，需要用逗号结尾消除歧义a_tuple = (2,) #tuple中的listmixed_tuple = (1, 2, [‘a’, ‘b’])print(“mixed_tuple: “ + str(mixed_tuple))mixed_tuple[2]">
+<meta name="description" content="1. 元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意:   1.1 创建一个元素的Tuple 创建只有一个元素的tuple，需要用逗号结尾消除歧义 a_tuple = (2,)1.2 Tuple中的list Tuple 是不可变 list。 一旦创建了一个 tuple 就不能以任何方式改变它。12345mixed_tuple = (">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习笔记（三）">
+<meta property="og:title" content="Python学习笔记（三） 元组 字典">
 <meta property="og:url" content="http://dnysu.cn/2017-6-23-one/index.html">
 <meta property="og:site_name" content="Serenityd Blog">
-<meta property="og:description" content="1、元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意 #创建只有一个元素的tuple，需要用逗号结尾消除歧义a_tuple = (2,) #tuple中的listmixed_tuple = (1, 2, [‘a’, ‘b’])print(“mixed_tuple: “ + str(mixed_tuple))mixed_tuple[2]">
+<meta property="og:description" content="1. 元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意:   1.1 创建一个元素的Tuple 创建只有一个元素的tuple，需要用逗号结尾消除歧义 a_tuple = (2,)1.2 Tuple中的list Tuple 是不可变 list。 一旦创建了一个 tuple 就不能以任何方式改变它。12345mixed_tuple = (">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-13T08:07:57.000Z">
+<meta property="og:updated_time" content="2018-02-28T14:01:57.662Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习笔记（三）">
-<meta name="twitter:description" content="1、元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意 #创建只有一个元素的tuple，需要用逗号结尾消除歧义a_tuple = (2,) #tuple中的listmixed_tuple = (1, 2, [‘a’, ‘b’])print(“mixed_tuple: “ + str(mixed_tuple))mixed_tuple[2]">
+<meta name="twitter:title" content="Python学习笔记（三） 元组 字典">
+<meta name="twitter:description" content="1. 元组（tuple）不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意:   1.1 创建一个元素的Tuple 创建只有一个元素的tuple，需要用逗号结尾消除歧义 a_tuple = (2,)1.2 Tuple中的list Tuple 是不可变 list。 一旦创建了一个 tuple 就不能以任何方式改变它。12345mixed_tuple = (">
 
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <title>Python学习笔记（三） | Serenityd Blog</title>
+  <title>Python学习笔记（三） 元组 字典 | Serenityd Blog</title>
   
 
 
@@ -340,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python学习笔记（三）</h1>
+          <h1 class="post-title" itemprop="name headline">Python学习笔记（三） 元组 字典</h1>
         
 
         <div class="post-meta">
@@ -368,8 +368,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-13T16:07:57+08:00">
-                2018-01-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-02-28T22:01:57+08:00">
+                2018-02-28
               </time>
             
           </span>
@@ -382,7 +382,7 @@
 
           
           
-             <span id="/2017-6-23-one/" class="leancloud_visitors" data-flag-title="Python学习笔记（三）">
+             <span id="/2017-6-23-one/" class="leancloud_visitors" data-flag-title="Python学习笔记（三） 元组 字典">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,264
+                  1,286
                 </span>
               
 
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -444,9 +444,20 @@
       
 
       
-        <p>1、元组（tuple）<br>不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意</p>
-<p>#创建只有一个元素的tuple，需要用逗号结尾消除歧义<br>a_tuple = (2,)</p>
-<p>#tuple中的list<br>mixed_tuple = (1, 2, [‘a’, ‘b’])<br>print(“mixed_tuple: “ + str(mixed_tuple))<br>mixed_tuple[2][0] = ‘c’<br>mixed_tuple[2][1] = ‘d’<br>print(“mixed_tuple: “ + str(mixed_tuple))<br>Tuple 是不可变 list。 一旦创建了一个 tuple 就不能以任何方式改变它。<br><a id="more"></a><br>2、Tuple 与 list 的相同之处<br>定义 tuple 与定义 list 的方式相同, 除了整个元素集是用小括号包围的而不是方括号。<br>Tuple 的元素与 list 一样按定义的次序进行排序。 Tuples 的索引与 list 一样从 0 开始, 所以一个非空 tuple 的第一个元素总是 t[0]。<br>负数索引与 list 一样从 tuple 的尾部开始计数。<br>与 list 一样分片 (slice) 也可以使用。注意当分割一个 list 时, 会得到一个新的 list ；当分割一个 tuple 时, 会得到一个新的 tuple。<br>3、Tuple 不存在的方法<br>您不能向 tuple 增加元素。Tuple 没有 append 或 extend 方法。<br>您不能从 tuple 删除元素。Tuple 没有 remove 或 pop 方法。<br>然而, 您可以使用 in 来查看一个元素是否存在于 tuple 中。<br>4、用 Tuple 的好处<br>Tuple 比 list 操作速度快。如果您定义了一个值的常量集，并且唯一要用它做的是不断地遍历它，请使用 tuple 代替 list。<br>如果对不需要修改的数据进行 “写保护”，可以使代码更安全。使用 tuple 而不是 list 如同拥有一个隐含的 assert 语句，说明这一数据是常量。如果必须要改变这些值，则需要执行 tuple 到 list 的转换。<br>5、Tuple 与 list 的转换<br>Tuple 可以转换成 list，反之亦然。内置的 tuple 函数接收一个 list，并返回一个有着相同元素的 tuple。而 list 函数接收一个 tuple 返回一个 list。从效果上看，tuple 冻结一个 list，而 list 解冻一个 tuple。<br>6、Tuple 的其他应用<br>一次赋多值<br>v = (‘a’, ‘b’, ‘e’)<br>(x, y, z) = v<br>解释：v 是一个三元素的 tuple, 并且 (x, y, z) 是一个三变量的 tuple。将一个 tuple 赋值给另一个 tuple, 会按顺序将 v  的每个值赋值给每个变量。<br>7、词典<br>键(key)，对应值(value)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">直接给出代码</span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#创建一个词典</span></span><br><span class="line">phone_book = &#123;<span class="string">'Tom'</span>: 123, <span class="string">"Jerry"</span>: 456, <span class="string">'Kim'</span>: 789&#125;</span><br><span class="line">mixed_dict = &#123;<span class="string">"Tom"</span>: <span class="string">'boy'</span>, 11: 23.5&#125;</span><br><span class="line"><span class="comment">#访问词典里的值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Tom's number is "</span> + str(phone_book[<span class="string">'Tom'</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'Tom is a '</span> + mixed_dict[<span class="string">'Tom'</span>])</span><br><span class="line"><span class="comment">#修改词典</span></span><br><span class="line">phone_book[<span class="string">'Tom'</span>] = 999</span><br><span class="line">phone_book[<span class="string">'Heath'</span>] = 888</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"phone_book: "</span> + str(phone_book)) </span><br><span class="line">phone_book.update(&#123;<span class="string">'Ling'</span>:159, <span class="string">'Lili'</span>:247&#125;)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"updated phone_book: "</span> + str(phone_book)) </span><br><span class="line"><span class="comment">#删除词典元素以及词典本身</span></span><br><span class="line">del phone_book[<span class="string">'Tom'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"phone_book after deleting Tom: "</span> + str(phone_book)) </span><br><span class="line"><span class="comment">#清空词典</span></span><br><span class="line">phone_book.clear()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"after clear: "</span> + str(phone_book))</span><br><span class="line"><span class="comment">#删除词典</span></span><br><span class="line">del phone_book</span><br><span class="line"><span class="comment"># print("after del: " + str(phone_book))</span></span><br><span class="line"><span class="comment">#不允许同一个键出现两次</span></span><br><span class="line">rep_test = &#123;<span class="string">'Name'</span>: <span class="string">'aa'</span>, <span class="string">'age'</span>:5, <span class="string">'Name'</span>: <span class="string">'bb'</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"rep_test: "</span> + str(rep_test))</span><br><span class="line"><span class="comment">#键必须不可变，所以可以用书，字符串或者元组充当，列表不行</span></span><br><span class="line">list_dict = &#123;[<span class="string">'Name'</span>]: <span class="string">'John'</span>, <span class="string">'Age'</span>:13&#125;</span><br><span class="line">list_dict = &#123;(<span class="string">'Name'</span>): <span class="string">'John'</span>, <span class="string">'Age'</span>:13&#125;</span><br><span class="line"><span class="comment"># 字典内置函数&amp;方法</span></span><br><span class="line"><span class="comment"># Python字典包含了以下内置函数：</span></span><br><span class="line"><span class="comment"># 1、cmp(dict1, dict2)：比较两个字典元素。</span></span><br><span class="line"><span class="comment"># 2、len(dict)：计算字典元素个数，即键的总数。</span></span><br><span class="line"><span class="comment"># 3、str(dict)：输出字典可打印的字符串表示。</span></span><br><span class="line"><span class="comment"># 4、type(variable)：返回输入的变量类型，如果变量是字典就返回字典类型。</span></span><br><span class="line"><span class="comment"># Python字典包含了以下内置方法：</span></span><br><span class="line"><span class="comment"># 1、radiansdict.clear()：删除字典内所有元素</span></span><br><span class="line"><span class="comment"># 2、radiansdict.copy()：返回一个字典的浅复制</span></span><br><span class="line"><span class="comment"># 3、radiansdict.fromkeys()：创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</span></span><br><span class="line"><span class="comment"># 4、radiansdict.get(key, default=None)：返回指定键的值，如果值不在字典中返回default值</span></span><br><span class="line"><span class="comment"># 5、radiansdict.has_key(key)：如果键在字典dict里返回true，否则返回false</span></span><br><span class="line"><span class="comment"># 6、radiansdict.items()：以列表返回可遍历的(键, 值) 元组数组</span></span><br><span class="line"><span class="comment"># 7、radiansdict.keys()：以列表返回一个字典所有的键</span></span><br><span class="line"><span class="comment"># 8、radiansdict.setdefault(key, default=None)：和get()类似, 但如果键不已经存在于字典中，将会添加键并将值设为default</span></span><br><span class="line"><span class="comment"># 9、radiansdict.update(dict2)：把字典dict2的键/值对更新到dict里</span></span><br><span class="line"><span class="comment"># 10、radiansdict.values()：以列表返回字典中的所有值</span></span><br></pre></td></tr></table></figure></p>
+        <h1 id="1-元组（tuple）"><a href="#1-元组（tuple）" class="headerlink" title="1. 元组（tuple）"></a>1. 元组（tuple）</h1><p>不可删除其中的元素可以整个删除，不可以更新，用（）创建，其余用法与list相同，有以下需要注意:  </p>
+<h2 id="1-1-创建一个元素的Tuple"><a href="#1-1-创建一个元素的Tuple" class="headerlink" title="1.1 创建一个元素的Tuple"></a>1.1 创建一个元素的Tuple</h2><ul>
+<li>创建只有一个元素的tuple，需要用逗号结尾消除歧义</li>
+<li>a_tuple = (2,)<h2 id="1-2-Tuple中的list"><a href="#1-2-Tuple中的list" class="headerlink" title="1.2 Tuple中的list"></a>1.2 Tuple中的list</h2></li>
+<li>Tuple 是不可变 list。 一旦创建了一个 tuple 就不能以任何方式改变它。<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mixed_tuple = (<span class="number">1</span>, <span class="number">2</span>, [<span class="string">'a'</span>, <span class="string">'b'</span>])</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"mixed_tuple: "</span> + str(mixed_tuple)</span></span>)</span><br><span class="line">mixed_tuple[<span class="number">2</span>][<span class="number">0</span>] = <span class="string">'c'</span></span><br><span class="line">mixed_tuple[<span class="number">2</span>][<span class="number">1</span>] = <span class="string">'d'</span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">"mixed_tuple: "</span> + str(mixed_tuple)</span></span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="1-3-Tuple-与-list-的相同之处"><a href="#1-3-Tuple-与-list-的相同之处" class="headerlink" title="1.3 Tuple 与 list 的相同之处"></a>1.3 Tuple 与 list 的相同之处</h2><p>定义 tuple 与定义 list 的方式相同, 除了整个元素集是用小括号包围的而不是方括号。<br>Tuple 的元素与 list 一样按定义的次序进行排序。 Tuples 的索引与 list 一样从 0 开始, 所以一个非空 tuple 的第一个元素总是 t[0]。<br>负数索引与 list 一样从 tuple 的尾部开始计数。<br>与 list 一样分片 (slice) 也可以使用。注意当分割一个 list 时, 会得到一个新的 list ；当分割一个 tuple 时, 会得到一个新的 tuple。</p>
+<h2 id="1-4-Tuple-不存在的方法"><a href="#1-4-Tuple-不存在的方法" class="headerlink" title="1.4 Tuple 不存在的方法"></a>1.4 Tuple 不存在的方法</h2><p>您不能向 tuple 增加元素。Tuple 没有 append 或 extend 方法。<br>您不能从 tuple 删除元素。Tuple 没有 remove 或 pop 方法。<br>然而, 您可以使用 in 来查看一个元素是否存在于 tuple 中。</p>
+<h2 id="1-5-用-Tuple-的好处"><a href="#1-5-用-Tuple-的好处" class="headerlink" title="1.5 用 Tuple 的好处"></a>1.5 用 Tuple 的好处</h2><p>Tuple 比 list 操作速度快。如果您定义了一个值的常量集，并且唯一要用它做的是不断地遍历它，请使用 tuple 代替 list。<br>如果对不需要修改的数据进行 “写保护”，可以使代码更安全。使用 tuple 而不是 list 如同拥有一个隐含的 assert 语句，说明这一数据是常量。如果必须要改变这些值，则需要执行 tuple 到 list 的转换。</p>
+<h2 id="1-6-Tuple-与-list-的转换"><a href="#1-6-Tuple-与-list-的转换" class="headerlink" title="1.6 Tuple 与 list 的转换"></a>1.6 Tuple 与 list 的转换</h2><p>Tuple 可以转换成 list，反之亦然。内置的 tuple 函数接收一个 list，并返回一个有着相同元素的 tuple。而 list 函数接收一个 tuple 返回一个 list。从效果上看，tuple 冻结一个 list，而 list 解冻一个 tuple。</p>
+<h2 id="1-7-Tuple-的其他应用"><a href="#1-7-Tuple-的其他应用" class="headerlink" title="1.7 Tuple 的其他应用"></a>1.7 Tuple 的其他应用</h2><p>一次赋多值<br>v = (‘a’, ‘b’, ‘e’)<br>(x, y, z) = v<br>解释：v 是一个三元素的 tuple, 并且 (x, y, z) 是一个三变量的 tuple。将一个 tuple 赋值给另一个 tuple, 会按顺序将 v  的每个值赋值给每个变量。</p>
+<h1 id="2-词典"><a href="#2-词典" class="headerlink" title="2 词典"></a>2 词典</h1><p>键(key)，对应值(value)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">直接给出代码</span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#创建一个词典</span></span><br><span class="line">phone_book = &#123;<span class="string">'Tom'</span>: 123, <span class="string">"Jerry"</span>: 456, <span class="string">'Kim'</span>: 789&#125;</span><br><span class="line">mixed_dict = &#123;<span class="string">"Tom"</span>: <span class="string">'boy'</span>, 11: 23.5&#125;</span><br><span class="line"><span class="comment">#访问词典里的值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Tom's number is "</span> + str(phone_book[<span class="string">'Tom'</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'Tom is a '</span> + mixed_dict[<span class="string">'Tom'</span>])</span><br><span class="line"><span class="comment">#修改词典</span></span><br><span class="line">phone_book[<span class="string">'Tom'</span>] = 999</span><br><span class="line">phone_book[<span class="string">'Heath'</span>] = 888</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"phone_book: "</span> + str(phone_book)) </span><br><span class="line">phone_book.update(&#123;<span class="string">'Ling'</span>:159, <span class="string">'Lili'</span>:247&#125;)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"updated phone_book: "</span> + str(phone_book)) </span><br><span class="line"><span class="comment">#删除词典元素以及词典本身</span></span><br><span class="line">del phone_book[<span class="string">'Tom'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"phone_book after deleting Tom: "</span> + str(phone_book)) </span><br><span class="line"><span class="comment">#清空词典</span></span><br><span class="line">phone_book.clear()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"after clear: "</span> + str(phone_book))</span><br><span class="line"><span class="comment">#删除词典</span></span><br><span class="line">del phone_book</span><br><span class="line"><span class="comment"># print("after del: " + str(phone_book))</span></span><br><span class="line"><span class="comment">#不允许同一个键出现两次</span></span><br><span class="line">rep_test = &#123;<span class="string">'Name'</span>: <span class="string">'aa'</span>, <span class="string">'age'</span>:5, <span class="string">'Name'</span>: <span class="string">'bb'</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"rep_test: "</span> + str(rep_test))</span><br><span class="line"><span class="comment">#键必须不可变，所以可以用书，字符串或者元组充当，列表不行</span></span><br><span class="line">list_dict = &#123;[<span class="string">'Name'</span>]: <span class="string">'John'</span>, <span class="string">'Age'</span>:13&#125;</span><br><span class="line">list_dict = &#123;(<span class="string">'Name'</span>): <span class="string">'John'</span>, <span class="string">'Age'</span>:13&#125;</span><br><span class="line"><span class="comment"># 字典内置函数&amp;方法</span></span><br><span class="line"><span class="comment"># Python字典包含了以下内置函数：</span></span><br><span class="line"><span class="comment"># 1、cmp(dict1, dict2)：比较两个字典元素。</span></span><br><span class="line"><span class="comment"># 2、len(dict)：计算字典元素个数，即键的总数。</span></span><br><span class="line"><span class="comment"># 3、str(dict)：输出字典可打印的字符串表示。</span></span><br><span class="line"><span class="comment"># 4、type(variable)：返回输入的变量类型，如果变量是字典就返回字典类型。</span></span><br><span class="line"><span class="comment"># Python字典包含了以下内置方法：</span></span><br><span class="line"><span class="comment"># 1、radiansdict.clear()：删除字典内所有元素</span></span><br><span class="line"><span class="comment"># 2、radiansdict.copy()：返回一个字典的浅复制</span></span><br><span class="line"><span class="comment"># 3、radiansdict.fromkeys()：创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</span></span><br><span class="line"><span class="comment"># 4、radiansdict.get(key, default=None)：返回指定键的值，如果值不在字典中返回default值</span></span><br><span class="line"><span class="comment"># 5、radiansdict.has_key(key)：如果键在字典dict里返回true，否则返回false</span></span><br><span class="line"><span class="comment"># 6、radiansdict.items()：以列表返回可遍历的(键, 值) 元组数组</span></span><br><span class="line"><span class="comment"># 7、radiansdict.keys()：以列表返回一个字典所有的键</span></span><br><span class="line"><span class="comment"># 8、radiansdict.setdefault(key, default=None)：和get()类似, 但如果键不已经存在于字典中，将会添加键并将值设为default</span></span><br><span class="line"><span class="comment"># 9、radiansdict.update(dict2)：把字典dict2的键/值对更新到dict里</span></span><br><span class="line"><span class="comment"># 10、radiansdict.values()：以列表返回字典中的所有值</span></span><br></pre></td></tr></table></figure></p>
 <p>结果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"C:\Users\Administrator\workspace\TeachingPython\TestBuildinPack.py"</span>, line 27, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    list_dict = &#123;[<span class="string">'Name'</span>]: <span class="string">'John'</span>, <span class="string">'Age'</span>:13&#125;</span><br><span class="line">TypeError: unhashable <span class="built_in">type</span>: <span class="string">'list'</span></span><br><span class="line">Tom<span class="string">'s number is 123</span></span><br><span class="line"><span class="string">Tom is a boy</span></span><br><span class="line"><span class="string">phone_book: &#123;'</span>Tom<span class="string">': 999, '</span>Jerry<span class="string">': 456, '</span>Kim<span class="string">': 789, '</span>Heath<span class="string">': 888&#125;</span></span><br><span class="line"><span class="string">updated phone_book: &#123;'</span>Tom<span class="string">': 999, '</span>Jerry<span class="string">': 456, '</span>Kim<span class="string">': 789, '</span>Heath<span class="string">': 888, '</span>Ling<span class="string">': 159, '</span>Lili<span class="string">': 247&#125;</span></span><br><span class="line"><span class="string">phone_book after deleting Tom: &#123;'</span>Jerry<span class="string">': 456, '</span>Kim<span class="string">': 789, '</span>Heath<span class="string">': 888, '</span>Ling<span class="string">': 159, '</span>Lili<span class="string">': 247&#125;</span></span><br><span class="line"><span class="string">after clear: &#123;&#125;</span></span><br><span class="line"><span class="string">rep_test: &#123;'</span>Name<span class="string">': '</span>bb<span class="string">', '</span>age<span class="string">': 5&#125;</span></span><br></pre></td></tr></table></figure></p>
 <p>PS:此处error是因为list_dict = {[‘Name’]: ‘John’, ‘Age’:13}引起，key的值应该为常量 而list是变量所以提示TypeError 将list换为tuple就没有报错</p>
 
@@ -469,7 +480,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://dnysu.cn/2017-6-23-one/" title="Python学习笔记（三）">http://dnysu.cn/2017-6-23-one/</a>
+    <a href="http://dnysu.cn/2017-6-23-one/" title="Python学习笔记（三） 元组 字典">http://dnysu.cn/2017-6-23-one/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -610,8 +621,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -705,6 +725,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-元组（tuple）"><span class="nav-text">1. 元组（tuple）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-创建一个元素的Tuple"><span class="nav-text">1.1 创建一个元素的Tuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Tuple中的list"><span class="nav-text">1.2 Tuple中的list</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Tuple-与-list-的相同之处"><span class="nav-text">1.3 Tuple 与 list 的相同之处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Tuple-不存在的方法"><span class="nav-text">1.4 Tuple 不存在的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-用-Tuple-的好处"><span class="nav-text">1.5 用 Tuple 的好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Tuple-与-list-的转换"><span class="nav-text">1.6 Tuple 与 list 的转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-Tuple-的其他应用"><span class="nav-text">1.7 Tuple 的其他应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-词典"><span class="nav-text">2 词典</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
