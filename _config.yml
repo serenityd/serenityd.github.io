@@ -1,0 +1,40 @@
+title: Serenityd Blog
+subtitle: 凡心所向 素履可往
+description: 人生如逆旅 我亦是行人
+author: Serenityd
+language: zh-Hans
+timezone:
+url: http://dnysu.cn
+theme: next
+menu_icons:
+  enable: true
+  home: /
+  archives: /archives
+  tags: /tags
+permalink: :title/
+sidebar:
+  position: left
+  display: post
+avatar: /images/avatar.jpg
+widgets:
+- search
+- category
+- recent_posts
+- tag
+- tagcloud
+post_asset_folder: true 
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+deploy:
+  type: git
+  repository: 
+    github: git@github.com:serenityd/serenityd.github.io.git
+    coding: git@git.coding.net:serenityd/hexo.git
+  branch: master

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Serenityd Blog</title>
+  
+  <subtitle>凡心所向 素履可往</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://dnysu.cn/"/>
+  <updated>2018-03-04T13:28:17.000Z</updated>
+  <id>http://dnysu.cn/</id>
+  
+  <author>
+    <name>Serenityd</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="http://dnysu.cn/2018-2-4-two/"/>
+    <id>http://dnysu.cn/2018-2-4-two/</id>
+    <published>2018-02-04T14:38:57.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>备用<br><a href="https://www.cnblogs.com/yuxiuyan/p/6044682.html" target="_blank" rel="noopener">快速传送门</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;备用&lt;br&gt;&lt;a href=&quot;https://www.cnblogs.com/yuxiuyan/p/6044682.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;快速传送门&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://dnysu.cn/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://dnysu.cn/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim命令图示</title>
+    <link href="http://dnysu.cn/2018-2-4-one/"/>
+    <id>http://dnysu.cn/2018-2-4-one/</id>
+    <published>2018-02-04T14:38:45.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>vi命令图示 备用<br><a id="more"></a><br><img src="/2018-2-4-one/1.png" alt=""><br><img src="/2018-2-4-one/2.png" alt=""> </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vi命令图示 备用&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://dnysu.cn/tags/linux/"/>
+    
+      <category term="vim" scheme="http://dnysu.cn/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux下搭建python3环境</title>
+    <link href="http://dnysu.cn/2018-2-3-two/"/>
+    <id>http://dnysu.cn/2018-2-3-two/</id>
+    <published>2018-02-03T08:31:27.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>python3环境设置<br>printenv发现环境PATH中并没有python<br>修改个人环境变量设置<br><code>vim ~/.bashrc</code><br>添加python bin目录到<br><code>export PATH=/usr/python3.6.4/bin:$PATH</code><br>生效方法:<br>输入<code>source ~/.bashrc</code>命令，立即生效<br>linux使用CentOS6.5<br>以后用到会更新一些linxu命令备用<br>python环境整个采用Xshell+VMwork+CentOs环境 配置不难</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;python3环境设置&lt;br&gt;printenv发现环境PATH中并没有python&lt;br&gt;修改个人环境变量设置&lt;br&gt;&lt;code&gt;vim ~/.bashrc&lt;/code&gt;&lt;br&gt;添加python bin目录到&lt;br&gt;&lt;code&gt;export PATH=/usr/python
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://dnysu.cn/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客在VSCode下编写及git配置问题</title>
+    <link href="http://dnysu.cn/2018-2-3-one/"/>
+    <id>http://dnysu.cn/2018-2-3-one/</id>
+    <published>2018-02-03T05:51:28.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>设置VSCode下git环境<br>文件—首选项-设置<br>用户设置下 添加git路径以及git-bash终端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"git.path"</span>: <span class="string">"D:\\Program Files\\Git\\cmd"</span>,</span><br><span class="line">    <span class="string">"terminal.integrated.shell.windows"</span>:<span class="string">"D:\\ProgramFiles\\Git\\bin\\bash.exe"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>PS:<br>记录两天搭建环境过程中遇到的各种麻烦 好久不弄又出现一些新问题<br>一、图片加载问题<br>下面给出hexo图片公式加载环境设置<br>经过一番折腾发现加载图片必须满足一下条件<br>1、_config.yml中开启文件夹声明<br><code>post_asset_folder: true</code><br>2、npm安装图片插件<br><code>npm install hexo-asset-image --save</code><br>图片测试<br><img src="/2018-2-3-one/2018-02-03-one/1.jpg" alt=""><br>二、公式加载问题<br>此处分为两个小问题<br>一是公式插件加载问题<br>二是markdown斜线注释问题<br>1、公式插件按照网上教程加载hexo-math不成功，所以另辟蹊径采用mathjax.ejs文件建立公式环境到主题目录下mathjax.ejs:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><br><span class="line">MathJax.Hub.Config(&#123;</span><br><span class="line">    tex2jax: &#123;</span><br><span class="line">        inlineMath: [ [<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">"\\("</span>,<span class="string">"\\)"</span>]  ],</span><br><span class="line">        processEscapes: <span class="literal">true</span>,</span><br><span class="line">        skipTags: [<span class="string">'script'</span>, <span class="string">'noscript'</span>, <span class="string">'style'</span>, <span class="string">'textarea'</span>, <span class="string">'pre'</span>, <span class="string">'code'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">MathJax.Hub.Queue(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    var all = MathJax.Hub.getAllJax(), i;</span><br><span class="line">    <span class="keyword">for</span>(i=0; i &lt; all.length; i += 1) &#123;</span><br><span class="line">        all[i].SourceElement().parentNode.className += <span class="string">' has-jax'</span>;                 </span><br><span class="line">    &#125;       </span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>src地址需要更新到mathjax接口最新地址<br>然后加载启用判断在after_footer.ejs中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (page.mathjax)&#123; %&gt;</span><br><span class="line">&lt;%- partial(<span class="string">'mathjax'</span>) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p><p>2、斜线注释问题<br>在<code>node_modules\marked\lib\marked.js</code>中修改两处代码这样无需替换markdown环境<br>将451行和459行的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">escape: /^\\([\\`*&#123;&#125;\[\]()<span class="comment"># +\-.!_&gt;])/  </span></span><br><span class="line">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure></p><p>替换为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">escape: /^\\([`*\[\]()<span class="comment"># +\-.!_&gt;])/</span></span><br><span class="line">em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span><br></pre></td></tr></table></figure></p><p>这样文章只要开启公式就可以加载公式<br>公式 test<br>$a^2=b^2+c^2$</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;设置VSCode下git环境&lt;br&gt;文件—首选项-设置&lt;br&gt;用户设置下 添加git路径以及git-bash终端&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;git.path&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;D:\\Program Files\\Git\\cmd&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&quot;terminal.integrated.shell.windows&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;D:\\ProgramFiles\\Git\\bin\\bash.exe&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://dnysu.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git学习笔记</title>
+    <link href="http://dnysu.cn/2017-11-10-one/"/>
+    <id>http://dnysu.cn/2017-11-10-one/</id>
+    <published>2017-11-10T09:02:57.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ubuntu下用hexo写博客,借机学习了一下git,感觉还是很强大的管理系统,这里记录一下git常用的基础命令,随时添加.<br><a id="more"></a><br>工作区 暂存区 仓库关系<br><img src="/2017-11-10-one/1.png" alt=""> </p><pre><code class="bash">//初始化gitgit init //添加文件到暂存区git add.//提交文件到仓库git commit -m <span class="string">"x"</span>//查看工作状态git status//比较不同git diff//查看日志git <span class="built_in">log</span>git <span class="built_in">log</span> --pretty=oneline//回退一个版本git reset --hard HEAD^//回退版本 编号 3628164git reset --hard 3628164//命令记录git reflog//创建SSH Key id_rsa.pub公钥ssh-keygen -t rsa -C <span class="string">"youremail@example.com"</span>//关联远程仓库git remote add origin git@github.com:michaelliao/learngit.git//推送master到origingit push origin master//同步远程到mastergit pull origin master//同步到本地git <span class="built_in">clone</span> git@github.com:michaelliao/gitskills.git//创建+切换分支git checkout -b &lt;name&gt;//查看分支git branch//切换分支git checkout &lt;name&gt;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ubuntu下用hexo写博客,借机学习了一下git,感觉还是很强大的管理系统,这里记录一下git常用的基础命令,随时添加.&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://dnysu.cn/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
+    <link href="http://dnysu.cn/2017-9-21-two/"/>
+    <id>http://dnysu.cn/2017-9-21-two/</id>
+    <published>2017-09-21T07:27:19.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>hierarchical clustering聚类算法python代码：<br>HierarchicalClustering.py<br><a id="more"></a></p><pre><code class="bash">from numpy import *<span class="string">""</span><span class="string">"</span><span class="string">Code for hierarchical clustering, modified from </span><span class="string">Programming Collective Intelligence by Toby Segaran </span><span class="string">(O'Reilly Media 2007, page 33). </span><span class="string">"</span><span class="string">""</span>class cluster_node:    def __init__(self,vec,left=None,right=None,distance=0.0,id=None,count=1):        self.left=left        self.right=right        self.vec=vec        self.id=id        self.distance=distance        self.count=count <span class="comment">#only used for weighted average </span>def L2dist(v1,v2):    <span class="built_in">return</span> sqrt(sum((v1-v2)**2))def L1dist(v1,v2):    <span class="built_in">return</span> sum(abs(v1-v2))<span class="comment"># def Chi2dist(v1,v2):</span><span class="comment">#     return sqrt(sum((v1-v2)**2))</span>def hcluster(features,distance=L2dist):    <span class="comment">#cluster the rows of the "features" matrix</span>    distances={}    currentclustid=-1    <span class="comment"># clusters are initially just the individual rows</span>    clust=[cluster_node(array(features[i]),id=i) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(features))]    <span class="keyword">while</span> len(clust)&gt;1:        lowestpair=(0,1)        closest=distance(clust[0].vec,clust[1].vec)        <span class="comment"># loop through every pair looking for the smallest distance</span>        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust)):            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+1,len(clust)):                <span class="comment"># distances is the cache of distance calculations</span>                <span class="keyword">if</span> (clust[i].id,clust[j].id) not <span class="keyword">in</span> distances:                     distances[(clust[i].id,clust[j].id)]=distance(clust[i].vec,clust[j].vec)                d=distances[(clust[i].id,clust[j].id)]                <span class="keyword">if</span> d&lt;closest:                    closest=d                    lowestpair=(i,j)        <span class="comment"># calculate the average of the two clusters</span>        mergevec=[(clust[lowestpair[0]].vec[i]+clust[lowestpair[1]].vec[i])/2.0 \            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust[0].vec))]        <span class="comment"># create the new cluster</span>        newcluster=cluster_node(array(mergevec),left=clust[lowestpair[0]],                             right=clust[lowestpair[1]],                             distance=closest,id=currentclustid)        <span class="comment"># cluster ids that weren't in the original set are negative</span>        currentclustid-=1        del clust[lowestpair[1]]        del clust[lowestpair[0]]        clust.append(newcluster)    <span class="built_in">return</span> clust[0]def extract_clusters(clust,dist):    <span class="comment"># extract list of sub-tree clusters from hcluster tree with distance&lt;dist</span>    clusters = {}    <span class="keyword">if</span> clust.distance&lt;dist:        <span class="comment"># we have found a cluster subtree</span>        <span class="built_in">return</span> [clust]     <span class="keyword">else</span>:        <span class="comment"># check the right and left branches</span>        cl = []        cr = []        <span class="keyword">if</span> clust.left!=None:             cl = extract_clusters(clust.left,dist=dist)        <span class="keyword">if</span> clust.right!=None:             cr = extract_clusters(clust.right,dist=dist)        <span class="built_in">return</span> cl+cr def get_cluster_elements(clust):    <span class="comment"># return ids for elements in a cluster sub-tree</span>    <span class="keyword">if</span> clust.id&gt;=0:        <span class="comment"># positive id means that this is a leaf</span>        <span class="built_in">return</span> [clust.id]    <span class="keyword">else</span>:        <span class="comment"># check the right and left branches</span>        cl = []        cr = []        <span class="keyword">if</span> clust.left!=None:             cl = get_cluster_elements(clust.left)        <span class="keyword">if</span> clust.right!=None:             cr = get_cluster_elements(clust.right)        <span class="built_in">return</span> cl+crdef printclust(clust,labels=None,n=0):    <span class="comment"># indent to make a hierarchy layout</span>    <span class="keyword">for</span> i <span class="keyword">in</span> range(n): <span class="built_in">print</span> <span class="string">' '</span>,    <span class="keyword">if</span> clust.id&lt;0:        <span class="comment"># negative id means that this is branch</span>        <span class="built_in">print</span> <span class="string">'-'</span>    <span class="keyword">else</span>:        <span class="comment"># positive id means that this is an endpoint</span>        <span class="keyword">if</span> labels==None: <span class="built_in">print</span> clust.id        <span class="keyword">else</span>: <span class="built_in">print</span> labels[clust.id]    <span class="comment"># now print the right and left branches</span>    <span class="keyword">if</span> clust.left!=None: printclust(clust.left,labels=labels,n=n+1)    <span class="keyword">if</span> clust.right!=None: printclust(clust.right,labels=labels,n=n+1)def getheight(clust):    <span class="comment"># Is this an endpoint? Then the height is just 1</span>    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 1    <span class="comment"># Otherwise the height is the same of the heights of</span>    <span class="comment"># each branch</span>    <span class="built_in">return</span> getheight(clust.left)+getheight(clust.right)def getdepth(clust):    <span class="comment"># The distance of an endpoint is 0.0</span>    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 0    <span class="comment"># The distance of a branch is the greater of its two sides</span>    <span class="comment"># plus its own distance</span>    <span class="built_in">return</span> max(getdepth(clust.left),getdepth(clust.right))+clust.distance</code></pre><p>TestHClustering.py   </p><pre><code class="bash">import osfrom PIL import Image , ImageDrawfrom HierarchicalClustering import hclusterfrom HierarchicalClustering import getheightfrom HierarchicalClustering import getdepthimport numpy as npimport osdef drawdendrogram(clust,imlist, jpeg=<span class="string">'clusters.jpg'</span>):    h=getheight(clust)*20    w=1200    depth=getdepth(clust)    scaling=<span class="built_in">float</span>(w-150)/depth    img=Image.new(<span class="string">'RGB'</span>,(w,h),(255, 255, 255))    draw=ImageDraw.Draw(img)    draw.line((0,h/2,10,h/2),fill=(255,0,0))    drawnode(draw, clust, 10, int(h/2), scaling, imlist, img)    img.save(jpeg)def drawnode(draw,clust, x, y, scaling,imlist,img):    <span class="keyword">if</span> clust.id&lt;0:        h1=getheight(clust.left)*20        h2=getheight(clust.right)*20        top=y-(h1+h2)/2        bottom=y+(h1+h2)/2        ll=clust.distance*scaling        draw.line((x,top+h1/2,x,bottom-h2/2),fill=(255,0,0))        draw.line((x,top+h1/2,x+ll,top+h1/2),fill=(255,0,0))        draw.line((x,bottom-h2/2,x+ll,bottom-h2/2),fill=(255,0,0))        drawnode(draw,clust.left,x+ll,top+h1/2,scaling,imlist,img)        drawnode(draw,clust.right,x+ll,bottom-h2/2,scaling,imlist,img)    <span class="keyword">else</span>:        nodeim=Image.open(imlist[clust.id])        nodeim.thumbnail((20,20))        ns=nodeim.size        <span class="built_in">print</span> x,y-ns[1]//2        <span class="built_in">print</span> x+ns[0]        <span class="built_in">print</span>        img.paste(nodeim,(int(x),int(y-ns[1]//2),int(x+ns[0]),int(y+ns[1]-ns[1]//2))) imlist=[]folderPath=r<span class="string">'C:\Users\Administrator\Desktop\picture'</span><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(folderPath):    <span class="keyword">if</span> os.path.splitext(filename)[1]==<span class="string">'.jpg'</span>:        imlist.append(os.path.join(folderPath,filename))n=len(imlist)features = np.zeros((n,3))<span class="keyword">for</span> i <span class="keyword">in</span> range(n):    im=np.array(Image.open(imlist[i]))    R=np.mean(im[:,:,0].flatten())    G=np.mean(im[:,:,1].flatten())    B=np.mean(im[:,:,2].flatten())    features[i]=np.array([R,G,B])tree=hcluster(features)drawdendrogram(tree,imlist,jpeg=<span class="string">'clusters.jpg'</span>)</code></pre><p>归类结果：<br><img src="/2017-9-21-two/1.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hierarchical clustering聚类算法python代码：&lt;br&gt;HierarchicalClustering.py&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（二十二）hierarchical clustering 层次聚类</title>
+    <link href="http://dnysu.cn/2017-9-21-one/"/>
+    <id>http://dnysu.cn/2017-9-21-one/</id>
+    <published>2017-09-21T07:12:50.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>假设有N个待聚类的样本，对于层次聚类来说，步骤：<br>1、（初始化）把每个样本归为一类，计算每两个类之间的距离，也就是样本与样本之间的相似度；<br>2、寻找各个类之间最近的两个类，把他们归为一类（这样类的总数就少了一个）；<br>3、重新计算新生成的这个类与各个旧类之间的相似度；<br>4、重复2和3直到所有样本点都归为一类，结束<br><a id="more"></a><br><img src="/2017-9-21-one/1.png" alt=""><br>整个聚类过程其实是建立了一棵树，在建立的过程中，可以通过在第二步上设置一个阈值，当最近的两个类的距离大于这个阈值，则认为迭代可以终止。另外关键的一步就是第三步，如何判断两个类之间的相似度有不少种方法。这里介绍一下三种：<br>SingleLinkage：又叫做 nearest-neighbor ，就是取两个类中距离最近的两个样本的距离作为这两个集合的距离，也就是说，最近两个样本之间的距离越小，这两个类之间的相似度就越大。容易造成一种叫做 Chaining 的效果，两个 cluster 明明从“大局”上离得比较远，但是由于其中个别的点距离比较近就被合并了，并且这样合并之后 Chaining 效应会进一步扩大，最后会得到比较松散的 cluster 。<br>CompleteLinkage：这个则完全是 Single Linkage 的反面极端，取两个集合中距离最远的两个点的距离作为两个集合的距离。其效果也是刚好相反的，限制非常大，两个 cluster 即使已经很接近了，但是只要有不配合的点存在，就顽固到底，老死不相合并，也是不太好的办法。这两种相似度的定义方法的共同问题就是指考虑了某个有特点的数据，而没有考虑类内数据的整体特点。<br>Average-linkage：这种方法就是把两个集合中的点两两的距离全部放在一起求一个平均值，相对也能得到合适一点的结果。<br>average-linkage的一个变种就是取两两距离的中值，与取均值相比更加能够解除个别偏离样本对结果的干扰。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;假设有N个待聚类的样本，对于层次聚类来说，步骤：&lt;br&gt;1、（初始化）把每个样本归为一类，计算每两个类之间的距离，也就是样本与样本之间的相似度；&lt;br&gt;2、寻找各个类之间最近的两个类，把他们归为一类（这样类的总数就少了一个）；&lt;br&gt;3、重新计算新生成的这个类与各个旧类之间的相似度；&lt;br&gt;4、重复2和3直到所有样本点都归为一类，结束&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用</title>
+    <link href="http://dnysu.cn/2017-9-18-one/"/>
+    <id>http://dnysu.cn/2017-9-18-one/</id>
+    <published>2017-09-18T01:51:50.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>KMeans聚类算法python代码：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"><span class="comment"># Function: K Means</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># K-Means is an algorithm that takes in a dataset and a constant</span></span><br><span class="line"><span class="comment"># k and returns k centroids (which define clusters of data in the</span></span><br><span class="line"><span class="comment"># dataset which are similar to one another).</span></span><br><span class="line">def kmeans(X, k, maxIt):</span><br><span class="line">    </span><br><span class="line">    numPoints, numDim = X.shape</span><br><span class="line">    </span><br><span class="line">    dataSet = np.zeros((numPoints, numDim + 1))</span><br><span class="line">    dataSet[:, :-1] = X</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Initialize centroids randomly</span></span><br><span class="line">    centroids = dataSet[np.random.randint(numPoints, size = k), :]</span><br><span class="line">    centroids = dataSet[0:2, :]</span><br><span class="line">    <span class="comment">#Randomly assign labels to initial centorid</span></span><br><span class="line">    centroids[:, -1] = range(1, k +1)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Initialize book keeping vars.</span></span><br><span class="line">    iterations = 0</span><br><span class="line">    oldCentroids = None</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Run the main k-means algorithm</span></span><br><span class="line">    <span class="keyword">while</span> not shouldStop(oldCentroids, centroids, iterations, maxIt):</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"iteration: \n"</span>, iterations</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"dataSet: \n"</span>, dataSet</span><br><span class="line">        <span class="built_in">print</span> <span class="string">"centroids: \n"</span>, centroids</span><br><span class="line">        <span class="comment"># Save old centroids for convergence test. Book keeping.</span></span><br><span class="line">        oldCentroids = np.copy(centroids)</span><br><span class="line">        iterations += 1</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Assign labels to each datapoint based on centroids</span></span><br><span class="line">        updateLabels(dataSet, centroids)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Assign centroids based on datapoint labels</span></span><br><span class="line">        centroids = getCentroids(dataSet, k)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># We can get the labels too by calling getLabels(dataSet, centroids)</span></span><br><span class="line">    <span class="built_in">return</span> dataSet</span><br><span class="line"><span class="comment"># Function: Should Stop</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Returns True or False if k-means is done. K-means terminates either</span></span><br><span class="line"><span class="comment"># because it has run a maximum number of iterations OR the centroids</span></span><br><span class="line"><span class="comment"># stop changing.</span></span><br><span class="line">def shouldStop(oldCentroids, centroids, iterations, maxIt):</span><br><span class="line">    <span class="keyword">if</span> iterations &gt; maxIt:</span><br><span class="line">        <span class="built_in">return</span> True</span><br><span class="line">    <span class="built_in">return</span> np.array_equal(oldCentroids, centroids)  </span><br><span class="line"><span class="comment"># Function: Get Labels</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Update a label for each piece of data in the dataset. </span></span><br><span class="line">def updateLabels(dataSet, centroids):</span><br><span class="line">    <span class="comment"># For each element in the dataset, chose the closest centroid. </span></span><br><span class="line">    <span class="comment"># Make that centroid the element's label.</span></span><br><span class="line">    numPoints, numDim = dataSet.shape</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0, numPoints):</span><br><span class="line">        dataSet[i, -1] = getLabelFromClosestCentroid(dataSet[i, :-1], centroids)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">def getLabelFromClosestCentroid(dataSetRow, centroids):</span><br><span class="line">    label = centroids[0, -1];</span><br><span class="line">    minDist = np.linalg.norm(dataSetRow - centroids[0, :-1])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1 , centroids.shape[0]):</span><br><span class="line">        dist = np.linalg.norm(dataSetRow - centroids[i, :-1])</span><br><span class="line">        <span class="keyword">if</span> dist &lt; minDist:</span><br><span class="line">            minDist = dist</span><br><span class="line">            label = centroids[i, -1]</span><br><span class="line">    <span class="built_in">print</span> <span class="string">"minDist:"</span>, minDist</span><br><span class="line">    <span class="built_in">return</span> label</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line"><span class="comment"># Function: Get Centroids</span></span><br><span class="line"><span class="comment"># -------------</span></span><br><span class="line"><span class="comment"># Returns k random centroids, each of dimension n.</span></span><br><span class="line">def getCentroids(dataSet, k):</span><br><span class="line">    <span class="comment"># Each centroid is the geometric mean of the points that</span></span><br><span class="line">    <span class="comment"># have that centroid's label. Important: If a centroid is empty (no points have</span></span><br><span class="line">    <span class="comment"># that centroid's label) you should randomly re-initialize it.</span></span><br><span class="line">    result = np.zeros((k, dataSet.shape[1]))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1, k + 1):</span><br><span class="line">        oneCluster = dataSet[dataSet[:, -1] == i, :-1]</span><br><span class="line">        result[i - 1, :-1] = np.mean(oneCluster, axis = 0)</span><br><span class="line">        result[i - 1, -1] = i</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">return</span> result</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">x1 = np.array([1, 1])</span><br><span class="line">x2 = np.array([2, 1])</span><br><span class="line">x3 = np.array([4, 3])</span><br><span class="line">x4 = np.array([5, 4])</span><br><span class="line">testX = np.vstack((x1, x2, x3, x4))</span><br><span class="line"></span><br><span class="line">result = kmeans(testX, 2, 10)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"final result:"</span></span><br><span class="line"><span class="built_in">print</span> result</span><br></pre></td></tr></table></figure></p><p>打印结果均为[1,1],[2,1]为一组，[4，3][5,4]为一组，与手算结果一致 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;KMeans聚类算法python代码：&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
+    <link href="http://dnysu.cn/2017-9-15-one/"/>
+    <id>http://dnysu.cn/2017-9-15-one/</id>
+    <published>2017-09-15T02:47:16.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>归类：<br>聚类(clustering) 属于非监督学习 (unsupervised learning)<br>无类别标记(class label)</li><li>举例：<br><img src="/2017-9-15-one/1.jpg" alt=""> <a id="more"></a>          </li><li>K-means 算法：<br>3.1 Clustering 中的经典算法，数据挖掘十大经典算法之一<br>3.2 算法接受参数 k ；然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高；而不同聚类中的对象相似度较小。<br>3.3 算法思想：<br>以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至得到最好的聚类结果<br>3.4 算法描述：<br>（1）适当选择c个类的初始中心；<br>（2）在第k次迭代中，对任意一个样本，求其到c各中心的距离，将该样本归到距离最短的中心所在的类；<br>（3）利用均值等方法更新该类的中心值；<br>（4）对于所有的c个聚类中心，如果利用（2）（3）的迭代法更新后，值保持不变，则迭代结束，否则继续迭代。<br>3.5 算法流程：<br><img src="/2017-9-15-one/2.jpg" alt=""><br>输入：k, data[n];<br>（1） 选择k个初始中心点，例如c[0]=data[0],…c[k-1]=data[k-1];<br>（2） 对于data[0]….data[n], 分别与c[0]…c[k-1]比较，假定与c[i]差值最少，就标记为i;<br>（3） 对于所有标记为i点，重新计算c[i]={ 所有标记为i的data[j]之和}/标记为i的个数；<br>（4） 重复(2)(3),直到所有c[i]值的变化小于给定阈值。</li><li>举例：<br><img src="/2017-9-15-one/3.png" alt=""><br><img src="/2017-9-15-one/4.png" alt=""><br><img src="/2017-9-15-one/5.png" alt=""><br><img src="/2017-9-15-one/d0.png" alt=""><br><img src="/2017-9-15-one/g0.png" alt=""><br><img src="/2017-9-15-one/c2.png" alt=""><br><img src="/2017-9-15-one/6.png" alt=""><br><img src="/2017-9-15-one/d1.png" alt=""><br><img src="/2017-9-15-one/g1.png" alt=""><br><img src="/2017-9-15-one/c1andc2.png" alt=""><br><img src="/2017-9-15-one/7.png" alt=""><br><img src="/2017-9-15-one/d2.png" alt=""><br><img src="/2017-9-15-one/g2.png" alt=""><br>停止<br>优点：速度快，简单<br>缺点：最终结果跟初始点选择相关，容易陷入局部最优，需直到k值<br>Reference:<a href="http://croce.ggf.br/dados/K%20mean%20Clustering1.pdf" target="_blank" rel="noopener">http://croce.ggf.br/dados/K%20mean%20Clustering1.pdf</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;归类：&lt;br&gt;聚类(clustering) 属于非监督学习 (unsupervised learning)&lt;br&gt;无类别标记(class label)&lt;/li&gt;
+&lt;li&gt;举例：&lt;br&gt;&lt;img src=&quot;/2017-9-15-one/1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
+    <link href="http://dnysu.cn/2017-9-14-two/"/>
+    <id>http://dnysu.cn/2017-9-14-two/</id>
+    <published>2017-09-14T07:31:24.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>线性回归计算R平方值和相关度python代码：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">from astropy.units import Ybarn</span><br><span class="line">import math</span><br><span class="line"></span><br><span class="line">def computeCorrelation(X, Y):</span><br><span class="line">    xBar = np.mean(X)</span><br><span class="line">    yBar = np.mean(Y)</span><br><span class="line">    SSR = 0</span><br><span class="line">    varX = 0</span><br><span class="line">    varY = 0</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0 , len(X)):</span><br><span class="line">        diffXXBar = X[i] - xBar</span><br><span class="line">        diffYYBar = Y[i] - yBar</span><br><span class="line">        SSR += (diffXXBar * diffYYBar)</span><br><span class="line">        varX +=  diffXXBar**2</span><br><span class="line">        varY += diffYYBar**2</span><br><span class="line">    </span><br><span class="line">    SST = math.sqrt(varX * varY)</span><br><span class="line">    <span class="built_in">return</span> SSR / SST</span><br><span class="line">def polyfit(x,y,degree):</span><br><span class="line">    results=&#123;&#125;</span><br><span class="line">    coeffs=np.polyfit(x,y,degree)</span><br><span class="line">    results[<span class="string">'polinoial'</span>]=coeffs.tolist()</span><br><span class="line">    p=np.poly1d(coeffs)</span><br><span class="line">    yhat=p(x)</span><br><span class="line">    ybar=np.mean(y)</span><br><span class="line">    ssr=np.sum((yhat-ybar)**2)</span><br><span class="line">    sst=np.sum((y-ybar)**2)</span><br><span class="line">    results[<span class="string">'determination'</span>]=ssr/sst;</span><br><span class="line">    <span class="built_in">return</span> results</span><br><span class="line">    </span><br><span class="line">testX = [1, 3, 8, 7, 9]</span><br><span class="line">testY = [10, 12, 24, 21, 34]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> computeCorrelation(testX, testY) **2</span><br><span class="line"><span class="built_in">print</span> polyfit(testX, testY, 1)</span><br></pre></td></tr></table></figure></p><p>打印结果均为0.884   </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;线性回归计算R平方值和相关度python代码：&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十八）回归中的相关度和R平方值</title>
+    <link href="http://dnysu.cn/2017-9-14-one/"/>
+    <id>http://dnysu.cn/2017-9-14-one/</id>
+    <published>2017-09-14T01:42:49.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>皮尔逊相关系数 (Pearson Correlation Coefficient):<br>1.1 衡量两个值线性相关强度的量<br>1.2 取值范围 [-1, 1]: <a id="more"></a>正向相关: &gt;0, 负向相关：&lt;0, 无相关性：=0<br>1.3<br>$\rho=Cor(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$<br>$r_{xy}=\frac{\sum(x-\overline{x})(y-\overline{y})}{\sqrt{\sum(x-\overline{x})^2(y-\overline{y})^2}}$    </li><li>计算方法举例：<br>X    Y<br>1    10<br>3    12<br>8    24<br>7    21<br>9    34</li><li>其他例子：<br><img src="/2017-9-14-one/1.png" alt=""> </li><li>R平方值:<br>4.1 定义：决定系数，反应因变量的全部变异能通过回归关系被自变量解释的比例。<br>4.2 描述：如R平方为0.8，则表示回归关系可以解释因变量80%的变异。换句话说，如果我们能控制自变量不变，则因变量的变异程度会减少80%<br>4.3： 简单线性回归：R^2 = r * r<br>   多元线性回归：<br>$R^2=\frac{SSR}{SST}=\frac{\sum(\hat{y_i}-\overline{y})^2}{\sum(y_i-\overline{y})^2}$<br><img src="/2017-9-14-one/2.jpg" alt=""><br>$SSE=\sum(y_i-\hat{y_i})^2$                    </li><li>R平方也有其局限性：R平方随着自变量的增加会变大，R平方和样本量是有关系的。因此，我们要到R平方进行修正。修正的方法：<br>$R^2=1-\frac{(1-R^2)(N-1)}{N-P-1}$<br>p为预测数目<br>N为样本数目         </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;皮尔逊相关系数 (Pearson Correlation Coefficient):&lt;br&gt;1.1 衡量两个值线性相关强度的量&lt;br&gt;1.2 取值范围 [-1, 1]:&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十七）非线性回归应用</title>
+    <link href="http://dnysu.cn/2017-9-13-two/"/>
+    <id>http://dnysu.cn/2017-9-13-two/</id>
+    <published>2017-09-13T08:27:31.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>直接上一段简单的梯度下降算法代码<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">def genData(numPoints,bias,variance):</span><br><span class="line">    x = np.zeros(shape=(numPoints,2))</span><br><span class="line">    y = np.zeros(shape=(numPoints))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0,numPoints):</span><br><span class="line">        x[i][0]=1</span><br><span class="line">        x[i][1]=i</span><br><span class="line">        y[i]=(i+bias)+random.uniform(0,1)+variance</span><br><span class="line">    <span class="built_in">return</span> x,y</span><br><span class="line"></span><br><span class="line">def gradientDescent(x,y,theta,alpha,m,numIterations):</span><br><span class="line">    xTran = np.transpose(x)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numIterations):</span><br><span class="line">        hypothesis = np.dot(x,theta)</span><br><span class="line">        loss = hypothesis-y</span><br><span class="line">        cost = np.sum(loss**2)/(2*m)</span><br><span class="line">        gradient=np.dot(xTran,loss)/m</span><br><span class="line">        theta = theta-alpha*gradient</span><br><span class="line">    <span class="built_in">return</span> theta</span><br><span class="line"></span><br><span class="line">x,y = genData(100, 25, 10)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"x:"</span></span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> <span class="string">"y:"</span></span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line"></span><br><span class="line">m,n = np.shape(x)</span><br><span class="line">n_y = np.shape(y)</span><br><span class="line">  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">"m:"</span>+str(m)+<span class="string">" n:"</span>+str(n)+<span class="string">" n_y:"</span>+str(n_y))</span><br><span class="line">  </span><br><span class="line">numIterations = 100000</span><br><span class="line">alpha = 0.0005</span><br><span class="line">theta = np.ones(n)</span><br><span class="line">theta= gradientDescent(x, y, theta, alpha, m, numIterations)</span><br><span class="line"><span class="built_in">print</span>(theta)</span><br></pre></td></tr></table></figure></p><p>cost由开始的60多下降到最后的3点几<br>最后给出参数theta x数组第一列为1，所以theta[1]代表偏置,theta[2]为斜率</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;直接上一段简单的梯度下降算法代码&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Latex符号大全</title>
+    <link href="http://dnysu.cn/2017-9-13-one/"/>
+    <id>http://dnysu.cn/2017-9-13-one/</id>
+    <published>2017-09-13T01:42:49.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载自<br><a href="http://blog.csdn.net/garfielder007/article/details/51646604" target="_blank" rel="noopener">http://blog.csdn.net/garfielder007/article/details/51646604</a><br>mark一下备用</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;转载自&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/garfielder007/article/details/51646604&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://blog.csdn.net/garfield
+      
+    
+    </summary>
+    
+    
+      <category term="LATEX" scheme="http://dnysu.cn/tags/LATEX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十六）非线性回归原理</title>
+    <link href="http://dnysu.cn/2017-9-12-one/"/>
+    <id>http://dnysu.cn/2017-9-12-one/</id>
+    <published>2017-09-12T07:03:47.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>概率：<br>1.1 定义   概率(P)robability: 对一件事情发生的可能性的衡量<br>1.2 范围   0 &lt;= P &lt;= 1<br>1.3 计算方法：<br>1.3.1 根据个人置信<br>1.3.2 根据历史数据<br>1.3.3 根据模拟数据<a id="more"></a> 1.4 条件概率：<br>$P(A|B)=\frac{P(A\cap B)}{P(B)}$                         </li><li>Logistic Regression (逻辑回归)<br>2.1 例子<br><img src="/2017-9-12-one/1.png" alt=""><br>h(x) &gt; 0.5<br><img src="/2017-9-12-one/2.png" alt=""><br>h(x) &gt; 0.2<br>2.2 基本模型<br>测试数据为X(x0，x1，x2···xn)<br>要学习的参数为： Θ(θ0，θ1，θ2，···θn)<br>$Z=\theta_0 x_0+\theta_1 x_1\theta_2 x_2+\cdots \theta_n x_n$<br>向量表示<br>$Z=\Theta^TX$<br>处理二值数据，引入Sigmoid函数时曲线平滑化<br>$g(Z)=\frac{1}{1+e^{-Z}}$<br>预测函数:<br>$h_\theta(X)=g(\Theta^TX)=\frac{1}{1+e^{-\Theta^TX}}$<br>用概率表示:<br>正例(y=1):<br>$h_\theta(X)=P(y=1|X;\Theta)$<br>反例(y=0):<br>$1-h_\theta(X)=P(y=0|X;\Theta)$<br>2.3 Cost函数<br>线性回归:<br><img src="/2017-9-12-one/3.jpg" alt=""><br>$\sum_{i=1}^m(h_\theta (x^{(i)})-y^{(i)})^2$<br>$h_\theta(x^{(i)})=\theta_0+\theta_1x^{(i)}$<br>找到合适的 θ0，θ1使上式最小<br>Logistic regression:<br><img src="/2017-9-12-one/44.jpg" alt=""><br>Cost函数:<br>目标：找到合适的 θ0，θ1使上式最小<br>2.4 解法：梯度下降（gradient decent)<br><img src="/2017-9-12-one/5.jpg" alt=""> <img src="/2017-9-12-one/6.jpg" alt=""><br>$\theta_j=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta),(j=0\cdots n)$<br>更新法则:<br>$\theta_j=\theta_j-\alpha \sum_{i=1}^m(h_\theta (x^{(i)})-y^{(i)})x_j^{(i)},(j=0\cdots n)$<br>学习率<br>同时对所有的θ进行更新<br>重复更新直到收敛   </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;概率：&lt;br&gt;1.1 定义   概率(P)robability: 对一件事情发生的可能性的衡量&lt;br&gt;1.2 范围   0 &amp;lt;= P &amp;lt;= 1&lt;br&gt;1.3 计算方法：&lt;br&gt;1.3.1 根据个人置信&lt;br&gt;1.3.2 根据历史数据&lt;br&gt;1.3.3 根据模拟数据&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多电脑间github同步hexo博文</title>
+    <link href="http://dnysu.cn/2017-8-31-one/"/>
+    <id>http://dnysu.cn/2017-8-31-one/</id>
+    <published>2017-08-31T03:26:00.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>远程仓库及分支建立方法参照博文：<a href="https://righere.github.io/2016/10/10/install-hexo/" target="_blank" rel="noopener">https://righere.github.io/2016/10/10/install-hexo/</a><br>完成远程仓库建立<br>这样在另一台没有任何博文资料的电脑上可以同步github数据，先建立SSH连接，确保github账户关联，然后参照一下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git pull origin hexo  //先pull完成本地与远端的融合</span><br><span class="line">hexo new post <span class="string">" new blog name"</span></span><br><span class="line">git add .//.的话就只增加更新的文章 </span><br><span class="line">git commit -m <span class="string">"XX"</span>//此处为github说明</span><br><span class="line">git push origin hexo</span><br><span class="line">hexo d -g //编译发布</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;远程仓库及分支建立方法参照博文：&lt;a href=&quot;https://righere.github.io/2016/10/10/install-hexo/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://righere.github.io/201
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://dnysu.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十五）多元回归分析应用</title>
+    <link href="http://dnysu.cn/2017-8-12-two/"/>
+    <id>http://dnysu.cn/2017-8-12-two/</id>
+    <published>2017-08-12T07:57:38.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>例子<br>一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间   <a id="more"></a> Driving Assignment X1=Miles Traveled X2=Number of Deliveries Y= Travel Time (Hours)<br>1    100    4    9.3<br>2    50    3    4.8<br>3    100    4    8.9<br>4    100    2    6.5<br>5    50    2    4.2<br>6    80    2    6.2<br>7    75    3    7.4<br>8    65    4    6.0<br>9    90    3    7.6<br>10    90    2    6.1<br>目的，求出b0, b1,…. bp：<br>y_hat=b0＋b１x1+b2x2+ … +bpxp</li><li>Python代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">from numpy import genfromtxt</span><br><span class="line">from sklearn import linear_model</span><br><span class="line">dataPath = r<span class="string">"Delivery.csv"</span></span><br><span class="line">deliveryData = genfromtxt(dataPath,delimiter=<span class="string">','</span>)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"data"</span></span><br><span class="line"><span class="built_in">print</span> deliveryData</span><br><span class="line">x= deliveryData[:,:-1]</span><br><span class="line">y = deliveryData[:,-1]</span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line">lr = linear_model.LinearRegression()</span><br><span class="line">lr.fit(x, y)</span><br><span class="line"><span class="built_in">print</span> lr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"coefficients:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.coef_</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"intercept:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.intercept_</span><br><span class="line">xPredict = [102,6] </span><br><span class="line">yPredict = lr.predict(xPredict)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"predict:"</span>)</span><br><span class="line"><span class="built_in">print</span> yPredict</span><br><span class="line"><span class="comment"># 如果需要多个车型分开则增加N维二进制数组输入 然后预测 如：xPredict =  [90,2,0,0,1]</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;例子&lt;br&gt;一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十四）多元回归分析</title>
+    <link href="http://dnysu.cn/2017-8-12-one/"/>
+    <id>http://dnysu.cn/2017-8-12-one/</id>
+    <published>2017-08-12T07:36:18.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>与简单线性回归区别(simple linear regression)<br>多个自变量(x)</li><li>多元回归模型<br>y=β0＋β１x1+β2x2+ … +βpxp+ε<br>其中：β0，β１，β2… βp是参数<br>ε是误差值</li><li>多元回归方程<br>E(y)=β0＋β１x1+β2x2+ … +βpxp</li><li>估计多元回归方程:<br>y_hat=b0＋b１x1+b2x2+ … +bpxp<br>一个样本被用来计算β0，β１，β2… βp的点估计b0, b1, b2,…, bp<a id="more"></a> </li><li>估计流程  (与简单线性回归类似）<br><img src="/2017-8-12-one/1.png" alt="">  </li><li>估计方法<br>使sum of squares最小<br><img src="/2017-8-12-one/2.png" alt=""><br>运算与简单线性回归类似，涉及到线性代数和矩阵代数的运算</li><li>例子<br>一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间<br>Driving<br>Assignment Traveled    X1=Miles X2=Number of Deliveries Y= Travel Time (Hours)<br>1    100    4    9.3<br>2    50    3    4.8<br>3    100    4    8.9<br>4    100    2    6.5<br>5    50    2    4.2<br>6    80    2    6.2<br>7    75    3    7.4<br>8    65    4    6.0<br>9    90    3    7.6<br>10    90    2    6.1<br>Time = b0+ b1<em>Miles + b2 </em> Deliveries<br>Time = -0.869 + 0.0611 Miles + 0.923 Deliveries</li><li>描述参数含义<br>b0: 平均每多运送一英里，运输时间延长0.0611 小时<br>b1: 平均每多一次运输，运输时间延长 0.923 小时</li><li>预测<br>如果一个运输任务是跑102英里，运输6次，预计多少小时？<br>Time = -0.869 +0.0611 <em>102+ 0.923 </em> 6<br>= 10.9 (小时）</li><li>如果自变量中有分类型变量(categorical data) , 如何处理？<br>英里数    次数    车型    时间<br>100    4    1    9.3<br>50    3    0    4.8<br>100    4    1    8.9<br>100    2    2    6.5<br>50    2    2    4.2<br>80    2    1    6.2<br>75    3    1    7.4<br>65    4    0    6<br>90    3    0    7.6</li><li>关于误差的分布<br>误差ε是一个随机变量，均值为0<br>ε的方差对于所有的自变量来说相等<br>所有ε的值是独立的<br>ε满足正态分布，并且通过β0＋β１x1+β2x2+ … +βpxp反映y的期望值</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;与简单线性回归区别(simple linear regression)&lt;br&gt;多个自变量(x)&lt;/li&gt;
+&lt;li&gt;多元回归模型&lt;br&gt;y=β0＋β１x1+β2x2+ … +βpxp+ε&lt;br&gt;其中：β0，β１，β2… βp是参数&lt;br&gt;ε是误差值&lt;/li&gt;
+&lt;li&gt;多元回归方程&lt;br&gt;E(y)=β0＋β１x1+β2x2+ … +βpxp&lt;/li&gt;
+&lt;li&gt;估计多元回归方程:&lt;br&gt;y_hat=b0＋b１x1+b2x2+ … +bpxp&lt;br&gt;一个样本被用来计算β0，β１，β2… βp的点估计b0, b1, b2,…, bp&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十三）简单线性回归应用</title>
+    <link href="http://dnysu.cn/2017-7-8-two/"/>
+    <id>http://dnysu.cn/2017-7-8-two/</id>
+    <published>2017-07-08T08:35:16.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>简单线性回归模型举例：<br>汽车卖家做电视广告数量与卖出的汽车数量：<br><img src="/2017-7-8-two/1.png" alt=""><br>1.1 如何练处适合简单线性回归模型的最佳回归线？<a id="more"></a>  <img src="/2017-7-8-two/2.png" alt=""><br>min$\sum(y_i-\hat y_i)^2$<br>使sum of squares最小<br>1.1.2 计算<br><img src="/2017-7-8-two/1.png" alt=""><br>$b_1=\frac{\sum(x_i-\overline x)(y_i-\overline y)}{\sum(x_i-\overline x)^2}$<br>$b_0=\overline y-b_1\overline x$<br>分子 = (1-2)(14-20)+(3-2)(24-20)+(2-2)(18-20)+(1-2)(17-20)+(3-2)(27-20)<br>= 6 + 4 + 0 + 3 + 7<br>= 20<br>分母 = （1-2）^2 + (3-2)^2 + (2-2)^2 + (1-2)^2 + (3-2)^2<br>= 1 + 1 + 0 + 1 + 1<br>= 4<br>b1 = 20/4  =5<br>b0 = 20 - 5$\times$2 = 20 - 10 = 10<br>1.2 预测：<br>假设有一周广告数量为6，预测的汽车销售量是多少？<br><img src="/2017-7-8-two/2.png" alt=""><br>x_given = 6<br>Y_hat = 5$\times$6 + 10 = 40<br>1.3 Python实现：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def fitSLR(x, y):</span><br><span class="line">    n = len(x)</span><br><span class="line">    dinominator = 0</span><br><span class="line">    numerator = 0</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0, n):</span><br><span class="line">        numerator += (x[i] - np.mean(x))*(y[i] - np.mean(y))</span><br><span class="line">        dinominator += (x[i] - np.mean(x))**2</span><br><span class="line">    b1 = numerator/<span class="built_in">float</span>(dinominator)</span><br><span class="line">    b0 = np.mean(y)-b1*<span class="built_in">float</span>(np.mean(x))</span><br><span class="line">    <span class="built_in">return</span> b0, b1</span><br><span class="line">def predict(x, b0, b1):</span><br><span class="line">    <span class="built_in">return</span> b0 + x*b1</span><br><span class="line">x = [1, 3, 2, 1, 3]</span><br><span class="line">y = [14, 24, 18, 17, 27]    </span><br><span class="line">b0, b1 = fitSLR(x, y)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"intercept:"</span>, b0, <span class="string">" slope:"</span>, b1</span><br><span class="line">x_test = 6</span><br><span class="line">y_test = predict(6, b0, b1)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"y_test:"</span>, y_test</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;简单线性回归模型举例：&lt;br&gt;汽车卖家做电视广告数量与卖出的汽车数量：&lt;br&gt;&lt;img src=&quot;/2017-7-8-two/1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;1.1 如何练处适合简单线性回归模型的最佳回归线？&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十二）简单线性回归原理</title>
+    <link href="http://dnysu.cn/2017-7-8-one/"/>
+    <id>http://dnysu.cn/2017-7-8-one/</id>
+    <published>2017-07-08T05:36:21.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>为什么需要统计量？<br>统计量：描述数据特征<br>1.1集中趋势衡量<br>1.1.1均值（平均数，平均值）（mean）<br>$\overline x = \sum_{i=1}^{n}x_i$<br>{6, 2, 9, 1, 2}<br>(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 4<br>1.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量<br>1.1.2.1给数据排序：1， 2， 2， 6， 9<br>1.1.2.2找出位置处于中间的变量：2<br>当n为基数的时候：直接取位置处于中间的变量<br>当n为偶数的时候，取中间两个量的平均值<br>1.1.2众数 （mode）：数据中出现次数最多的数<a id="more"></a>1.2<br>1.2.1离散程度衡量<br>1.2.1.1方差（variance)<br>$s^2=\frac{\sum_{i=1}^n(x_i-\overline x)^2}{n-1}$<br>{6, 2, 9, 1, 2}<br>(1) (6 - 4)^2 + (2 - 4) ^2 + (9 - 4)^2 + (1 - 4)^2 + (2 - 4)^2<br>= 4 + 4 + 25 + 9 + 4<br>= 46<br>(2) n - 1 = 5 - 1 = 4<br>(3) 46 / 4 = 11.5<br>1.2.1.2标准差 (standard deviation)<br>$s=\sqrt{s^2}$<br>s = sqrt(11.5) = 3.39  </li><li>简单线性回归(Simple Linear Regression)<br>2.1很多做决定过过程通常是根据两个或者多个变量之间的关系<br>2.2回归分析(regression analysis)用来建立方程模拟两个或者多个变量之间如何关联<br>2.3被预测的变量叫做：因变量(dependent variable), y, 输出(output)<br>2.4被用来进行预测的变量叫做： 自变量(independent variable), x, 输入(input)</li><li>简单线性回归介绍<br>3.1简单线性回归包含一个自变量(x)和一个因变量(y)<br>3.2以上两个变量的关系用一条直线来模拟<br>3.3如果包含两个以上的自变量，则称作多元回归分析(multiple regression)</li><li>简单线性回归模型<br>4.1被用来描述因变量(y)和自变量(X)以及偏差(error)之间关系的方程叫做回归模型<br>4.2简单线性回归的模型是:<br>$y=\beta_0+\beta_1x+\varepsilon$     </li><li>简单线性回归方程<br>E(y) = β0+β1x<br>这个方程对应的图像是一条直线，称作回归线<br>其中，β0是回归线的截距<br>β1是回归线的斜率<br>E(y)是在一个给定x值下y的期望值（均值）</li><li>正向线性关系：<br><img src="/2017-7-8-one/1.png" alt="">   </li><li>负向线性关系：<br><img src="/2017-7-8-one/2.png" alt=""></li><li>无关系<br><img src="/2017-7-8-one/3.png" alt=""></li><li>估计的简单线性回归方程<br>ŷ=b0+b1x<br>这个方程叫做估计线性方程(estimated regression line)<br>其中，b0是估计线性方程的纵截距<br>b1是估计线性方程的斜率<br>ŷ是在自变量x等于一个给定值的时候，y的估计值</li><li>线性回归分析流程：<br><img src="/2017-7-8-one/4.png" alt="">    </li><li>关于偏差ε的假定<br>11.1是一个随机的变量，均值为0<br>11.2ε的方差(variance)对于所有的自变量x是一样的<br>11.3ε的值是独立的<br>11.4ε满足正态分布</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;为什么需要统计量？&lt;br&gt;统计量：描述数据特征&lt;br&gt;1.1集中趋势衡量&lt;br&gt;1.1.1均值（平均数，平均值）（mean）&lt;br&gt;$\overline x = \sum_{i=1}^{n}x_i$&lt;br&gt;{6, 2, 9, 1, 2}&lt;br&gt;(6 + 2 + 9 + 1 + 2) / 5 = 20 / 5 = 4&lt;br&gt;1.1.2中位数 （median）: 将数据中的各个数值按照大小顺序排列，居于中间位置的变量&lt;br&gt;1.1.2.1给数据排序：1， 2， 2， 6， 9&lt;br&gt;1.1.2.2找出位置处于中间的变量：2&lt;br&gt;当n为基数的时候：直接取位置处于中间的变量&lt;br&gt;当n为偶数的时候，取中间两个量的平均值&lt;br&gt;1.1.2众数 （mode）：数据中出现次数最多的数&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十一）神经网络应用</title>
+    <link href="http://dnysu.cn/2017-7-3-three/"/>
+    <id>http://dnysu.cn/2017-7-3-three/</id>
+    <published>2017-07-03T13:08:39.000Z</published>
+    <updated>2018-03-04T13:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>关于非线性转化方程(non-linear transformation function)<br>sigmoid函数(S 曲线)用来作为activation function:<br>1.1双曲函数(tanh)<br>1.2逻辑函数(logistic function)</li><li><p>用类实现一个简单的神经网络算法</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def tanh(x):  </span><br><span class="line">    <span class="built_in">return</span> np.tanh(x)</span><br><span class="line">def tanh_deriv(x):  </span><br><span class="line">    <span class="built_in">return</span> 1.0 - np.tanh(x)*np.tanh(x)</span><br><span class="line">def logistic(x):  </span><br><span class="line">    <span class="built_in">return</span> 1/(1 + np.exp(-x))</span><br><span class="line">def logistic_derivative(x):  </span><br><span class="line">    <span class="built_in">return</span> logistic(x)*(1-logistic(x))</span><br><span class="line">class NeuralNetwork:   </span><br><span class="line">    def __init__(self, layers, activation=<span class="string">'tanh'</span>):  </span><br><span class="line">        <span class="string">""</span><span class="string">"  </span></span><br><span class="line"><span class="string">        :param layers: A list containing the number of units in each layer.</span></span><br><span class="line"><span class="string">        Should be at least two values  </span></span><br><span class="line"><span class="string">        :param activation: The activation function to be used. Can be</span></span><br><span class="line"><span class="string">        "</span>logistic<span class="string">" or "</span>tanh<span class="string">"  </span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span>  </span><br><span class="line">        <span class="keyword">if</span> activation == <span class="string">'logistic'</span>:  </span><br><span class="line">            self.activation = logistic  </span><br><span class="line">            self.activation_deriv = logistic_derivative  </span><br><span class="line">        <span class="keyword">elif</span> activation == <span class="string">'tanh'</span>:  </span><br><span class="line">            self.activation = tanh  </span><br><span class="line">            self.activation_deriv = tanh_deriv</span><br><span class="line">    </span><br><span class="line">        self.weights = []  </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(1, len(layers) - 1):  </span><br><span class="line">            self.weights.append((2*np.random.random((layers[i - 1] + 1, layers[i] + 1))-1)*0.25)  </span><br><span class="line">            self.weights.append((2*np.random.random((layers[i] + 1, layers[i + 1]))-1)*0.25)</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">    def fit(self, X, y, learning_rate=0.2, epochs=10000):         </span><br><span class="line">        X = np.atleast_2d(X)         </span><br><span class="line">        temp = np.ones([X.shape[0], X.shape[1]+1])         </span><br><span class="line">        temp[:, 0:-1] = X  <span class="comment"># adding the bias unit to the input layer         </span></span><br><span class="line">        X = temp         </span><br><span class="line">        y = np.array(y)</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> range(epochs):  </span><br><span class="line">            i = np.random.randint(X.shape[0])  </span><br><span class="line">            a = [X[i]]</span><br><span class="line">    </span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> range(len(self.weights)):  <span class="comment">#going forward network, for each layer</span></span><br><span class="line">                a.append(self.activation(np.dot(a[l], self.weights[l])))  <span class="comment">#Computer the node value for each layer (O_i) using activation function</span></span><br><span class="line">            error = y[i] - a[-1]  <span class="comment">#Computer the error at the top layer</span></span><br><span class="line">            deltas = [error * self.activation_deriv(a[-1])] <span class="comment">#For output layer, Err calculation (delta is updated error)</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">#Staring backprobagation</span></span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> range(len(a) - 2, 0, -1): <span class="comment"># we need to begin at the second to last layer </span></span><br><span class="line">                <span class="comment">#Compute the updated error (i,e, deltas) for each node going from top layer to input layer </span></span><br><span class="line">                deltas.append(deltas[-1].dot(self.weights[l].T)*self.activation_deriv(a[l]))  </span><br><span class="line">            deltas.reverse()  </span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self.weights)):  </span><br><span class="line">                layer = np.atleast_2d(a[i])  </span><br><span class="line">                delta = np.atleast_2d(deltas[i])  </span><br><span class="line">                self.weights[i] += learning_rate * layer.T.dot(delta)</span><br><span class="line">                </span><br><span class="line">                </span><br><span class="line">    def predict(self, x):         </span><br><span class="line">        x = np.array(x)         </span><br><span class="line">        temp = np.ones(x.shape[0]+1)         </span><br><span class="line">        temp[0:-1] = x         </span><br><span class="line">        a = temp         </span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> range(0, len(self.weights)):             </span><br><span class="line">            a = self.activation(np.dot(a, self.weights[l]))         </span><br><span class="line">        <span class="built_in">return</span> a</span><br></pre></td></tr></table></figure></li><li><p>简单非线性关系数据集测试(XOR):<br>X:                  Y<br>0 0                 0<br>0 1                 1<br>1 0                 1<br>1 1                 0</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from NeuralNetwork import NeuralNetwork</span><br><span class="line">import numpy as np</span><br><span class="line">nn = NeuralNetwork([2,2,1], <span class="string">'tanh'</span>)     </span><br><span class="line">X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])     </span><br><span class="line">y = np.array([0, 1, 1, 0])     </span><br><span class="line">nn.fit(X, y)     </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [[0, 0], [0, 1], [1, 0], [1,1]]:    </span><br><span class="line">    <span class="built_in">print</span>(i, nn.predict(i))</span><br></pre></td></tr></table></figure></li><li><p>手写数字识别：<br>每个图片8x8<br>识别数字：0,1,2,3,4,5,6,7,8,9</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np </span><br><span class="line">from sklearn.datasets import load_digits </span><br><span class="line">from sklearn.metrics import confusion_matrix, classification_report </span><br><span class="line">from sklearn.preprocessing import LabelBinarizer </span><br><span class="line">from NeuralNetwork import NeuralNetwork</span><br><span class="line">from sklearn.cross_validation import train_test_split</span><br><span class="line">digits = load_digits()  </span><br><span class="line">X = digits.data  </span><br><span class="line">y = digits.target  </span><br><span class="line">X -= X.min() <span class="comment"># normalize the values to bring them into the range 0-1  </span></span><br><span class="line">X /= X.max()</span><br><span class="line">nn = NeuralNetwork([64,100,10],<span class="string">'logistic'</span>)  </span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y)  </span><br><span class="line">labels_train = LabelBinarizer().fit_transform(y_train)  </span><br><span class="line">labels_test = LabelBinarizer().fit_transform(y_test)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"start fitting"</span></span><br><span class="line">nn.fit(X_train,labels_train,epochs=3000)  </span><br><span class="line">predictions = []  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(X_test.shape[0]):  </span><br><span class="line">    o = nn.predict(X_test[i] )  </span><br><span class="line">    predictions.append(np.argmax(o))  </span><br><span class="line"><span class="built_in">print</span> confusion_matrix(y_test,predictions)  </span><br><span class="line"><span class="built_in">print</span> classification_report(y_test,predictions)</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;关于非线性转化方程(non-linear transformation function)&lt;br&gt;sigmoid函数(S 曲线)用来作为activation function:&lt;br&gt;1.1双曲函数(tanh)&lt;br&gt;1.2逻辑函数(logistic function)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用类实现一个简单的神经网络算法&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
