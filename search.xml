@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python学习笔记（九）文件的打开与关闭]]></title>
+    <url>%2F2018-3-17-two%2F</url>
+    <content type="text"><![CDATA[想一想：如果想用word编写一份简历，应该有哪些流程呢？ 打开word软件，新建一个word文件 写入个人简历信息 保存文件 关闭word软件同样，在操作文件的整体过程与使用word编写一份简历的过程是很相似的 （io操作） 打开文件，或者新建立一个文件 读/写数据 关闭文件 打开文件在python，使用open函数，可以打开一个已经存在的文件，或者创建一个新文件open(文件名，访问模式)示例如下：f = open(‘test.txt’,’w’)说明: ‘r’ open for reading (default) ‘w’ open for writing, truncating the file first ‘x’ open for exclusive creation, failing if the file already exists ‘a’ open for writing, appending to the end of the file if it exists ‘b’ binary mode ‘t’ text mode (default) ‘+’ open a disk file for updating (reading and writing) ‘U’ universal newlines mode (deprecated) 关闭文件close( )示例如下：12345#新建一个文件，文件名为:test.txt f = open('test.txt','w')#关闭这个文件 f.close() 写数据(write)使用write()可以完成向文件写入数据demo:123f = open('test.txt','w')f.write('helloworld, i am here!')f.close() 注意：如果文件不存在那么创建，如果存在那么就先清空，然后写入数据 读数据(read)使用read(num)可以从文件中读取数据，num表示要从文件中读取的数据的长度（单位是字节），如果没有传入num，那么就表示读取文件中所有的数据demo:1234567f = open('test.txt','r')content = f.read(1024)print(content)print("-"*30)content= f.read()print(content)f.close() 注意： 如果open是打开一个文件，那么可以不用写打开的模式，即只写 open(‘test.txt’) 如果使用读了多次，那么后面读取的数据是从上次读完后的位置开始的 应用1:文件的copy 读数据（readlines）就像read没有参数时一样，readlines可以按照行的方式把整个文件中的内容进行一次性读取，并且返回的是一个列表，其中每一行的数据为一个元素12345678f = open('test.txt','r')content = f.readlines()print(type(content))i=1for temp in content: print("%d:%s"%(i,temp)) i+=1f.close() 读数据（readline）123456f = open('test.txt','r')content = f.readline()print("1:%s"%content)content= f.readline()print("2:%s"%content)f.close() 想一想：如果一个文件很大，比如5G，试想应该怎样把文件的数据读取到内存然后进行处理呢？ 文件的定位读写 获取当前读写的位置tell在读写文件的过程中，如果想知道当前的位置，可以使用tell()来获取 定位到某个位置如果在读写文件的过程中，需要从另外一个位置进行操作的话，可以使用seek()]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python学习笔记（八）匿名函数]]></title>
+    <url>%2F2018-3-17-one%2F</url>
+    <content type="text"><![CDATA[用lambda关键词能创建小型匿名函数。这种函数得名于省略了用def声明函数的标准步骤。 lambda函数的语法只包含一个语句，如下： lambda [arg1 [,arg2,.....argn]]:expression 如下实例：1234sum = lambda arg1, arg2: arg1 + arg2#调用sum函数print "Value of total : ", sum( 10, 20 )print "Value of total : ", sum( 20, 20 ) 以上实例输出结果： Value of total : 30 Value of total : 40 Lambda函数能接收任何数量的参数但只能返回一个表达式的值 匿名函数不能直接调用print，因为lambda需要一个表达式 应用场合函数作为参数传递自己定义函数123456789&gt;&gt;&gt; def fun(a, b, opt):... print "a =", a... print "b =", b... print "result =", opt(a, b)...&gt;&gt;&gt; fun(1, 2, lambda x,y:x+y)a = 1b = 2result = 3 作为内置函数的参数想一想，下面的数据如何指定按age或name排序？12345stus = [ &#123;"name":"zhangsan", "age":18&#125;, &#123;"name":"lisi", "age":19&#125;, &#123;"name":"wangwu", "age":17&#125;] 按name排序：123&gt;&gt;&gt; stus.sort(key = lambda x:x['name'])&gt;&gt;&gt; stus[&#123;'age': 19, 'name': 'lisi'&#125;, &#123;'age': 17, 'name': 'wangwu'&#125;, &#123;'age': 18, 'name': 'zhangsan'&#125;] 按age排序：123&gt;&gt;&gt; stus.sort(key = lambda x:x['age'])&gt;&gt;&gt; stus[&#123;'age': 17, 'name': 'wangwu'&#125;, &#123;'age': 18, 'name': 'zhangsan'&#125;, &#123;'age': 19, 'name': 'lisi'&#125;]]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown语法]]></title>
     <url>%2F2018-2-4-two%2F</url>
     <content type="text"><![CDATA[备用快速传送门]]></content>
@@ -275,7 +291,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python学习笔记（四）LIST 函数]]></title>
+    <title><![CDATA[Python学习笔记（四）函数]]></title>
     <url>%2F2017-6-23-three%2F</url>
     <content type="text"><![CDATA[函数：程序中可重复使用的程序段给一段程程序起一个名字，用这个名字来执行一段程序，反复使用 （调用函数）用关键字 ‘def’ 来定义，identifier(参数)identifier参数listreturn statement局部变量 vs 全局变量12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#-*- coding: utf-8 -*-#没有参数和返回的函数# def say_hi():# print(" hi!")# # say_hi()# say_hi()# # #有参数，无返回值# def print_sum_two(a, b):# c = a + b# print(c)# # print_sum_two(3, 6) # def hello_some(str):# print("hello " + str + "!")# # hello_some("China")# hello_some("Python") #有参数，有返回值# def repeat_str(str, times):# repeated_strs = str * times# return repeated_strs# # # repeated_strings = repeat_str("Happy Birthday!", 4)# print(repeated_strings) #全局变量与局部 变量# x = 60# # def foo(x):# print("x is: " + str(x))# x = 3# print("change local x to " + str(x))# # foo(x)# print('x is still', str(x))x = 60def foo(): global x print("x is: " + str(x)) x = 3 print("change local x to " + str(x))foo()print('value of x is' , str(x)) 默认参数关键字参数VarArgs参数123456789101112131415161718192021222324#-*- coding: utf-8 -*-# 默认参数def repeat_str(s, times = 1): repeated_strs = s * times return repeated_strsrepeated_strings = repeat_str("Happy Birthday!")print(repeated_strings)repeated_strings_2 = repeat_str("Happy Birthday!" , 4)print(repeated_strings_2)#不能在有默认参数后面跟随没有默认参数#f(a, b =2)合法#f(a = 2, b)非法#关键字参数: 调用函数时，选择性的传入部分参数def func(a, b = 4, c = 8): print('a is', a, 'and b is', b, 'and c is', c)func(13, 17)func(125, c = 24)func(c = 40, a = 80)#VarArgs参数def print_paras(fpara, *nums, **words): print("fpara: " + str(fpara)) print("nums: " + str(nums)) print("words: " + str(words)) print_paras("hello", 1, 3, 5, 7, word = "python", anohter_word = "java")]]></content>
       <tags>
