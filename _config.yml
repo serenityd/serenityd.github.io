@@ -34,7 +34,6 @@ baidusitemap:
   path: baidusitemap.xml
 deploy:
   type: git
-  repository: 
-    github: git@github.com:serenityd/serenityd.github.io.git
-    coding: git@git.coding.net:serenityd/hexo.git
+  repository: git@67.218.139.133:/var/repo/blog.git
+
   branch: master
