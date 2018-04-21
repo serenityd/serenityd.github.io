@@ -4,7 +4,7 @@ description: 人生如逆旅 我亦是行人
 author: Serenityd
 language: zh-Hans
 timezone:
-url: http://dnysu.cn
+url: http://www.dnysu.cn
 theme: next
 menu_icons:
   enable: true
@@ -34,6 +34,7 @@ baidusitemap:
   path: baidusitemap.xml
 deploy:
   type: git
-  repository: git@67.218.139.133:/var/repo/blog.git
-
+  repository: 
+    vps: git@67.218.139.133:/var/repo/blog.git
+    github: git@github.com:serenityd/serenityd.github.io
   branch: master
