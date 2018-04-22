@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Serenityd Blog</title>
   
-  <subtitle>凡心所向 素履可往</subtitle>
+  <subtitle>个人笔记技术博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dnysu.cn/"/>
-  <updated>2018-04-22T03:14:30.635Z</updated>
+  <updated>2018-04-22T06:48:37.483Z</updated>
   <id>http://www.dnysu.cn/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux下sh脚本相关</title>
+    <link href="http://www.dnysu.cn/2018-4-22-two/"/>
+    <id>http://www.dnysu.cn/2018-4-22-two/</id>
+    <published>2018-04-22T04:03:11.000Z</published>
+    <updated>2018-04-22T06:48:37.483Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.jb51.net/article/28514.htm" target="_blank" rel="noopener">原文链接</a><br>此处是内容和个人的一些笔记</p><h1 id="建立一个脚本"><a href="#建立一个脚本" class="headerlink" title="建立一个脚本"></a>建立一个脚本</h1><p>　　Linux中有好多中不同的shell，但是通常我们使用bash (bourne again shell) 进行shell编程，因为bash是免费的并且很容易使用。所以在本文中笔者所提供的脚本都是使用bash（但是在大多数情况下，这些脚本同样可以在 bash的大姐，bourne shell中运行）。<br>　　如同其他语言一样，通过我们使用任意一种文字编辑器，比如nedit、kedit、emacs、vi 等来编写我们的shell程序。<br>　　程序必须以下面的行开始（必须方在文件的第一行）： </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br></pre></td></tr></table></figure><p>符号#!用来告诉系统它后面的参数是用来执行该文件的程序。在这个例子中我们使用/bin/sh来执行程序。<br>当编辑好脚本时，如果要执行该脚本，还必须使其可执行。 要使脚本可执行： </p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">chmod</span> +x filename</span><br></pre></td></tr></table></figure><p>　　然后，您可以通过输入： ./filename 来执行您的脚本。<br>注释<br>　　在进行shell编程时，以#开头的句子表示注释，直到这一行的结束。我们真诚地建议您在程序中使用注释。如果您使用了注释，那么即使相当长的时间内没有使用该脚本，您也能在很短的时间内明白该脚本的作用及工作原理。<br><a id="more"></a><br>变量<br>　　在其他编程语言中您必须使用变量。在shell编程中，所有的变量都由字符串组成，并且您不需要对变量进行声明。要赋值给一个变量，您可以这样写：<br>变量名=值<br>　　取出变量值可以加一个美元符号（$）在变量前面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line"><span class="comment">#对变量赋值： </span></span><br><span class="line">a=<span class="string">"hello world"</span> </span><br><span class="line"><span class="comment">#现在打印变量a的内容： </span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"A is:"</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$a</span></span><br></pre></td></tr></table></figure></p><p>在您的编辑器中输入以上内容，然后将其保存为一个文件first。之后执行chmod +x first<br>使其可执行，最后输入./first执行该脚本。<br>这个脚本将会输出： </p><figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A <span class="keyword">is</span>: </span><br><span class="line">hello world</span><br></pre></td></tr></table></figure><p>在shell脚本中可以使用三类命令：<br>1)Unix 命令:<br>　　虽然在shell脚本中可以使用任意的unix命令，但是还是由一些相对更常用的命令。这些命令通常是用来进行文件和文字操作的。<br>常用命令语法及功能 </p><ul><li>echo “some text”: 将文字内容打印在屏幕上 </li><li>ls: 文件列表 </li><li>wc –l filewc -w filewc -c file: 计算文件行数计算文件中的单词数计算文件中的字符数 </li><li>cp sourcefile destfile: 文件拷贝 </li><li>mv oldname newname : 重命名文件或移动文件 </li><li>rm file: 删除文件 </li><li>grep ‘pattern’ file: 在文件内搜索字符串比如：grep ‘searchstring’ file.txt </li><li>cut -b colnum file: 指定欲显示的文件内容范围，并将它们输出到标准输出设备比如：输出每行第5个到第9个字符cut -b5-9 file.txt千万不要和cat命令混淆，这是两个完全不同的命令 </li><li>cat file.txt: 输出文件内容到标准输出设备（屏幕）上 </li><li>file somefile: 得到文件类型 </li><li>read var: 提示用户输入，并将输入赋值给变量 </li><li>sort file.txt: 对file.txt文件中的行进行排序 </li><li>uniq: 删除文本文件中出现的行列比如： sort file.txt | uniq </li><li>expr: 进行数学运算Example: add 2 and 3expr 2 “+” 3 </li><li>find: 搜索文件比如：根据文件名搜索find . -name filename -print </li><li>tee: 将数据输出到标准输出设备(屏幕) 和文件比如：somecommand | tee outfile </li><li>basename file: 返回不包含路径的文件名比如： basename /bin/tux将返回 tux </li><li>dirname file: 返回文件所在路径比如：dirname /bin/tux将返回 /bin </li><li>head file: 打印文本文件开头几行 </li><li>tail file : 打印文本文件末尾几行 </li><li>sed: Sed是一个基本的查找替换程序。可以从标准输入（比如命令管道）读入文本，并将结果输出到标准输出（屏幕）。该命令采用正则表达式（见参考）进行搜索。不要和shell中的通配符相混淆。比如：将linuxfocus 替换为 LinuxFocus ：cat text.file | sed ‘s/linuxfocus/LinuxFocus/‘ &gt; newtext.file </li><li>awk: awk 用来从文本文件中提取字段。缺省地，字段分割符是空格，可以使用-F指定其他分割符。cat file.txt | awk -F, ‘{print $1 “,” $3 }’这里我们使用，作为字段分割符，同时打印第一个和第三个字段。如果该文件内容如下： Adam Bor, 34, IndiaKerry Miller, 22, USA命令输出结果为：Adam Bor, IndiaKerry Miller, USA<br>2) 概念: 管道, 重定向和 backtick<br>　　这些不是系统命令，但是他们真的很重要。<br>　　管道 (|) 将一个命令的输出作为另外一个命令的输入。<br>grep “hello” file.txt | wc -l<br>　　在file.txt中搜索包含有”hello”的行并计算其行数。<br>　　在这里grep命令的输出作为wc命令的输入。当然您可以使用多个命令。<br>　　重定向：将命令的结果输出到文件，而不是标准输出（屏幕）。<br>　　&gt; 写入文件并覆盖旧文件<br>　　&gt;&gt; 加到文件的尾部，保留旧文件内容。<br>反短斜线<br>　使用反短斜线可以将一个命令的输出作为另外一个命令的一个命令行参数。<br>　　命令： </li></ul><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">find</span> . -mtime -<span class="number">1</span> -<span class="built_in">type</span> <span class="keyword">f</span> -<span class="keyword">print</span></span><br></pre></td></tr></table></figure><p>　　用来查找过去24小时（-mtime –2则表示过去48小时）内修改过的文件。如果您想将所有查找到的文件打一个包，则可以使用以下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line"><span class="comment"># The ticks are backticks (`) not normal quotes ('): </span></span><br><span class="line">tar -zcvf lastmod.tar.gz `find . -mtime -1 -<span class="built_in">type</span> f -<span class="built_in">print</span>` </span><br><span class="line">　　3) 流程控制 </span><br><span class="line">　　<span class="string">"if"</span> 表达式 如果条件为真则执行<span class="keyword">then</span>后面的部分： </span><br><span class="line"><span class="keyword">if</span> ....; <span class="keyword">then</span> </span><br><span class="line">　 .... </span><br><span class="line"><span class="keyword">elif</span> ....; <span class="keyword">then</span> </span><br><span class="line">　 .... </span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">　 .... </span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p><p>　　大多数情况下，可以使用测试命令来对条件进行测试。比如可以比较字符串、判断文件是否存在及是否可读等等…<br>　　通常用” [ ] “来表示条件测试。注意这里的空格很重要。要确保方括号的空格。<br>[ -f “somefile” ] ：判断是否是一个文件<br>[ -x “/bin/ls” ] ：判断/bin/ls是否存在并有可执行权限<br>[ -n “$var” ] ：判断$var变量是否有值<br>[ “$a” = “$b” ] ：判断$a和$b是否相等<br>　　执行man test可以查看所有测试表达式可以比较和判断的类型。<br>　　直接执行以下脚本： </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$SHELL</span>"</span> = <span class="string">"/bin/bash"</span> ]; <span class="keyword">then</span> </span><br><span class="line">　<span class="built_in">echo</span> <span class="string">"your login shell is the bash (bourne again shell)"</span> </span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">　<span class="built_in">echo</span> <span class="string">"your login shell is not bash but <span class="variable">$SHELL</span>"</span> </span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure><p>　　变量$SHELL包含了登录shell的名称，我们和/bin/bash进行了比较。<br>快捷操作符<br>　　熟悉C语言的朋友可能会很喜欢下面的表达式：<br>[ -f “/etc/shadow” ] &amp;&amp; echo “This computer uses shadow passwors”<br>　　这里 &amp;&amp; 就是一个快捷操作符，如果左边的表达式为真则执行右边的语句。您也可以认为是逻辑运算中的与操作。上例中表示如果/etc/shadow文件存在则打印” This computer uses shadow passwors”。同样或操作(||)在shell编程中也是可用的。这里有个例子： </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line">mailfolder=/var/spool/mail/james</span><br><span class="line"><span class="comment">#此处有错误</span></span><br><span class="line">[ -r <span class="string">"<span class="variable">$mailfolder</span>"</span> ]||&#123; <span class="built_in">echo</span> <span class="string">"Can not read <span class="variable">$mailfolder</span>"</span> ; <span class="built_in">exit</span> 1; &#125; </span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$mailfolder</span> has mail from:"</span> </span><br><span class="line">grep <span class="string">"^From "</span> <span class="variable">$mailfolder</span></span><br></pre></td></tr></table></figure><p>　　该脚本首先判断mailfolder是否可读。如果可读则打印该文件中的”From” 一行。如果不可读则或操作生效，打印错误信息后脚本退出。这里有个问题，那就是我们必须有两个命令：<br>　　-打印错误信息<br>　　-退出程序<br>　　我们使用花括号以匿名函数的形式将两个命令放到一起作为一个命令使用。一般函数将在下文提及。<br>　　不用与和或操作符，我们也可以用if表达式作任何事情，但是使用与或操作符会更便利很多。<br>　　case表达式可以用来匹配一个给定的字符串，而不是数字。 </p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="params">...</span> <span class="keyword">in</span> </span><br><span class="line"><span class="params">...</span>) <span class="keyword">do</span> something here ;; </span><br><span class="line">esac</span><br></pre></td></tr></table></figure><p>　　让我们看一个例子。 file命令可以辨别出一个给定文件的文件类型，比如：<br>file lf.gz<br>　　这将返回：<br>lf.gz: gzip compressed data, deflated, original filename,<br>last modified: Mon Aug 27 23:09:18 2001, os: Unix<br>　我们利用这一点写了一个叫做smartzip的脚本，该脚本可以自动解压bzip2, gzip 和zip 类型的压缩文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line">ftype=`file <span class="string">"<span class="variable">$1</span>"</span>` </span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$ftype</span>"</span> <span class="keyword">in</span> </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: Zip archive"</span>*) </span><br><span class="line">　　unzip <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: gzip compressed"</span>*) </span><br><span class="line">　　gunzip <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: bzip2 compressed"</span>*) </span><br><span class="line">　　bunzip2 <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line">*) error <span class="string">"File <span class="variable">$1</span> can not be uncompressed with smartzip"</span>;; </span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p><p>未完待续</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/28514.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;br&gt;此处是内容和个人的一些笔记&lt;/p&gt;
+&lt;h1 id=&quot;建立一个脚本&quot;&gt;&lt;a href=&quot;#建立一个脚本&quot; class=&quot;headerlink&quot; title=&quot;建立一个脚本&quot;&gt;&lt;/a&gt;建立一个脚本&lt;/h1&gt;&lt;p&gt;　　Linux中有好多中不同的shell，但是通常我们使用bash (bourne again shell) 进行shell编程，因为bash是免费的并且很容易使用。所以在本文中笔者所提供的脚本都是使用bash（但是在大多数情况下，这些脚本同样可以在 bash的大姐，bourne shell中运行）。&lt;br&gt;　　如同其他语言一样，通过我们使用任意一种文字编辑器，比如nedit、kedit、emacs、vi 等来编写我们的shell程序。&lt;br&gt;　　程序必须以下面的行开始（必须方在文件的第一行）： &lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt;!/bin/sh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;符号#!用来告诉系统它后面的参数是用来执行该文件的程序。在这个例子中我们使用/bin/sh来执行程序。&lt;br&gt;当编辑好脚本时，如果要执行该脚本，还必须使其可执行。 要使脚本可执行： &lt;/p&gt;
+&lt;figure class=&quot;highlight nginx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;chmod&lt;/span&gt; +x filename&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;　　然后，您可以通过输入： ./filename 来执行您的脚本。&lt;br&gt;注释&lt;br&gt;　　在进行shell编程时，以#开头的句子表示注释，直到这一行的结束。我们真诚地建议您在程序中使用注释。如果您使用了注释，那么即使相当长的时间内没有使用该脚本，您也能在很短的时间内明白该脚本的作用及工作原理。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内网穿透服务搭建 （VPS+goproxy）</title>
+    <link href="http://www.dnysu.cn/2018-4-22-one/"/>
+    <id>http://www.dnysu.cn/2018-4-22-one/</id>
+    <published>2018-04-22T03:25:01.000Z</published>
+    <updated>2018-04-22T03:53:43.044Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　博主最近悲催的被老师叫到公司，想到在公司无法上知网下载论文，即公司的电脑A却无法访问课题室的电脑B校园网服务，于是想到了利用手里的VPS来搭建一个HTTP代理，通过vps开放端口直接代理电脑B的校园网。这里记录一下搭建过程，工具<a href="https://github.com/snail007/goproxy" target="_blank" rel="noopener">groxy</a><br><a id="more"></a><br>课题室电脑A上：</p><ul><li>1、安装goproxy</li><li>2、运行<code>proxy http -t tcp -p &quot;0.0.0.0:38080</code>将HTTP代理到本地38080端口</li><li>3、运行<code>proxy client -P &quot;22.22.22.22:33080&quot; -C proxy.crt -K proxy.key</code><br>这样就在课题室电脑上搭建好了http代理服务并且加密连接到了IP为22.22.22.22VPS的33080端口  </li></ul><p>VPS上:</p><ul><li>1、安装goprox，密匙与课题室电脑A一样，这点很重要proxy.crt、proxy.key</li><li>2、运行<code>proxy bridge -p &quot;:33080&quot; -C proxy.crt -K proxy.key</code>将VPS端口打开建立课题室电脑A连接</li><li>3、运行<code>proxy server -r &quot;:28080@:38080&quot; -P &quot;127.0.0.1:33080&quot; -C proxy.crt -K proxy.key</code>将vps作为服务端打开28080端口，这样访问28080端口就被桥转移到访问电脑A的38080端口即HTTP服务，至此搭建完成</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　博主最近悲催的被老师叫到公司，想到在公司无法上知网下载论文，即公司的电脑A却无法访问课题室的电脑B校园网服务，于是想到了利用手里的VPS来搭建一个HTTP代理，通过vps开放端口直接代理电脑B的校园网。这里记录一下搭建过程，工具&lt;a href=&quot;https://github.com/snail007/goproxy&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;groxy&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vps" scheme="http://www.dnysu.cn/tags/vps/"/>
+    
+      <category term="goproxy" scheme="http://www.dnysu.cn/tags/goproxy/"/>
+    
+  </entry>
   
   <entry>
     <title>近期博客更新计划</title>
@@ -399,50 +444,6 @@
     
       &lt;ol&gt;
 &lt;li&gt;概率：&lt;br&gt;1.1 定义   概率(P)robability: 对一件事情发生的可能性的衡量&lt;br&gt;1.2 范围   0 &amp;lt;= P &amp;lt;= 1&lt;br&gt;1.3 计算方法：&lt;br&gt;1.3.1 根据个人置信&lt;br&gt;1.3.2 根据历史数据&lt;br&gt;1.3.3 根据模拟数据&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多电脑间github同步hexo博文</title>
-    <link href="http://www.dnysu.cn/2017-8-31-one/"/>
-    <id>http://www.dnysu.cn/2017-8-31-one/</id>
-    <published>2017-08-31T03:26:00.000Z</published>
-    <updated>2018-01-13T08:07:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>远程仓库及分支建立方法参照博文：<a href="https://righere.github.io/2016/10/10/install-hexo/" target="_blank" rel="noopener">https://righere.github.io/2016/10/10/install-hexo/</a><br>完成远程仓库建立<br>这样在另一台没有任何博文资料的电脑上可以同步github数据，先建立SSH连接，确保github账户关联，然后参照一下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git pull origin hexo  //先pull完成本地与远端的融合</span><br><span class="line">hexo new post <span class="string">" new blog name"</span></span><br><span class="line">git add .//.的话就只增加更新的文章 </span><br><span class="line">git commit -m <span class="string">"XX"</span>//此处为github说明</span><br><span class="line">git push origin hexo</span><br><span class="line">hexo d -g //编译发布</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;远程仓库及分支建立方法参照博文：&lt;a href=&quot;https://righere.github.io/2016/10/10/install-hexo/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://righere.github.io/201
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://www.dnysu.cn/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记（十五）多元回归分析应用</title>
-    <link href="http://www.dnysu.cn/2017-8-12-two/"/>
-    <id>http://www.dnysu.cn/2017-8-12-two/</id>
-    <published>2017-08-12T07:57:38.000Z</published>
-    <updated>2018-01-13T08:07:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>例子<br>一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间   <a id="more"></a> Driving Assignment X1=Miles Traveled X2=Number of Deliveries Y= Travel Time (Hours)<br>1    100    4    9.3<br>2    50    3    4.8<br>3    100    4    8.9<br>4    100    2    6.5<br>5    50    2    4.2<br>6    80    2    6.2<br>7    75    3    7.4<br>8    65    4    6.0<br>9    90    3    7.6<br>10    90    2    6.1<br>目的，求出b0, b1,…. bp：<br>y_hat=b0＋b１x1+b2x2+ … +bpxp</li><li>Python代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">from numpy import genfromtxt</span><br><span class="line">from sklearn import linear_model</span><br><span class="line">dataPath = r<span class="string">"Delivery.csv"</span></span><br><span class="line">deliveryData = genfromtxt(dataPath,delimiter=<span class="string">','</span>)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"data"</span></span><br><span class="line"><span class="built_in">print</span> deliveryData</span><br><span class="line">x= deliveryData[:,:-1]</span><br><span class="line">y = deliveryData[:,-1]</span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line">lr = linear_model.LinearRegression()</span><br><span class="line">lr.fit(x, y)</span><br><span class="line"><span class="built_in">print</span> lr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"coefficients:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.coef_</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"intercept:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.intercept_</span><br><span class="line">xPredict = [102,6] </span><br><span class="line">yPredict = lr.predict(xPredict)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"predict:"</span>)</span><br><span class="line"><span class="built_in">print</span> yPredict</span><br><span class="line"><span class="comment"># 如果需要多个车型分开则增加N维二进制数组输入 然后预测 如：xPredict =  [90,2,0,0,1]</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;例子&lt;br&gt;一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
