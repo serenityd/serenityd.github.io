@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dnysu.cn/"/>
-  <updated>2018-04-21T12:55:01.059Z</updated>
+  <updated>2018-04-22T03:14:30.635Z</updated>
   <id>http://www.dnysu.cn/</id>
   
   <author>
@@ -17,27 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://www.dnysu.cn/test-1/"/>
-    <id>http://www.dnysu.cn/test-1/</id>
-    <published>2018-04-21T12:55:01.000Z</published>
-    <updated>2018-04-21T12:55:01.059Z</updated>
+    <title>近期博客更新计划</title>
+    <link href="http://www.dnysu.cn/%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/"/>
+    <id>http://www.dnysu.cn/近期博客更新计划/</id>
+    <published>2018-04-22T03:08:46.000Z</published>
+    <updated>2018-04-22T03:14:30.635Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vps内网穿透"><a href="#vps内网穿透" class="headerlink" title="vps内网穿透"></a>vps内网穿透</h1><h1 id="linux-sh脚本"><a href="#linux-sh脚本" class="headerlink" title="linux sh脚本"></a>linux sh脚本</h1><h1 id="linux-邮件服务"><a href="#linux-邮件服务" class="headerlink" title="linux 邮件服务"></a>linux 邮件服务</h1><h1 id="linux-xvfb服务"><a href="#linux-xvfb服务" class="headerlink" title="linux xvfb服务"></a>linux xvfb服务</h1><h1 id="selenium-chrome网页脚本"><a href="#selenium-chrome网页脚本" class="headerlink" title="selenium chrome网页脚本"></a>selenium chrome网页脚本</h1><h1 id="ssh-git-hook自动部署博客"><a href="#ssh-git-hook自动部署博客" class="headerlink" title="ssh git hook自动部署博客"></a>ssh git hook自动部署博客</h1><h1 id="owncloud搭建"><a href="#owncloud搭建" class="headerlink" title="owncloud搭建"></a>owncloud搭建</h1><h1 id="x11vnc可视化服务"><a href="#x11vnc可视化服务" class="headerlink" title="x11vnc可视化服务"></a>x11vnc可视化服务</h1><p>下周开始扫机器学习的内容</p>]]></content>
     
     <summary type="html">
     
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://www.dnysu.cn/test/"/>
-    <id>http://www.dnysu.cn/test/</id>
-    <published>2018-04-21T12:51:43.000Z</published>
-    <updated>2018-04-21T12:51:43.784Z</updated>
-    
-    <summary type="html">
+      
+      
+        &lt;h1 id=&quot;vps内网穿透&quot;&gt;&lt;a href=&quot;#vps内网穿透&quot; class=&quot;headerlink&quot; title=&quot;vps内网穿透&quot;&gt;&lt;/a&gt;vps内网穿透&lt;/h1&gt;&lt;h1 id=&quot;linux-sh脚本&quot;&gt;&lt;a href=&quot;#linux-sh脚本&quot; class=&quot;head
+      
     
     </summary>
     
@@ -434,6 +427,27 @@
     
     
       <category term="hexo" scheme="http://www.dnysu.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（十五）多元回归分析应用</title>
+    <link href="http://www.dnysu.cn/2017-8-12-two/"/>
+    <id>http://www.dnysu.cn/2017-8-12-two/</id>
+    <published>2017-08-12T07:57:38.000Z</published>
+    <updated>2018-01-13T08:07:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>例子<br>一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间   <a id="more"></a> Driving Assignment X1=Miles Traveled X2=Number of Deliveries Y= Travel Time (Hours)<br>1    100    4    9.3<br>2    50    3    4.8<br>3    100    4    8.9<br>4    100    2    6.5<br>5    50    2    4.2<br>6    80    2    6.2<br>7    75    3    7.4<br>8    65    4    6.0<br>9    90    3    7.6<br>10    90    2    6.1<br>目的，求出b0, b1,…. bp：<br>y_hat=b0＋b１x1+b2x2+ … +bpxp</li><li>Python代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">from numpy import genfromtxt</span><br><span class="line">from sklearn import linear_model</span><br><span class="line">dataPath = r<span class="string">"Delivery.csv"</span></span><br><span class="line">deliveryData = genfromtxt(dataPath,delimiter=<span class="string">','</span>)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"data"</span></span><br><span class="line"><span class="built_in">print</span> deliveryData</span><br><span class="line">x= deliveryData[:,:-1]</span><br><span class="line">y = deliveryData[:,-1]</span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line">lr = linear_model.LinearRegression()</span><br><span class="line">lr.fit(x, y)</span><br><span class="line"><span class="built_in">print</span> lr</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"coefficients:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.coef_</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"intercept:"</span>)</span><br><span class="line"><span class="built_in">print</span> lr.intercept_</span><br><span class="line">xPredict = [102,6] </span><br><span class="line">yPredict = lr.predict(xPredict)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"predict:"</span>)</span><br><span class="line"><span class="built_in">print</span> yPredict</span><br><span class="line"><span class="comment"># 如果需要多个车型分开则增加N维二进制数组输入 然后预测 如：xPredict =  [90,2,0,0,1]</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;例子&lt;br&gt;一家快递公司送货：X1： 运输里程 X2： 运输次数   Y：总运输时间&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
