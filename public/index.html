@@ -322,6 +322,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.dnysu.cn/2018-4-23-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Serenityd">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Serenityd Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018-4-23-one/" itemprop="url">Python中机器学习库的使用（一）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T15:53:17+08:00">
+                2018-04-23
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T17:00:42+08:00">
+                2018-04-23
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018-4-23-one/" class="leancloud_visitors" data-flag-title="Python中机器学习库的使用（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  368
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>机器学习课程笔记<br>源代码2.7现移植到3.6版本顺便记录一些笔记<br><a href="https://github.com/serenityd/Machine-Learning/blob/master/SourceCode/lession5/5.1.intro.py" target="_blank" rel="noopener">源代码传送门</a></p>
+<h1 id="numpy概述"><a href="#numpy概述" class="headerlink" title="numpy概述"></a>numpy概述</h1><p>　　标准Python的列表(list)中，元素本质是对象。如：L = [1, 2, 3]，需要3个指针和三个整数对象，对于数值运算比较浪费内存和CPU。因此，Numpy提供了ndarray(N-dimensional array object)对象：存储单一数据类型的多维数组。numpy（Numerical Python）提供了python对多维数组对象的支持：ndarray，具有矢量运算能力，快速、节省空间。numpy支持高级大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
+<h2 id="通过array函数传递list对象"><a href="#通过array函数传递list对象" class="headerlink" title="通过array函数传递list对象"></a>通过array函数传递list对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">print(<span class="string">"L = "</span>, L)</span><br><span class="line">print(type(L))</span><br><span class="line">a = np.array(L)</span><br><span class="line">print(<span class="string">"a = "</span>, a)</span><br><span class="line">print(type(a))</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br>L =  [1, 2, 3, 4, 5, 6]</p>
+<p><class 'list'=""><br>a =  [1 2 3 4 5 6]</class></p>
+<p><class 'numpy.ndarray'=""></class></p>
+<h2 id="若传递的是多层嵌套的list，将创建多维数组"><a href="#若传递的是多层嵌套的list，将创建多维数组" class="headerlink" title="若传递的是多层嵌套的list，将创建多维数组"></a>若传递的是多层嵌套的list，将创建多维数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>], [<span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]])</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<p>输出结果：<br>[[ 1  2  3  4]<br> [ 5  6  7  8]<br> [ 9 10 11 12]]</p>
+<h2 id="数组大小可以通过其shape属性获得"><a href="#数组大小可以通过其shape属性获得" class="headerlink" title="数组大小可以通过其shape属性获得"></a>数组大小可以通过其shape属性获得</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">print</span><span class="params">(a.shape)</span></span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(b.shape)</span></span></span><br></pre></td></tr></table></figure>
+<p>此处需和前面代码一起运行才有a、b两个数组<br>输出结果：<br>(6,)<br>(3, 4)</p>
+<h2 id="强制修改shape"><a href="#强制修改shape" class="headerlink" title="强制修改shape"></a>强制修改shape</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">b</span><span class="selector-class">.shape</span> = [<span class="number">4</span>, <span class="number">3</span>]</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(b)</span></span></span><br></pre></td></tr></table></figure>
+<p>输出结果：<br>[[ 1  2  3]<br> [ 4  5  6]<br> [ 7  8  9]<br> [10 11 12]]</p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.dnysu.cn/2018-4-22-two/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -454,7 +640,7 @@
 <p>　　然后，您可以通过输入： ./filename 来执行您的脚本。<br>注释<br>　　在进行shell编程时，以#开头的句子表示注释，直到这一行的结束。我们真诚地建议您在程序中使用注释。如果您使用了注释，那么即使相当长的时间内没有使用该脚本，您也能在很短的时间内明白该脚本的作用及工作原理。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-4-22-two/#more" rel="contents">
+            <a class="btn" href="/2018-4-22-two/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -633,7 +819,7 @@
           <p>　　博主最近悲催的被老师叫到公司，想到在公司无法上知网下载论文，即公司的电脑A却无法访问课题室的电脑B校园网服务，于是想到了利用手里的VPS来搭建一个HTTP代理，通过vps开放端口直接代理电脑B的校园网。这里记录一下搭建过程，工具<a href="https://github.com/snail007/goproxy" target="_blank" rel="noopener">groxy</a><br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-4-22-one/#more" rel="contents">
+            <a class="btn" href="/2018-4-22-one/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -988,7 +1174,7 @@
 <p>class 类名:<br>    方法列表<br>demo：定义一个Car类<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-3-25-one/#more" rel="contents">
+            <a class="btn" href="/2018-3-25-one/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1175,7 +1361,7 @@
 <li>关闭文件</li></ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-3-17-two/#more" rel="contents">
+            <a class="btn" href="/2018-3-17-two/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1357,7 +1543,7 @@
 </code></pre>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-3-17-one/#more" rel="contents">
+            <a class="btn" href="/2018-3-17-one/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1711,7 +1897,7 @@
           <p>vi命令图示 备用<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018-2-4-one/#more" rel="contents">
+            <a class="btn" href="/2018-2-4-one/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1925,190 +2111,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dnysu.cn/2018-2-3-one/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Serenityd">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Serenityd Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018-2-3-one/" itemprop="url">Hexo博客在VSCode下编写及git配置问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-03T13:51:28+08:00">
-                2018-02-03
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T10:18:38+08:00">
-                2018-04-23
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018-2-3-one/" class="leancloud_visitors" data-flag-title="Hexo博客在VSCode下编写及git配置问题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  434
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>设置VSCode下git环境<br>文件—首选项-设置<br>用户设置下 添加git路径以及git-bash终端<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"git.path"</span>: <span class="string">"D:\\Program Files\\Git\\cmd"</span>,</span><br><span class="line">    <span class="string">"terminal.integrated.shell.windows"</span>:<span class="string">"D:\\ProgramFiles\\Git\\bin\\bash.exe"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018-2-3-one/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2158,7 +2165,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2171,7 +2178,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2264,7 +2271,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">26.5k</span>
+    <span title="Site words total count">26.8k</span>
   
 </div>
 
