@@ -1,0 +1,40 @@
+title: Serenityd Blog
+subtitle: 个人笔记技术博客 
+description: 记录快乐的折腾日常
+author: Serenityd
+language: zh-Hans
+timezone:
+url: http://www.dnysu.cn
+theme: next
+menu_icons:
+  enable: true
+  home: /
+  archives: /archives
+  tags: /tags
+permalink: :title/
+sidebar:
+  position: left
+  display: post
+avatar: /images/avatar.jpg
+widgets:
+- search
+- category
+- recent_posts
+- tag
+- tagcloud
+post_asset_folder: true 
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+deploy:
+  type: git
+  repository: 
+    vps: git@67.218.139.133:/var/repo/blog.git
+    github: git@github.com:serenityd/serenityd.github.io
+  branch: master
