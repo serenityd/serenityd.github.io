@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Serenityd Blog">
 <meta property="og:description" content="原文链接此处是内容和个人的一些笔记 建立一个脚本　　Linux中有好多中不同的shell，但是通常我们使用bash (bourne again shell) 进行shell编程，因为bash是免费的并且很容易使用。所以在本文中笔者所提供的脚本都是使用bash（但是在大多数情况下，这些脚本同样可以在 bash的大姐，bourne shell中运行）。　　如同其他语言一样，通过我们使用任意一种文字编辑">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-22T07:02:35.056Z">
+<meta property="og:updated_time" content="2018-04-24T13:51:30.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux下sh脚本相关">
 <meta name="twitter:description" content="原文链接此处是内容和个人的一些笔记 建立一个脚本　　Linux中有好多中不同的shell，但是通常我们使用bash (bourne again shell) 进行shell编程，因为bash是免费的并且很容易使用。所以在本文中笔者所提供的脚本都是使用bash（但是在大多数情况下，这些脚本同样可以在 bash的大姐，bourne shell中运行）。　　如同其他语言一样，通过我们使用任意一种文字编辑">
@@ -369,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-22T15:02:35+08:00">
-                2018-04-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-24T21:51:30+08:00">
+                2018-04-24
               </time>
             
           </span>
@@ -487,8 +487,7 @@
 <p>　　该脚本首先判断mailfolder是否可读。如果可读则打印该文件中的”From” 一行。如果不可读则或操作生效，打印错误信息后脚本退出。这里有个问题，那就是我们必须有两个命令：<br>　　-打印错误信息<br>　　-退出程序<br>　　我们使用花括号以匿名函数的形式将两个命令放到一起作为一个命令使用。一般函数将在下文提及。<br>　　不用与和或操作符，我们也可以用if表达式作任何事情，但是使用与或操作符会更便利很多。<br>　　case表达式可以用来匹配一个给定的字符串，而不是数字。 </p>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="params">...</span> <span class="keyword">in</span> </span><br><span class="line"><span class="params">...</span>) <span class="keyword">do</span> something here ;; </span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
 <p>　　让我们看一个例子。 file命令可以辨别出一个给定文件的文件类型，比如：<br>file lf.gz<br>　　这将返回：<br>lf.gz: gzip compressed data, deflated, original filename,<br>last modified: Mon Aug 27 23:09:18 2001, os: Unix<br>　我们利用这一点写了一个叫做smartzip的脚本，该脚本可以自动解压bzip2, gzip 和zip 类型的压缩文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line">ftype=`file <span class="string">"<span class="variable">$1</span>"</span>` </span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$ftype</span>"</span> <span class="keyword">in</span> </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: Zip archive"</span>*) </span><br><span class="line">　　unzip <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: gzip compressed"</span>*) </span><br><span class="line">　　gunzip <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line"><span class="string">"<span class="variable">$1</span>: bzip2 compressed"</span>*) </span><br><span class="line">　　bunzip2 <span class="string">"<span class="variable">$1</span>"</span> ;; </span><br><span class="line">*) error <span class="string">"File <span class="variable">$1</span> can not be uncompressed with smartzip"</span>;; </span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p>
-<p>未完待续</p>
-
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
       
     </div>
     
@@ -680,7 +679,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">52</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -769,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#建立一个脚本"><span class="nav-text">建立一个脚本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#建立一个脚本"><span class="nav-text">建立一个脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未完待续"><span class="nav-text">未完待续</span></a></li></ol></div>
             
 
           </div>
@@ -802,7 +801,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">26.8k</span>
+    <span title="Site words total count">27.1k</span>
   
 </div>
 

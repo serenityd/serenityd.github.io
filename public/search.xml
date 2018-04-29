@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[最小二乘法公式推导]]></title>
+    <url>%2F2018-4-28-one%2F</url>
+    <content type="text"><![CDATA[最近在学习吴恩达机器学习课程，线性回归中介绍了正规方程法（最小二乘法）直接给出了最小化代价函数的方法，这里记录一下推导过程代价函数：$J(\theta)=\frac{1}{2m}\sum_{i=1}^m (h_\theta (x)-Y)^2$矩阵写法可以写成：$J(\theta)=( X\theta-Y)^T( X\theta-Y)$$\theta$:n+1个特征向量形成的矩阵,shape:(n+1)x1X:m个训练集n+1个特征向量形成的矩阵，特征$x^{(0)}=1$,shape:mx(n+1)Y:训练集形成的矩阵,shape:mx1对$J(\theta)$对$\theta$求导，利用下面两个公式：$\frac{\partial x^T \alpha}{\partial x}=\frac{\partial \alpha^T x}{\partial x}=\alpha$$\frac{\partial x^T \alpha x}{\partial x}=(\alpha+\alpha^T)x$有$\frac{\partial J}{\partial \theta}=2X^TX\theta-2X^TY$令导数等于0从而得到最终结果:$\theta=(X^TX)^{-1}X^TY$]]></content>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python中机器学习库的使用（一）]]></title>
     <url>%2F2018-4-23-one%2F</url>
     <content type="text"><![CDATA[机器学习课程笔记源代码2.7现移植到3.6版本顺便记录一些笔记源代码传送门 numpy概述 标准Python的列表(list)中，元素本质是对象。如：L = [1, 2, 3]，需要3个指针和三个整数对象，对于数值运算比较浪费内存和CPU。因此，Numpy提供了ndarray(N-dimensional array object)对象：存储单一数据类型的多维数组。numpy（Numerical Python）提供了python对多维数组对象的支持：ndarray，具有矢量运算能力，快速、节省空间。numpy支持高级大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。 通过array函数传递list对象123456L = [1, 2, 3, 4, 5, 6]print("L = ", L)print(type(L))a = np.array(L)print("a = ", a)print(type(a)) 输出结果：L = [1, 2, 3, 4, 5, 6] a = [1 2 3 4 5 6] 若传递的是多层嵌套的list，将创建多维数组12b = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])print(b) 输出结果：[[ 1 2 3 4] [ 5 6 7 8] [ 9 10 11 12]] 数组大小可以通过其shape属性获得12print(a.shape)print(b.shape) 此处需和前面代码一起运行才有a、b两个数组输出结果：(6,)(3, 4) 强制修改shape12b.shape = [4, 3]print(b) 输出结果：[[ 1 2 3] [ 4 5 6] [ 7 8 9] [10 11 12]] 未完待续]]></content>
