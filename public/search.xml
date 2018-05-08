@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux xvfb+x11vnc服务]]></title>
+    <url>%2F2018-5-8-two%2F</url>
+    <content type="text"><![CDATA[这个服务难点好像在于x11vnc的安装缺少一堆库文件,不过一番折腾后博主还是成功安装上了,具体过程有点忘了,记录一下目前记得的情况大体思路是Xvfb虚拟窗口，然后通过x11vnc转发供远程访问启动Xvfb1Xvfb :1 -screen 0 1920x1080x24 -nolisten tcp 新建虚拟窗口12345export DISPLAY:=1``` 启动x11vnc ``` x11vnc -listen 0.0.0.0 -rfbport 5900 -noipv6 -display :1 -forever -o x11vnc.log 远程VNC访问5900端口可以看到Xvfb情况]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>xvfb</tag>
+        <tag>x11vnc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux 邮件服务]]></title>
+    <url>%2F2018-5-8-one%2F</url>
+    <content type="text"><![CDATA[最近狂扫机器学习与神经网络的知识，忽略了博客的更新，这里先更新一下linux的一部分知识，顺便放慢一下机器学习的脚步，整理一下最近所学知识邮件服务，博主所用系统centos7 采用msmtp+mutt方式安装两个软件：主要配置vim /usr/local/msmtp/etc/msmtprc12345678910111213141516# Set default values for all following accounts.defaults# The SMTP server of the provider.account jack# SMTP邮件服务器地址host smtp.163.comdomain 163.com# 发送的邮件Emailfrom user@163.comauth login# 邮件服务器登录账号user user@163.com# 邮件服务器登陆密码password password# Set a default accountaccount default : jack /etc/Muttrc配置1234567891011set sendmail=&apos;/usr/bin/msmtp&apos;set use_from=yesset realname=&apos;YOURNAME&apos;set from=user@163.comset envelope_from=yesauto_view text/htmlset charset=&apos;utf-8&apos;set send_charset=&apos;utf-8&apos;set locale =&apos;zh_CN.UTF-8&apos;set content_type = &apos;text/html\;charset=utf-8&apos;set rfc2047_parameters=yes 发送邮件命令1echo &quot;测试test&quot;|mutt -s &quot;test&quot; receiver@163.com]]></content>
+      <tags>
+        <tag>linux</tag>
+        <tag>msmtp</tag>
+        <tag>mutt</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[机器学习线性回归代码练习（梯度下降法、最小二乘法）]]></title>
     <url>%2F2018-4-29-two%2F</url>
     <content type="text"><![CDATA[吴恩达机器学习课程ex1 python版本 代码上传的我的github上单变量线性回归梯度下降法：学习速率与迭代次数：iterations = 1500alpha = 0.01运行结果：参数计算结果：[[-3.63029144] [ 1.16636235]]最小代价：Cost computed = 4.483388代码 最小二乘法：参数计算结果：[[-3.89578088] [ 1.19303364]]最小代价：Cost computed = 4.47697138 代码可见梯度下降得到的是一个相对最优的值 与学习速率和迭代次数有关系 在特征量不那么多（&lt;10000）时采用最小二乘法效果较好 多变量线性回归梯度下降法：参数：alpha = 0.01;num_iters = 400;运行结果：参数计算结果：[[ 334302.06399328] [ 99411.44947359] [ 3267.01285407]]最小代价：[[ 2.10544829e+09]]最小二乘法：参数：alpha = 0.01;num_iters = 400; 参数计算结果：[[ 340412.65957447] [ 109447.79646964] [ -6578.35485416]]最小代价：[[ 2.04328005e+09]]小于梯度下降法，经多次实验当梯度下降法参数选取适当时与最小二乘法结果相同代码]]></content>
@@ -56,7 +76,7 @@
   <entry>
     <title><![CDATA[近期博客更新计划]]></title>
     <url>%2F%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%2F</url>
-    <content type="text"><![CDATA[vps内网穿透 (已完成)linux sh脚本 (完成部分)linux 邮件服务linux xvfb服务selenium chrome网页脚本ssh git hook自动部署博客owncloud搭建x11vnc可视化服务下周开始扫机器学习的内容]]></content>
+    <content type="text"><![CDATA[#Linux篇 linux sh脚本 (完成部分)linux 邮件服务（已完成）linux xvfb+x11vnc服务(已完成)selenium chrome网页脚本ssh git hook自动部署博客owncloud搭建#机器学习篇 #神经网络与深度学习篇下周开始扫机器学习��]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python学习笔记（十）类与对象]]></title>

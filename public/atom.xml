@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dnysu.cn/"/>
-  <updated>2018-04-30T04:59:47.860Z</updated>
+  <updated>2018-05-08T03:21:57.065Z</updated>
   <id>http://www.dnysu.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux xvfb+x11vnc服务</title>
+    <link href="http://www.dnysu.cn/2018-5-8-two/"/>
+    <id>http://www.dnysu.cn/2018-5-8-two/</id>
+    <published>2018-05-08T03:10:35.000Z</published>
+    <updated>2018-05-08T03:21:57.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个服务难点好像在于x11vnc的安装缺少一堆库文件,不过一番折腾后博主还是成功安装上了,具体过程有点忘了,记录一下目前记得的情况<br>大体思路是Xvfb虚拟窗口，然后通过x11vnc转发供远程访问<br><a id="more"></a><br>启动Xvfb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Xvfb :1 -screen 0 1920x1080x24 -nolisten tcp</span><br></pre></td></tr></table></figure></p><p>新建虚拟窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export DISPLAY:=1</span><br><span class="line">``` </span><br><span class="line">启动x11vnc </span><br><span class="line">``` </span><br><span class="line">x11vnc -listen 0.0.0.0 -rfbport 5900 -noipv6 -display :1 -forever -o x11vnc.log</span><br></pre></td></tr></table></figure></p><p>远程VNC访问5900端口可以看到Xvfb情况</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这个服务难点好像在于x11vnc的安装缺少一堆库文件,不过一番折腾后博主还是成功安装上了,具体过程有点忘了,记录一下目前记得的情况&lt;br&gt;大体思路是Xvfb虚拟窗口，然后通过x11vnc转发供远程访问&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+    
+      <category term="xvfb" scheme="http://www.dnysu.cn/tags/xvfb/"/>
+    
+      <category term="x11vnc" scheme="http://www.dnysu.cn/tags/x11vnc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux 邮件服务</title>
+    <link href="http://www.dnysu.cn/2018-5-8-one/"/>
+    <id>http://www.dnysu.cn/2018-5-8-one/</id>
+    <published>2018-05-08T02:43:11.000Z</published>
+    <updated>2018-05-08T03:07:28.130Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近狂扫机器学习与神经网络的知识，忽略了博客的更新，这里先更新一下linux的一部分知识，顺便放慢一下机器学习的脚步，整理一下最近所学知识<br>邮件服务，博主所用系统centos7 采用msmtp+mutt方式<br><a id="more"></a><br>安装两个软件：主要配置<br>vim /usr/local/msmtp/etc/msmtprc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Set default values for all following accounts.</span><br><span class="line">defaults</span><br><span class="line"># The SMTP server of the provider.</span><br><span class="line">account jack</span><br><span class="line"># SMTP邮件服务器地址</span><br><span class="line">host smtp.163.com</span><br><span class="line">domain 163.com</span><br><span class="line"># 发送的邮件Email</span><br><span class="line">from user@163.com</span><br><span class="line">auth login</span><br><span class="line"># 邮件服务器登录账号</span><br><span class="line">user user@163.com</span><br><span class="line"># 邮件服务器登陆密码</span><br><span class="line">password password</span><br><span class="line"># Set a default account</span><br><span class="line">account default : jack</span><br></pre></td></tr></table></figure></p><p>/etc/Muttrc配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">set sendmail=&apos;/usr/bin/msmtp&apos;</span><br><span class="line">set use_from=yes</span><br><span class="line">set realname=&apos;YOURNAME&apos;</span><br><span class="line">set from=user@163.comset envelope_from=yes</span><br><span class="line">auto_view text/html</span><br><span class="line"></span><br><span class="line">set charset=&apos;utf-8&apos;</span><br><span class="line">set send_charset=&apos;utf-8&apos;</span><br><span class="line">set locale =&apos;zh_CN.UTF-8&apos;</span><br><span class="line">set content_type = &apos;text/html\;charset=utf-8&apos;</span><br><span class="line">set rfc2047_parameters=yes</span><br></pre></td></tr></table></figure></p><p>发送邮件命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo  &quot;测试test&quot;|mutt -s &quot;test&quot;  receiver@163.com</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近狂扫机器学习与神经网络的知识，忽略了博客的更新，这里先更新一下linux的一部分知识，顺便放慢一下机器学习的脚步，整理一下最近所学知识&lt;br&gt;邮件服务，博主所用系统centos7 采用msmtp+mutt方式&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+    
+      <category term="msmtp" scheme="http://www.dnysu.cn/tags/msmtp/"/>
+    
+      <category term="mutt" scheme="http://www.dnysu.cn/tags/mutt/"/>
+    
+  </entry>
   
   <entry>
     <title>机器学习线性回归代码练习（梯度下降法、最小二乘法）</title>
@@ -160,15 +208,16 @@
     <link href="http://www.dnysu.cn/%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/"/>
     <id>http://www.dnysu.cn/近期博客更新计划/</id>
     <published>2018-04-22T03:08:46.000Z</published>
-    <updated>2018-04-24T06:39:56.897Z</updated>
+    <updated>2018-05-08T03:22:02.100Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vps内网穿透-已完成"><a href="#vps内网穿透-已完成" class="headerlink" title="vps内网穿透 (已完成)"></a>vps内网穿透 (已完成)</h1><h1 id="linux-sh脚本-完成部分"><a href="#linux-sh脚本-完成部分" class="headerlink" title="linux sh脚本 (完成部分)"></a>linux sh脚本 (完成部分)</h1><h1 id="linux-邮件服务"><a href="#linux-邮件服务" class="headerlink" title="linux 邮件服务"></a>linux 邮件服务</h1><h1 id="linux-xvfb服务"><a href="#linux-xvfb服务" class="headerlink" title="linux xvfb服务"></a>linux xvfb服务</h1><h1 id="selenium-chrome网页脚本"><a href="#selenium-chrome网页脚本" class="headerlink" title="selenium chrome网页脚本"></a>selenium chrome网页脚本</h1><h1 id="ssh-git-hook自动部署博客"><a href="#ssh-git-hook自动部署博客" class="headerlink" title="ssh git hook自动部署博客"></a>ssh git hook自动部署博客</h1><h1 id="owncloud搭建"><a href="#owncloud搭建" class="headerlink" title="owncloud搭建"></a>owncloud搭建</h1><h1 id="x11vnc可视化服务"><a href="#x11vnc可视化服务" class="headerlink" title="x11vnc可视化服务"></a>x11vnc可视化服务</h1><p>下周开始扫机器学习的内容</p>]]></content>
+    <content type="html"><![CDATA[<p>#Linux篇</p><h1 id="linux-sh脚本-完成部分"><a href="#linux-sh脚本-完成部分" class="headerlink" title="linux sh脚本 (完成部分)"></a>linux sh脚本 (完成部分)</h1><h1 id="linux-邮件服务（已完成）"><a href="#linux-邮件服务（已完成）" class="headerlink" title="linux 邮件服务（已完成）"></a>linux 邮件服务（已完成）</h1><h1 id="linux-xvfb-x11vnc服务-已完成"><a href="#linux-xvfb-x11vnc服务-已完成" class="headerlink" title="linux xvfb+x11vnc服务(已完成)"></a>linux xvfb+x11vnc服务(已完成)</h1><h1 id="selenium-chrome网页脚本"><a href="#selenium-chrome网页脚本" class="headerlink" title="selenium chrome网页脚本"></a>selenium chrome网页脚本</h1><h1 id="ssh-git-hook自动部署博客"><a href="#ssh-git-hook自动部署博客" class="headerlink" title="ssh git hook自动部署博客"></a>ssh git hook自动部署博客</h1><h1 id="owncloud搭建"><a href="#owncloud搭建" class="headerlink" title="owncloud搭建"></a>owncloud搭建</h1><p>#机器学习篇</p><p>#神经网络与深度学习篇<br>下周开始扫机器学习��</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;vps内网穿透-已完成&quot;&gt;&lt;a href=&quot;#vps内网穿透-已完成&quot; class=&quot;headerlink&quot; title=&quot;vps内网穿透 (已完成)&quot;&gt;&lt;/a&gt;vps内网穿透 (已完成)&lt;/h1&gt;&lt;h1 id=&quot;linux-sh脚本-完成部分&quot;&gt;&lt;a href=
+        &lt;p&gt;#Linux篇&lt;/p&gt;
+&lt;h1 id=&quot;linux-sh脚本-完成部分&quot;&gt;&lt;a href=&quot;#linux-sh脚本-完成部分&quot; class=&quot;headerlink&quot; title=&quot;linux sh脚本 (完成部分)&quot;&gt;&lt;/a&gt;linux sh脚本 (完成部分)&lt;/h1&gt;&lt;h
       
     
     </summary>
@@ -411,48 +460,6 @@
     <summary type="html">
     
       &lt;p&gt;KMeans聚类算法python代码：&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
-    <link href="http://www.dnysu.cn/2017-9-15-one/"/>
-    <id>http://www.dnysu.cn/2017-9-15-one/</id>
-    <published>2017-09-15T02:47:16.000Z</published>
-    <updated>2018-04-21T13:51:15.545Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>归类：<br>聚类(clustering) 属于非监督学习 (unsupervised learning)<br>无类别标记(class label)</li><li>举例：<br><img src="/2017-9-15-one/1.jpg" alt=""> <a id="more"></a>          </li><li>K-means 算法：<br>3.1 Clustering 中的经典算法，数据挖掘十大经典算法之一<br>3.2 算法接受参数 k ；然后将事先输入的n个数据对象划分为 k个聚类以便使得所获得的聚类满足：同一聚类中的对象相似度较高；而不同聚类中的对象相似度较小。<br>3.3 算法思想：<br>以空间中k个点为中心进行聚类，对最靠近他们的对象归类。通过迭代的方法，逐次更新各聚类中心的值，直至得到最好的聚类结果<br>3.4 算法描述：<br>（1）适当选择c个类的初始中心；<br>（2）在第k次迭代中，对任意一个样本，求其到c各中心的距离，将该样本归到距离最短的中心所在的类；<br>（3）利用均值等方法更新该类的中心值；<br>（4）对于所有的c个聚类中心，如果利用（2）（3）的迭代法更新后，值保持不变，则迭代结束，否则继续迭代。<br>3.5 算法流程：<br><img src="/2017-9-15-one/2.jpg" alt=""><br>输入：k, data[n];<br>（1） 选择k个初始中心点，例如c[0]=data[0],…c[k-1]=data[k-1];<br>（2） 对于data[0]….data[n], 分别与c[0]…c[k-1]比较，假定与c[i]差值最少，就标记为i;<br>（3） 对于所有标记为i点，重新计算c[i]={ 所有标记为i的data[j]之和}/标记为i的个数；<br>（4） 重复(2)(3),直到所有c[i]值的变化小于给定阈值。</li><li>举例：<br><img src="/2017-9-15-one/3.png" alt=""><br><img src="/2017-9-15-one/4.png" alt=""><br><img src="/2017-9-15-one/5.png" alt=""><br><img src="/2017-9-15-one/d0.png" alt=""><br><img src="/2017-9-15-one/g0.png" alt=""><br><img src="/2017-9-15-one/c2.png" alt=""><br><img src="/2017-9-15-one/6.png" alt=""><br><img src="/2017-9-15-one/d1.png" alt=""><br><img src="/2017-9-15-one/g1.png" alt=""><br><img src="/2017-9-15-one/c1andc2.png" alt=""><br><img src="/2017-9-15-one/7.png" alt=""><br><img src="/2017-9-15-one/d2.png" alt=""><br><img src="/2017-9-15-one/g2.png" alt=""><br>停止<br>优点：速度快，简单<br>缺点：最终结果跟初始点选择相关，容易陷入局部最优，需直到k值<br>Reference:<a href="http://croce.ggf.br/dados/K%20mean%20Clustering1.pdf" target="_blank" rel="noopener">http://croce.ggf.br/dados/K%20mean%20Clustering1.pdf</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;归类：&lt;br&gt;聚类(clustering) 属于非监督学习 (unsupervised learning)&lt;br&gt;无类别标记(class label)&lt;/li&gt;
-&lt;li&gt;举例：&lt;br&gt;&lt;img src=&quot;/2017-9-15-one/1.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
-    <link href="http://www.dnysu.cn/2017-9-14-two/"/>
-    <id>http://www.dnysu.cn/2017-9-14-two/</id>
-    <published>2017-09-14T07:31:24.000Z</published>
-    <updated>2018-04-21T13:51:15.543Z</updated>
-    
-    <content type="html"><![CDATA[<p>线性回归计算R平方值和相关度python代码：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">from astropy.units import Ybarn</span><br><span class="line">import math</span><br><span class="line"></span><br><span class="line">def computeCorrelation(X, Y):</span><br><span class="line">    xBar = np.mean(X)</span><br><span class="line">    yBar = np.mean(Y)</span><br><span class="line">    SSR = 0</span><br><span class="line">    varX = 0</span><br><span class="line">    varY = 0</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0 , len(X)):</span><br><span class="line">        diffXXBar = X[i] - xBar</span><br><span class="line">        diffYYBar = Y[i] - yBar</span><br><span class="line">        SSR += (diffXXBar * diffYYBar)</span><br><span class="line">        varX +=  diffXXBar**2</span><br><span class="line">        varY += diffYYBar**2</span><br><span class="line">    </span><br><span class="line">    SST = math.sqrt(varX * varY)</span><br><span class="line">    <span class="built_in">return</span> SSR / SST</span><br><span class="line">def polyfit(x,y,degree):</span><br><span class="line">    results=&#123;&#125;</span><br><span class="line">    coeffs=np.polyfit(x,y,degree)</span><br><span class="line">    results[<span class="string">'polinoial'</span>]=coeffs.tolist()</span><br><span class="line">    p=np.poly1d(coeffs)</span><br><span class="line">    yhat=p(x)</span><br><span class="line">    ybar=np.mean(y)</span><br><span class="line">    ssr=np.sum((yhat-ybar)**2)</span><br><span class="line">    sst=np.sum((y-ybar)**2)</span><br><span class="line">    results[<span class="string">'determination'</span>]=ssr/sst;</span><br><span class="line">    <span class="built_in">return</span> results</span><br><span class="line">    </span><br><span class="line">testX = [1, 3, 8, 7, 9]</span><br><span class="line">testY = [10, 12, 24, 21, 34]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> computeCorrelation(testX, testY) **2</span><br><span class="line"><span class="built_in">print</span> polyfit(testX, testY, 1)</span><br></pre></td></tr></table></figure></p><p>打印结果均为0.884   </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;线性回归计算R平方值和相关度python代码：&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
