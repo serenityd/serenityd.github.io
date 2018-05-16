@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2Ftest%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[linux xvfb+x11vnc服务]]></title>
     <url>%2F2018-5-8-two%2F</url>
     <content type="text"><![CDATA[这个服务难点好像在于x11vnc的安装缺少一堆库文件,不过一番折腾后博主还是成功安装上了,具体过程有点忘了,记录一下目前记得的情况大体思路是Xvfb虚拟窗口，然后通过x11vnc转发供远程访问启动Xvfb1Xvfb :1 -screen 0 1920x1080x24 -nolisten tcp 新建虚拟窗口12345export DISPLAY:=1``` 启动x11vnc ``` x11vnc -listen 0.0.0.0 -rfbport 5900 -noipv6 -display :1 -forever -o x11vnc.log 远程VNC访问5900端口可以看到Xvfb情况]]></content>
@@ -76,7 +81,7 @@
   <entry>
     <title><![CDATA[近期博客更新计划]]></title>
     <url>%2F%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%2F</url>
-    <content type="text"><![CDATA[#Linux篇 linux sh脚本 (完成部分)linux 邮件服务（已完成）linux xvfb+x11vnc服务(已完成)selenium chrome网页脚本ssh git hook自动部署博客owncloud搭建#机器学习篇 #神经网络与深度学习篇下周开始扫机器学习��]]></content>
+    <content type="text"><![CDATA[#Linux篇 linux sh脚本 (完成部分)linux 邮件服务（已完成）linux xvfb+x11vnc服务(已完成)selenium chrome网页脚本ssh git hook自动部署博客owncloud搭建#机器学习篇 #神经网络与深度学习篇 下周开始扫机器学习的内容]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python学习笔记（十）类与对象]]></title>

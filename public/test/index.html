@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="个人博客，学习笔记" />
 
 
 
@@ -85,18 +85,17 @@
 
 
 
-<meta name="description" content="直接上一段简单的梯度下降算法代码">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="记录快乐的折腾日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习笔记（十七）非线性回归应用">
-<meta property="og:url" content="http://www.dnysu.cn/2017-9-13-two/index.html">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://www.dnysu.cn/test/index.html">
 <meta property="og:site_name" content="Serenityd Blog">
-<meta property="og:description" content="直接上一段简单的梯度下降算法代码">
+<meta property="og:description" content="记录快乐的折腾日常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-13T08:07:57.000Z">
+<meta property="og:updated_time" content="2018-05-16T03:59:21.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习笔记（十七）非线性回归应用">
-<meta name="twitter:description" content="直接上一段简单的梯度下降算法代码">
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="记录快乐的折腾日常">
 
 
 
@@ -126,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.dnysu.cn/2017-9-13-two/"/>
+  <link rel="canonical" href="http://www.dnysu.cn/test/"/>
 
 
 
 
 
-  <title>机器学习笔记（十七）非线性回归应用 | Serenityd Blog</title>
+  <title>test | Serenityd Blog</title>
   
 
 
@@ -323,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.dnysu.cn/2017-9-13-two/">
+    <link itemprop="mainEntityOfPage" href="http://www.dnysu.cn/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Serenityd">
@@ -340,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习笔记（十七）非线性回归应用</h1>
+          <h1 class="post-title" itemprop="name headline">test</h1>
         
 
         <div class="post-meta">
@@ -353,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T16:27:31+08:00">
-                2017-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T11:59:21+08:00">
+                2018-05-16
               </time>
             
 
@@ -369,8 +368,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-13T16:07:57+08:00">
-                2018-01-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-16T11:59:21+08:00">
+                2018-05-16
               </time>
             
           </span>
@@ -383,7 +382,7 @@
 
           
           
-             <span id="/2017-9-13-two/" class="leancloud_visitors" data-flag-title="机器学习笔记（十七）非线性回归应用">
+             <span id="/test/" class="leancloud_visitors" data-flag-title="test">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -408,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  239
+                  0
                 </span>
               
 
@@ -445,9 +444,7 @@
       
 
       
-        <p>直接上一段简单的梯度下降算法代码<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">def genData(numPoints,bias,variance):</span><br><span class="line">    x = np.zeros(shape=(numPoints,2))</span><br><span class="line">    y = np.zeros(shape=(numPoints))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(0,numPoints):</span><br><span class="line">        x[i][0]=1</span><br><span class="line">        x[i][1]=i</span><br><span class="line">        y[i]=(i+bias)+random.uniform(0,1)+variance</span><br><span class="line">    <span class="built_in">return</span> x,y</span><br><span class="line"></span><br><span class="line">def gradientDescent(x,y,theta,alpha,m,numIterations):</span><br><span class="line">    xTran = np.transpose(x)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numIterations):</span><br><span class="line">        hypothesis = np.dot(x,theta)</span><br><span class="line">        loss = hypothesis-y</span><br><span class="line">        cost = np.sum(loss**2)/(2*m)</span><br><span class="line">        gradient=np.dot(xTran,loss)/m</span><br><span class="line">        theta = theta-alpha*gradient</span><br><span class="line">    <span class="built_in">return</span> theta</span><br><span class="line"></span><br><span class="line">x,y = genData(100, 25, 10)</span><br><span class="line"><span class="built_in">print</span> <span class="string">"x:"</span></span><br><span class="line"><span class="built_in">print</span> x</span><br><span class="line"><span class="built_in">print</span> <span class="string">"y:"</span></span><br><span class="line"><span class="built_in">print</span> y</span><br><span class="line"></span><br><span class="line">m,n = np.shape(x)</span><br><span class="line">n_y = np.shape(y)</span><br><span class="line">  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">"m:"</span>+str(m)+<span class="string">" n:"</span>+str(n)+<span class="string">" n_y:"</span>+str(n_y))</span><br><span class="line">  </span><br><span class="line">numIterations = 100000</span><br><span class="line">alpha = 0.0005</span><br><span class="line">theta = np.ones(n)</span><br><span class="line">theta= gradientDescent(x, y, theta, alpha, m, numIterations)</span><br><span class="line"><span class="built_in">print</span>(theta)</span><br></pre></td></tr></table></figure></p>
-<p>cost由开始的60多下降到最后的3点几<br>最后给出参数theta x数组第一列为1，所以theta[1]代表偏置,theta[2]为斜率</p>
-
+        
       
     </div>
     
@@ -467,7 +464,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.dnysu.cn/2017-9-13-two/" title="机器学习笔记（十七）非线性回归应用">http://www.dnysu.cn/2017-9-13-two/</a>
+    <a href="http://www.dnysu.cn/test/" title="test">http://www.dnysu.cn/test/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -480,12 +477,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
-          
-        </div>
       
 
       
@@ -511,8 +502,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-9-13-one/" rel="next" title="Latex符号大全">
-                <i class="fa fa-chevron-left"></i> Latex符号大全
+              <a href="/2018-5-8-two/" rel="next" title="linux xvfb+x11vnc服务">
+                <i class="fa fa-chevron-left"></i> linux xvfb+x11vnc服务
               </a>
             
           </div>
@@ -520,10 +511,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017-9-14-one/" rel="prev" title="机器学习笔记（十八）回归中的相关度和R平方值">
-                机器学习笔记（十八）回归中的相关度和R平方值 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
