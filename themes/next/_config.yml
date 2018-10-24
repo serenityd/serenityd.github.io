@@ -582,7 +582,7 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: true
 google_site_verification: VIwv5vlgAzyHmP6AdSK1ruiHpMjFqjgdOYJotWpFqFM
-baidu_site_verification: A2WEfKM8H5
+baidu_site_verification: Z3QEhRhiIo
 # Google Calendar
 # Share your recent schedule to others via calendar page
 #
