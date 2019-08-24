@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 {
-    "git.ignoreLimitWarning": true
-=======
-{
->>>>>>> 4a48cc0d5f7611f413d5bb1ecd899d94a993d9d9
+    "git.path": "D:\\Program Files\\Git\\cmd",
+    "terminal.integrated.shell.windows":"D:\\Program Files\\Git\\bin\\bash.exe",
 }

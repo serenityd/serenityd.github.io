@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[博客更新计划]]></title>
-    <url>%2F%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%2F</url>
-    <content type="text"><![CDATA[近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。 尽量保证每天更新一点，借此激励下自己 #机器学习篇svmXgboost #实习工作篇resnetrescnntensorflowfbank]]></content>
+    <title><![CDATA[lonwin test]]></title>
+    <url>%2Flonwin-test%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[许久没更新博客了，准备近期恢复一下]]></title>
+    <url>%2F2019-7-4%2F</url>
+    <content type="text"><![CDATA[先测试一下，试个水，然后恢复，7.16工作以后正式开始记录]]></content>
   </entry>
   <entry>
     <title><![CDATA[机器学习经典算法之Xgboost]]></title>
@@ -12,6 +17,11 @@
       <tags>
         <tag>机器学习</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[博客更新计划]]></title>
+    <url>%2F%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92%2F</url>
+    <content type="text"><![CDATA[近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。 尽量保证每天更新一点，借此激励下自己 #机器学习篇svmXgboost #实习工作篇resnetrescnntensorflowfbank]]></content>
   </entry>
   <entry>
     <title><![CDATA[linux xvfb+x11vnc服务]]></title>
