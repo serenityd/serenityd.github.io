@@ -35,6 +35,6 @@ baidusitemap:
 deploy:
   type: git
   repository: 
-    vps: git@67.218.139.133:/var/repo/blog.git
+    vps: git@35.229.189.119:/home/git/repos/blog.git
     github: git@github.com:serenityd/serenityd.github.io
   branch: master

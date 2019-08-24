@@ -53,30 +53,6 @@
   </entry>
   
   <entry>
-    <title>博客更新计划</title>
-    <link href="http://www.dnysu.cn/%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/"/>
-    <id>http://www.dnysu.cn/近期博客更新计划/</id>
-    <published>2018-10-24T15:10:58.000Z</published>
-    <updated>2019-08-24T02:10:36.462Z</updated>
-    
-    <content type="html"><![CDATA[<p>近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。</p><p>尽量保证每天更新一点，借此激励下自己</p><p>#机器学习篇<br>svm<br>Xgboost</p><p>#实习工作篇<br>resnet<br>rescnn<br>tensorflow<br>fbank</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。&lt;/p&gt;
-&lt;p&gt;尽量保证每天更新一点，借此激励下自己&lt;/p&gt;
-&lt;p&gt;#机器学习篇&lt;br&gt;svm&lt;br&gt;Xgboost&lt;/p&gt;
-&lt;p&gt;#实习工作篇&lt;br&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>机器学习经典算法之Xgboost</title>
     <link href="http://www.dnysu.cn/2018-10-24/"/>
     <id>http://www.dnysu.cn/2018-10-24/</id>
@@ -99,6 +75,30 @@
     
     
       <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客更新计划</title>
+    <link href="http://www.dnysu.cn/%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/"/>
+    <id>http://www.dnysu.cn/近期博客更新计划/</id>
+    <published>2018-10-24T15:10:58.000Z</published>
+    <updated>2019-08-24T02:10:36.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。</p><p>尽量保证每天更新一点，借此激励下自己</p><p>#机器学习篇<br>svm<br>Xgboost</p><p>#实习工作篇<br>resnet<br>rescnn<br>tensorflow<br>fbank</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。&lt;/p&gt;
+&lt;p&gt;尽量保证每天更新一点，借此激励下自己&lt;/p&gt;
+&lt;p&gt;#机器学习篇&lt;br&gt;svm&lt;br&gt;Xgboost&lt;/p&gt;
+&lt;p&gt;#实习工作篇&lt;br&gt;
+      
+    
+    </summary>
+    
     
   </entry>
   
