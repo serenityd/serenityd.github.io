@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.dnblog.cn/"/>
-  <updated>2019-10-23T09:20:35.632Z</updated>
+  <updated>2019-10-23T09:23:24.264Z</updated>
   <id>http://www.dnblog.cn/</id>
   
   <author>
@@ -21,21 +21,15 @@
     <link href="http://www.dnblog.cn/course-content/"/>
     <id>http://www.dnblog.cn/course-content/</id>
     <published>2019-10-23T08:11:38.000Z</published>
-    <updated>2019-10-23T09:20:35.632Z</updated>
+    <updated>2019-10-23T09:23:24.264Z</updated>
     
-    <content type="html"><![CDATA[<p>#七月在线</p><p>##Python</p><p>###Python基础入门第三期</p><p>###Python基础入门升级版</p><p>###Python爬虫项目班</p><p>###Python数据分析班</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="七月在线"><a href="#七月在线" class="headerlink" title="七月在线"></a>七月在线</h1><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h3 id="Python基础入门第三期"><a href="#Python基础入门第三期" class="headerlink" title="Python基础入门第三期"></a>Python基础入门第三期</h3><h3 id="Python基础入门升级版"><a href="#Python基础入门升级版" class="headerlink" title="Python基础入门升级版"></a>Python基础入门升级版</h3><h3 id="Python爬虫项目班"><a href="#Python爬虫项目班" class="headerlink" title="Python爬虫项目班"></a>Python爬虫项目班</h3><h3 id="Python数据分析班"><a href="#Python数据分析班" class="headerlink" title="Python数据分析班"></a>Python数据分析班</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#七月在线&lt;/p&gt;
-&lt;p&gt;##Python&lt;/p&gt;
-&lt;p&gt;###Python基础入门第三期&lt;/p&gt;
-&lt;p&gt;###Python基础入门升级版&lt;/p&gt;
-&lt;p&gt;###Python爬虫项目班&lt;/p&gt;
-&lt;p&gt;###Python数据分析班&lt;/p&gt;
-
+        &lt;h1 id=&quot;七月在线&quot;&gt;&lt;a href=&quot;#七月在线&quot; class=&quot;headerlink&quot; title=&quot;七月在线&quot;&gt;&lt;/a&gt;七月在线&lt;/h1&gt;&lt;h2 id=&quot;Python&quot;&gt;&lt;a href=&quot;#Python&quot; class=&quot;headerlink&quot; title=&quot;Pytho
       
     
     </summary>
