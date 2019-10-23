@@ -1,1015 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
     <loc>http://www.dnblog.cn/course-content/</loc>
-    <lastmod>2019-10-23T08:16:30.319Z</lastmod>
-    <data>
-        <display>
-        <title>课程目录</title>
-        <pubTime>2019-10-23T08:11:38.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-    
-  <url>
+    <lastmod>2019-10-23</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/flower/</loc>
-    <lastmod>2019-08-24T02:10:36.441Z</lastmod>
-    <data>
-        <display>
-        <title>写在前面的话</title>
-        <pubTime>2017-06-14T01:31:24.000Z</pubTime>
-        
-        <tag>多肉植物</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2019-7-4/</loc>
-    <lastmod>2019-08-24T02:10:36.440Z</lastmod>
-    <data>
-        <display>
-        <title>许久没更新博客了，准备近期恢复一下</title>
-        <pubTime>2019-07-04T02:54:50.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-5-8-two/</loc>
-    <lastmod>2019-08-24T02:10:36.439Z</lastmod>
-    <data>
-        <display>
-        <title>linux xvfb+x11vnc服务</title>
-        <pubTime>2018-05-08T03:10:35.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>xvfb</tag>
-         
-        <tag>x11vnc</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-5-8-one/</loc>
-    <lastmod>2019-08-24T02:10:36.437Z</lastmod>
-    <data>
-        <display>
-        <title>linux 邮件服务</title>
-        <pubTime>2018-05-08T02:43:11.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>msmtp</tag>
-         
-        <tag>mutt</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-29-two/</loc>
-    <lastmod>2019-08-24T02:10:36.428Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习线性回归代码练习（梯度下降法、最小二乘法）</title>
-        <pubTime>2018-04-29T01:32:28.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-        <tag>最小二乘法</tag>
-         
-        <tag>梯度下降法</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-29-one/</loc>
-    <lastmod>2019-08-24T02:10:36.426Z</lastmod>
-    <data>
-        <display>
-        <title>git冲突Please move or remove them before you can merge</title>
-        <pubTime>2018-04-29T01:08:59.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-28-one/</loc>
-    <lastmod>2019-08-24T02:10:36.425Z</lastmod>
-    <data>
-        <display>
-        <title>最小二乘法公式推导</title>
-        <pubTime>2018-04-28T05:39:58.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-23-one/</loc>
-    <lastmod>2019-08-24T02:10:36.424Z</lastmod>
-    <data>
-        <display>
-        <title>Python中机器学习库的使用（一）</title>
-        <pubTime>2018-04-23T07:53:17.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-        <tag>Python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-22-two/</loc>
-    <lastmod>2019-08-24T02:10:36.423Z</lastmod>
-    <data>
-        <display>
-        <title>linux下sh脚本相关</title>
-        <pubTime>2018-04-22T04:03:11.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>sh</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-4-22-one/</loc>
-    <lastmod>2019-08-24T02:10:36.422Z</lastmod>
-    <data>
-        <display>
-        <title>内网穿透服务搭建 （VPS+goproxy）</title>
-        <pubTime>2018-04-22T03:25:01.000Z</pubTime>
-        
-        <tag>vps</tag>
-         
-        <tag>goproxy</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-3-25-one/</loc>
-    <lastmod>2019-08-24T02:10:36.421Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（十）类与对象</title>
-        <pubTime>2018-03-25T01:47:48.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-3-17-two/</loc>
-    <lastmod>2019-08-24T02:10:36.419Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（九）文件的打开与关闭</title>
-        <pubTime>2018-03-17T13:00:32.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-3-17-one/</loc>
-    <lastmod>2019-08-24T02:10:36.418Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（八）匿名函数</title>
-        <pubTime>2018-03-17T12:54:04.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-2-4-two/</loc>
-    <lastmod>2019-08-24T02:10:36.417Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown语法</title>
-        <pubTime>2018-02-04T14:38:57.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>Markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-2-4-one/</loc>
-    <lastmod>2019-08-24T02:10:36.407Z</lastmod>
-    <data>
-        <display>
-        <title>vim命令图示</title>
-        <pubTime>2018-02-04T14:38:45.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>vim</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-2-3-two/</loc>
-    <lastmod>2019-08-24T02:10:36.403Z</lastmod>
-    <data>
-        <display>
-        <title>linux下搭建python3环境</title>
-        <pubTime>2018-02-03T08:31:27.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-2-3-one/</loc>
-    <lastmod>2019-08-24T02:10:36.400Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客在VSCode下编写及git配置问题</title>
-        <pubTime>2018-02-03T05:51:28.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2018-10-24/</loc>
-    <lastmod>2019-08-24T02:10:36.396Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习经典算法之Xgboost</title>
-        <pubTime>2018-10-24T15:10:58.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-21-two/</loc>
-    <lastmod>2019-08-24T02:10:36.389Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
-        <pubTime>2017-09-21T07:27:19.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-21-one/</loc>
-    <lastmod>2019-08-24T02:10:36.386Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二十二）hierarchical clustering 层次聚类</title>
-        <pubTime>2017-09-21T07:12:50.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-18-one/</loc>
-    <lastmod>2019-08-24T02:10:36.385Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二十一）聚类(Clustering) K-means算法应用</title>
-        <pubTime>2017-09-18T01:51:50.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-15-one/</loc>
-    <lastmod>2019-08-24T02:10:36.363Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二十）聚类(Clustering) K-means算法</title>
-        <pubTime>2017-09-15T02:47:16.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-14-two/</loc>
-    <lastmod>2019-08-24T02:10:36.362Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十九）回归中的相关度和R平方值代码</title>
-        <pubTime>2017-09-14T07:31:24.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-14-one/</loc>
-    <lastmod>2019-08-24T02:10:36.358Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十八）回归中的相关度和R平方值</title>
-        <pubTime>2017-09-14T01:42:49.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-13-two/</loc>
-    <lastmod>2019-08-24T02:10:36.357Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十七）非线性回归应用</title>
-        <pubTime>2017-09-13T08:27:31.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-13-one/</loc>
-    <lastmod>2019-08-24T02:10:36.355Z</lastmod>
-    <data>
-        <display>
-        <title>Latex符号大全</title>
-        <pubTime>2017-09-13T01:42:49.000Z</pubTime>
-        
-        <tag>LATEX</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-9-12-one/</loc>
-    <lastmod>2019-08-24T02:10:36.345Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十六）非线性回归原理</title>
-        <pubTime>2017-09-12T07:03:47.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-8-31-one/</loc>
-    <lastmod>2019-08-24T02:10:36.343Z</lastmod>
-    <data>
-        <display>
-        <title>多电脑间github同步hexo博文</title>
-        <pubTime>2017-08-31T03:26:00.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-8-12-two/</loc>
-    <lastmod>2019-08-24T02:10:36.342Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十五）多元回归分析应用</title>
-        <pubTime>2017-08-12T07:57:38.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-8-12-one/</loc>
-    <lastmod>2019-08-24T02:10:36.338Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十四）多元回归分析</title>
-        <pubTime>2017-08-12T07:36:18.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-8-two/</loc>
-    <lastmod>2019-08-24T02:10:36.333Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十三）简单线性回归应用</title>
-        <pubTime>2017-07-08T08:35:16.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-8-one/</loc>
-    <lastmod>2019-08-24T02:10:36.325Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十二）简单线性回归原理</title>
-        <pubTime>2017-07-08T05:36:21.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-3-two/</loc>
-    <lastmod>2019-08-24T02:10:36.319Z</lastmod>
-    <data>
-        <display>
-        <title>解决hexo数学公式编辑不正确的问题</title>
-        <pubTime>2017-07-03T12:58:10.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-3-three/</loc>
-    <lastmod>2019-08-24T02:10:36.317Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十一）神经网络应用</title>
-        <pubTime>2017-07-03T13:08:39.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-3-one/</loc>
-    <lastmod>2019-08-24T02:10:36.306Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（十）神经网络原理</title>
-        <pubTime>2017-07-03T09:02:17.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-7-1-one/</loc>
-    <lastmod>2019-08-24T02:10:36.305Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（九）利用SVM进行人脸识别</title>
-        <pubTime>2017-07-01T03:44:10.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-30-two/</loc>
-    <lastmod>2019-08-24T02:10:36.304Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（七）支持向量机（SVM）应用上</title>
-        <pubTime>2017-06-30T13:20:56.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-30-three/</loc>
-    <lastmod>2019-08-24T02:10:36.296Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（八）支持向量机（SVM）原理下</title>
-        <pubTime>2017-06-30T13:21:16.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-30-one/</loc>
-    <lastmod>2019-08-24T02:10:36.281Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（六）支持向量机（SVM）原理上</title>
-        <pubTime>2017-06-30T02:39:50.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-28-two/</loc>
-    <lastmod>2019-08-24T02:10:36.277Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（五）最临近分类算法应用（KNN）</title>
-        <pubTime>2017-06-28T13:31:19.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-28-one/</loc>
-    <lastmod>2019-08-24T02:10:36.267Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（四）最临近分类算法原理（KNN）</title>
-        <pubTime>2017-06-28T13:31:09.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-27-two/</loc>
-    <lastmod>2019-08-24T02:10:36.266Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（三）决策树算法代码与应用</title>
-        <pubTime>2017-06-27T07:22:31.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-27-three/</loc>
-    <lastmod>2019-08-24T02:10:36.264Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（六）</title>
-        <pubTime>2017-06-27T08:24:39.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-27-one/</loc>
-    <lastmod>2019-08-24T02:10:36.250Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（二）决策树算法原理</title>
-        <pubTime>2017-06-27T01:59:43.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-27-four/</loc>
-    <lastmod>2019-08-24T02:10:36.248Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（七）END</title>
-        <pubTime>2017-06-27T08:33:38.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-26-two/</loc>
-    <lastmod>2019-08-24T02:10:36.247Z</lastmod>
-    <data>
-        <display>
-        <title>破解百度云限速</title>
-        <pubTime>2017-06-26T13:24:29.000Z</pubTime>
-        
-        <tag>BaiduYun</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-26-one/</loc>
-    <lastmod>2019-08-24T02:10:36.244Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（五）if for range 等循环语句</title>
-        <pubTime>2017-06-26T13:21:13.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-23-two/</loc>
-    <lastmod>2019-08-24T02:10:36.241Z</lastmod>
-    <data>
-        <display>
-        <title>机器学习笔记（一）</title>
-        <pubTime>2017-06-23T06:33:37.000Z</pubTime>
-        
-        <tag>机器学习</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-23-three/</loc>
-    <lastmod>2019-08-24T02:10:36.238Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（四）函数</title>
-        <pubTime>2017-06-23T13:29:41.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-23-one/</loc>
-    <lastmod>2019-08-24T02:10:36.234Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（三） 元组 字典</title>
-        <pubTime>2017-06-23T01:11:37.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-21-two/</loc>
-    <lastmod>2019-08-24T02:10:36.225Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（一）变量数值类型</title>
-        <pubTime>2017-06-21T12:21:05.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-21-three/</loc>
-    <lastmod>2019-08-24T02:10:36.221Z</lastmod>
-    <data>
-        <display>
-        <title>Python学习笔记（二）字符串 列表</title>
-        <pubTime>2017-06-21T12:28:05.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-21-one/</loc>
-    <lastmod>2019-08-24T02:10:36.209Z</lastmod>
-    <data>
-        <display>
-        <title>Python环境配置(Eclipse+Anaconda)</title>
-        <pubTime>2017-06-21T08:42:27.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-15-two/</loc>
-    <lastmod>2019-08-24T02:10:36.205Z</lastmod>
-    <data>
-        <display>
-        <title>hexo+网易云跟帖+自定义打赏设置</title>
-        <pubTime>2017-06-15T04:40:45.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-15-one/</loc>
-    <lastmod>2019-08-24T02:10:36.201Z</lastmod>
-    <data>
-        <display>
-        <title>LATEX学习笔记</title>
-        <pubTime>2017-06-15T02:59:38.000Z</pubTime>
-        
-        <tag>LATEX</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-6-14-one/</loc>
-    <lastmod>2019-08-24T02:10:36.147Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo+github+个人域名搭建个人博客</title>
-        <pubTime>2017-06-14T08:40:58.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-08-24</lastmod>
+  </url>  <url>
     <loc>http://www.dnblog.cn/2017-11-10-one/</loc>
-    <lastmod>2019-08-24T02:10:36.143Z</lastmod>
-    <data>
-        <display>
-        <title>git学习笔记</title>
-        <pubTime>2017-11-10T09:02:57.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
+    <lastmod>2019-08-24</lastmod>
+  </url>
 </urlset>
