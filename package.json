@@ -25,7 +25,7 @@
     "hexo-wordcount": "^3.0.2"
   },
   "devDependencies": {
-    "hexo-generator-baidu-sitemap": "^0.1.2",
+    "hexo-generator-baidu-sitemap": "^0.1.6",
     "hexo-generator-sitemap": "^1.2.0"
   }
 }
