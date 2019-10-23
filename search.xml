@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[课程目录]]></title>
     <url>%2Fcourse-content%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[#七月在线 ##Python ###Python基础入门第三期 ###Python基础入门升级版 ###Python爬虫项目班 ###Python数据分析班]]></content>
   </entry>
   <entry>
     <title><![CDATA[许久没更新博客了，准备近期恢复一下]]></title>
@@ -129,8 +129,8 @@
     <url>%2F2018-2-4-one%2F</url>
     <content type="text"><![CDATA[vi命令图示 备用]]></content>
       <tags>
-        <tag>vim</tag>
         <tag>linux</tag>
+        <tag>vim</tag>
       </tags>
   </entry>
   <entry>
