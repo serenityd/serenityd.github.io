@@ -4,7 +4,7 @@ description: 记录快乐的折腾日常
 author: Serenityd
 language: zh-Hans
 timezone:
-url: http://www.dnysu.cn
+url: http://www.dnblog.cn
 theme: next
 menu_icons:
   enable: true
@@ -35,6 +35,6 @@ baidusitemap:
 deploy:
   type: git
   repository: 
-    vps: git@35.229.189.119:/home/git/repos/blog.git
+    vps: git@35.194.128.92:/home/git/repos/blog.git
     github: git@github.com:serenityd/serenityd.github.io
   branch: master

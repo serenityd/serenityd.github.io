@@ -5,9 +5,9 @@
   <subtitle>个人笔记技术博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.dnysu.cn/"/>
-  <updated>2019-08-24T02:41:24.624Z</updated>
-  <id>http://www.dnysu.cn/</id>
+  <link href="http://www.dnblog.cn/"/>
+  <updated>2019-10-23T08:16:30.319Z</updated>
+  <id>http://www.dnblog.cn/</id>
   
   <author>
     <name>Serenityd</name>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>lonwin test</title>
-    <link href="http://www.dnysu.cn/lonwin-test/"/>
-    <id>http://www.dnysu.cn/lonwin-test/</id>
-    <published>2019-08-24T02:41:24.000Z</published>
-    <updated>2019-08-24T02:41:24.624Z</updated>
+    <title>课程目录</title>
+    <link href="http://www.dnblog.cn/course-content/"/>
+    <id>http://www.dnblog.cn/course-content/</id>
+    <published>2019-10-23T08:11:38.000Z</published>
+    <updated>2019-10-23T08:16:30.319Z</updated>
     
     <summary type="html">
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>许久没更新博客了，准备近期恢复一下</title>
-    <link href="http://www.dnysu.cn/2019-7-4/"/>
-    <id>http://www.dnysu.cn/2019-7-4/</id>
+    <link href="http://www.dnblog.cn/2019-7-4/"/>
+    <id>http://www.dnblog.cn/2019-7-4/</id>
     <published>2019-07-04T02:54:50.000Z</published>
     <updated>2019-08-24T02:10:36.440Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>机器学习经典算法之Xgboost</title>
-    <link href="http://www.dnysu.cn/2018-10-24/"/>
-    <id>http://www.dnysu.cn/2018-10-24/</id>
+    <link href="http://www.dnblog.cn/2018-10-24/"/>
+    <id>http://www.dnblog.cn/2018-10-24/</id>
     <published>2018-10-24T15:10:58.000Z</published>
     <updated>2019-08-24T02:10:36.396Z</updated>
     
@@ -74,38 +74,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客更新计划</title>
-    <link href="http://www.dnysu.cn/%E8%BF%91%E6%9C%9F%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E8%AE%A1%E5%88%92/"/>
-    <id>http://www.dnysu.cn/近期博客更新计划/</id>
-    <published>2018-10-24T15:10:58.000Z</published>
-    <updated>2019-08-24T02:10:36.462Z</updated>
-    
-    <content type="html"><![CDATA[<p>近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。</p><p>尽量保证每天更新一点，借此激励下自己</p><p>#机器学习篇<br>svm<br>Xgboost</p><p>#实习工作篇<br>resnet<br>rescnn<br>tensorflow<br>fbank</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;近期由于在公司实习，许久没更新微博，找工作在即，调整博客更新计划。主要更新机器学习、实习工作总结、和leetcode相关。&lt;/p&gt;
-&lt;p&gt;尽量保证每天更新一点，借此激励下自己&lt;/p&gt;
-&lt;p&gt;#机器学习篇&lt;br&gt;svm&lt;br&gt;Xgboost&lt;/p&gt;
-&lt;p&gt;#实习工作篇&lt;br&gt;
-      
-    
-    </summary>
-    
+      <category term="机器学习" scheme="http://www.dnblog.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>linux xvfb+x11vnc服务</title>
-    <link href="http://www.dnysu.cn/2018-5-8-two/"/>
-    <id>http://www.dnysu.cn/2018-5-8-two/</id>
+    <link href="http://www.dnblog.cn/2018-5-8-two/"/>
+    <id>http://www.dnblog.cn/2018-5-8-two/</id>
     <published>2018-05-08T03:10:35.000Z</published>
     <updated>2019-08-24T02:10:36.439Z</updated>
     
@@ -118,18 +94,18 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+      <category term="linux" scheme="http://www.dnblog.cn/tags/linux/"/>
     
-      <category term="xvfb" scheme="http://www.dnysu.cn/tags/xvfb/"/>
+      <category term="xvfb" scheme="http://www.dnblog.cn/tags/xvfb/"/>
     
-      <category term="x11vnc" scheme="http://www.dnysu.cn/tags/x11vnc/"/>
+      <category term="x11vnc" scheme="http://www.dnblog.cn/tags/x11vnc/"/>
     
   </entry>
   
   <entry>
     <title>linux 邮件服务</title>
-    <link href="http://www.dnysu.cn/2018-5-8-one/"/>
-    <id>http://www.dnysu.cn/2018-5-8-one/</id>
+    <link href="http://www.dnblog.cn/2018-5-8-one/"/>
+    <id>http://www.dnblog.cn/2018-5-8-one/</id>
     <published>2018-05-08T02:43:11.000Z</published>
     <updated>2019-08-24T02:10:36.437Z</updated>
     
@@ -142,18 +118,18 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+      <category term="linux" scheme="http://www.dnblog.cn/tags/linux/"/>
     
-      <category term="msmtp" scheme="http://www.dnysu.cn/tags/msmtp/"/>
+      <category term="msmtp" scheme="http://www.dnblog.cn/tags/msmtp/"/>
     
-      <category term="mutt" scheme="http://www.dnysu.cn/tags/mutt/"/>
+      <category term="mutt" scheme="http://www.dnblog.cn/tags/mutt/"/>
     
   </entry>
   
   <entry>
     <title>机器学习线性回归代码练习（梯度下降法、最小二乘法）</title>
-    <link href="http://www.dnysu.cn/2018-4-29-two/"/>
-    <id>http://www.dnysu.cn/2018-4-29-two/</id>
+    <link href="http://www.dnblog.cn/2018-4-29-two/"/>
+    <id>http://www.dnblog.cn/2018-4-29-two/</id>
     <published>2018-04-29T01:32:28.000Z</published>
     <updated>2019-08-24T02:10:36.428Z</updated>
     
@@ -166,18 +142,18 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://www.dnblog.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="最小二乘法" scheme="http://www.dnysu.cn/tags/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"/>
+      <category term="最小二乘法" scheme="http://www.dnblog.cn/tags/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"/>
     
-      <category term="梯度下降法" scheme="http://www.dnysu.cn/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/"/>
+      <category term="梯度下降法" scheme="http://www.dnblog.cn/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>git冲突Please move or remove them before you can merge</title>
-    <link href="http://www.dnysu.cn/2018-4-29-one/"/>
-    <id>http://www.dnysu.cn/2018-4-29-one/</id>
+    <link href="http://www.dnblog.cn/2018-4-29-one/"/>
+    <id>http://www.dnblog.cn/2018-4-29-one/</id>
     <published>2018-04-29T01:08:59.000Z</published>
     <updated>2019-08-24T02:10:36.426Z</updated>
     
@@ -193,14 +169,14 @@
     </summary>
     
     
-      <category term="git" scheme="http://www.dnysu.cn/tags/git/"/>
+      <category term="git" scheme="http://www.dnblog.cn/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>最小二乘法公式推导</title>
-    <link href="http://www.dnysu.cn/2018-4-28-one/"/>
-    <id>http://www.dnysu.cn/2018-4-28-one/</id>
+    <link href="http://www.dnblog.cn/2018-4-28-one/"/>
+    <id>http://www.dnblog.cn/2018-4-28-one/</id>
     <published>2018-04-28T05:39:58.000Z</published>
     <updated>2019-08-24T02:10:36.425Z</updated>
     
@@ -213,14 +189,14 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://www.dnblog.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Python中机器学习库的使用（一）</title>
-    <link href="http://www.dnysu.cn/2018-4-23-one/"/>
-    <id>http://www.dnysu.cn/2018-4-23-one/</id>
+    <link href="http://www.dnblog.cn/2018-4-23-one/"/>
+    <id>http://www.dnblog.cn/2018-4-23-one/</id>
     <published>2018-04-23T07:53:17.000Z</published>
     <updated>2019-08-24T02:10:36.424Z</updated>
     
@@ -234,16 +210,16 @@
     </summary>
     
     
-      <category term="机器学习" scheme="http://www.dnysu.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="http://www.dnblog.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="Python" scheme="http://www.dnysu.cn/tags/Python/"/>
+      <category term="Python" scheme="http://www.dnblog.cn/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>linux下sh脚本相关</title>
-    <link href="http://www.dnysu.cn/2018-4-22-two/"/>
-    <id>http://www.dnysu.cn/2018-4-22-two/</id>
+    <link href="http://www.dnblog.cn/2018-4-22-two/"/>
+    <id>http://www.dnblog.cn/2018-4-22-two/</id>
     <published>2018-04-22T04:03:11.000Z</published>
     <updated>2019-08-24T02:10:36.423Z</updated>
     
@@ -261,16 +237,16 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+      <category term="linux" scheme="http://www.dnblog.cn/tags/linux/"/>
     
-      <category term="sh" scheme="http://www.dnysu.cn/tags/sh/"/>
+      <category term="sh" scheme="http://www.dnblog.cn/tags/sh/"/>
     
   </entry>
   
   <entry>
     <title>内网穿透服务搭建 （VPS+goproxy）</title>
-    <link href="http://www.dnysu.cn/2018-4-22-one/"/>
-    <id>http://www.dnysu.cn/2018-4-22-one/</id>
+    <link href="http://www.dnblog.cn/2018-4-22-one/"/>
+    <id>http://www.dnblog.cn/2018-4-22-one/</id>
     <published>2018-04-22T03:25:01.000Z</published>
     <updated>2019-08-24T02:10:36.422Z</updated>
     
@@ -283,16 +259,16 @@
     </summary>
     
     
-      <category term="vps" scheme="http://www.dnysu.cn/tags/vps/"/>
+      <category term="vps" scheme="http://www.dnblog.cn/tags/vps/"/>
     
-      <category term="goproxy" scheme="http://www.dnysu.cn/tags/goproxy/"/>
+      <category term="goproxy" scheme="http://www.dnblog.cn/tags/goproxy/"/>
     
   </entry>
   
   <entry>
     <title>Python学习笔记（十）类与对象</title>
-    <link href="http://www.dnysu.cn/2018-3-25-one/"/>
-    <id>http://www.dnysu.cn/2018-3-25-one/</id>
+    <link href="http://www.dnblog.cn/2018-3-25-one/"/>
+    <id>http://www.dnblog.cn/2018-3-25-one/</id>
     <published>2018-03-25T01:47:48.000Z</published>
     <updated>2019-08-24T02:10:36.421Z</updated>
     
@@ -306,14 +282,14 @@
     </summary>
     
     
-      <category term="python" scheme="http://www.dnysu.cn/tags/python/"/>
+      <category term="python" scheme="http://www.dnblog.cn/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习笔记（九）文件的打开与关闭</title>
-    <link href="http://www.dnysu.cn/2018-3-17-two/"/>
-    <id>http://www.dnysu.cn/2018-3-17-two/</id>
+    <link href="http://www.dnblog.cn/2018-3-17-two/"/>
+    <id>http://www.dnblog.cn/2018-3-17-two/</id>
     <published>2018-03-17T13:00:32.000Z</published>
     <updated>2019-08-24T02:10:36.419Z</updated>
     
@@ -334,14 +310,14 @@
     </summary>
     
     
-      <category term="python" scheme="http://www.dnysu.cn/tags/python/"/>
+      <category term="python" scheme="http://www.dnblog.cn/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习笔记（八）匿名函数</title>
-    <link href="http://www.dnysu.cn/2018-3-17-one/"/>
-    <id>http://www.dnysu.cn/2018-3-17-one/</id>
+    <link href="http://www.dnblog.cn/2018-3-17-one/"/>
+    <id>http://www.dnblog.cn/2018-3-17-one/</id>
     <published>2018-03-17T12:54:04.000Z</published>
     <updated>2019-08-24T02:10:36.418Z</updated>
     
@@ -357,14 +333,14 @@
     </summary>
     
     
-      <category term="python" scheme="http://www.dnysu.cn/tags/python/"/>
+      <category term="python" scheme="http://www.dnblog.cn/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法</title>
-    <link href="http://www.dnysu.cn/2018-2-4-two/"/>
-    <id>http://www.dnysu.cn/2018-2-4-two/</id>
+    <link href="http://www.dnblog.cn/2018-2-4-two/"/>
+    <id>http://www.dnblog.cn/2018-2-4-two/</id>
     <published>2018-02-04T14:38:57.000Z</published>
     <updated>2019-08-24T02:10:36.417Z</updated>
     
@@ -381,16 +357,16 @@
     </summary>
     
     
-      <category term="hexo" scheme="http://www.dnysu.cn/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.dnblog.cn/tags/hexo/"/>
     
-      <category term="Markdown" scheme="http://www.dnysu.cn/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://www.dnblog.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>vim命令图示</title>
-    <link href="http://www.dnysu.cn/2018-2-4-one/"/>
-    <id>http://www.dnysu.cn/2018-2-4-one/</id>
+    <link href="http://www.dnblog.cn/2018-2-4-one/"/>
+    <id>http://www.dnblog.cn/2018-2-4-one/</id>
     <published>2018-02-04T14:38:45.000Z</published>
     <updated>2019-08-24T02:10:36.407Z</updated>
     
@@ -403,16 +379,16 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+      <category term="linux" scheme="http://www.dnblog.cn/tags/linux/"/>
     
-      <category term="vim" scheme="http://www.dnysu.cn/tags/vim/"/>
+      <category term="vim" scheme="http://www.dnblog.cn/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>linux下搭建python3环境</title>
-    <link href="http://www.dnysu.cn/2018-2-3-two/"/>
-    <id>http://www.dnysu.cn/2018-2-3-two/</id>
+    <link href="http://www.dnblog.cn/2018-2-3-two/"/>
+    <id>http://www.dnblog.cn/2018-2-3-two/</id>
     <published>2018-02-03T08:31:27.000Z</published>
     <updated>2019-08-24T02:10:36.403Z</updated>
     
@@ -428,14 +404,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.dnysu.cn/tags/linux/"/>
+      <category term="linux" scheme="http://www.dnblog.cn/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客在VSCode下编写及git配置问题</title>
-    <link href="http://www.dnysu.cn/2018-2-3-one/"/>
-    <id>http://www.dnysu.cn/2018-2-3-one/</id>
+    <link href="http://www.dnblog.cn/2018-2-3-one/"/>
+    <id>http://www.dnblog.cn/2018-2-3-one/</id>
     <published>2018-02-03T05:51:28.000Z</published>
     <updated>2019-08-24T02:10:36.400Z</updated>
     
@@ -448,14 +424,14 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://www.dnysu.cn/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.dnblog.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>git学习笔记</title>
-    <link href="http://www.dnysu.cn/2017-11-10-one/"/>
-    <id>http://www.dnysu.cn/2017-11-10-one/</id>
+    <link href="http://www.dnblog.cn/2017-11-10-one/"/>
+    <id>http://www.dnblog.cn/2017-11-10-one/</id>
     <published>2017-11-10T09:02:57.000Z</published>
     <updated>2019-08-24T02:10:36.143Z</updated>
     
@@ -468,7 +444,27 @@
     </summary>
     
     
-      <category term="git" scheme="http://www.dnysu.cn/tags/git/"/>
+      <category term="git" scheme="http://www.dnblog.cn/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习笔记（二十三） hierarchical clustering 层次聚类应用（完）</title>
+    <link href="http://www.dnblog.cn/2017-9-21-two/"/>
+    <id>http://www.dnblog.cn/2017-9-21-two/</id>
+    <published>2017-09-21T07:27:19.000Z</published>
+    <updated>2019-08-24T02:10:36.389Z</updated>
+    
+    <content type="html"><![CDATA[<p>hierarchical clustering聚类算法python代码：<br>HierarchicalClustering.py<br><a id="more"></a></p><pre><code class="bash">from numpy import *<span class="string">""</span><span class="string">"</span><span class="string">Code for hierarchical clustering, modified from </span><span class="string">Programming Collective Intelligence by Toby Segaran </span><span class="string">(O'Reilly Media 2007, page 33). </span><span class="string">"</span><span class="string">""</span>class cluster_node:    def __init__(self,vec,left=None,right=None,distance=0.0,id=None,count=1):        self.left=left        self.right=right        self.vec=vec        self.id=id        self.distance=distance        self.count=count <span class="comment">#only used for weighted average </span>def L2dist(v1,v2):    <span class="built_in">return</span> sqrt(sum((v1-v2)**2))def L1dist(v1,v2):    <span class="built_in">return</span> sum(abs(v1-v2))<span class="comment"># def Chi2dist(v1,v2):</span><span class="comment">#     return sqrt(sum((v1-v2)**2))</span>def hcluster(features,distance=L2dist):    <span class="comment">#cluster the rows of the "features" matrix</span>    distances={}    currentclustid=-1    <span class="comment"># clusters are initially just the individual rows</span>    clust=[cluster_node(array(features[i]),id=i) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(features))]    <span class="keyword">while</span> len(clust)&gt;1:        lowestpair=(0,1)        closest=distance(clust[0].vec,clust[1].vec)        <span class="comment"># loop through every pair looking for the smallest distance</span>        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust)):            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+1,len(clust)):                <span class="comment"># distances is the cache of distance calculations</span>                <span class="keyword">if</span> (clust[i].id,clust[j].id) not <span class="keyword">in</span> distances:                     distances[(clust[i].id,clust[j].id)]=distance(clust[i].vec,clust[j].vec)                d=distances[(clust[i].id,clust[j].id)]                <span class="keyword">if</span> d&lt;closest:                    closest=d                    lowestpair=(i,j)        <span class="comment"># calculate the average of the two clusters</span>        mergevec=[(clust[lowestpair[0]].vec[i]+clust[lowestpair[1]].vec[i])/2.0 \            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(clust[0].vec))]        <span class="comment"># create the new cluster</span>        newcluster=cluster_node(array(mergevec),left=clust[lowestpair[0]],                             right=clust[lowestpair[1]],                             distance=closest,id=currentclustid)        <span class="comment"># cluster ids that weren't in the original set are negative</span>        currentclustid-=1        del clust[lowestpair[1]]        del clust[lowestpair[0]]        clust.append(newcluster)    <span class="built_in">return</span> clust[0]def extract_clusters(clust,dist):    <span class="comment"># extract list of sub-tree clusters from hcluster tree with distance&lt;dist</span>    clusters = {}    <span class="keyword">if</span> clust.distance&lt;dist:        <span class="comment"># we have found a cluster subtree</span>        <span class="built_in">return</span> [clust]     <span class="keyword">else</span>:        <span class="comment"># check the right and left branches</span>        cl = []        cr = []        <span class="keyword">if</span> clust.left!=None:             cl = extract_clusters(clust.left,dist=dist)        <span class="keyword">if</span> clust.right!=None:             cr = extract_clusters(clust.right,dist=dist)        <span class="built_in">return</span> cl+cr def get_cluster_elements(clust):    <span class="comment"># return ids for elements in a cluster sub-tree</span>    <span class="keyword">if</span> clust.id&gt;=0:        <span class="comment"># positive id means that this is a leaf</span>        <span class="built_in">return</span> [clust.id]    <span class="keyword">else</span>:        <span class="comment"># check the right and left branches</span>        cl = []        cr = []        <span class="keyword">if</span> clust.left!=None:             cl = get_cluster_elements(clust.left)        <span class="keyword">if</span> clust.right!=None:             cr = get_cluster_elements(clust.right)        <span class="built_in">return</span> cl+crdef printclust(clust,labels=None,n=0):    <span class="comment"># indent to make a hierarchy layout</span>    <span class="keyword">for</span> i <span class="keyword">in</span> range(n): <span class="built_in">print</span> <span class="string">' '</span>,    <span class="keyword">if</span> clust.id&lt;0:        <span class="comment"># negative id means that this is branch</span>        <span class="built_in">print</span> <span class="string">'-'</span>    <span class="keyword">else</span>:        <span class="comment"># positive id means that this is an endpoint</span>        <span class="keyword">if</span> labels==None: <span class="built_in">print</span> clust.id        <span class="keyword">else</span>: <span class="built_in">print</span> labels[clust.id]    <span class="comment"># now print the right and left branches</span>    <span class="keyword">if</span> clust.left!=None: printclust(clust.left,labels=labels,n=n+1)    <span class="keyword">if</span> clust.right!=None: printclust(clust.right,labels=labels,n=n+1)def getheight(clust):    <span class="comment"># Is this an endpoint? Then the height is just 1</span>    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 1    <span class="comment"># Otherwise the height is the same of the heights of</span>    <span class="comment"># each branch</span>    <span class="built_in">return</span> getheight(clust.left)+getheight(clust.right)def getdepth(clust):    <span class="comment"># The distance of an endpoint is 0.0</span>    <span class="keyword">if</span> clust.left==None and clust.right==None: <span class="built_in">return</span> 0    <span class="comment"># The distance of a branch is the greater of its two sides</span>    <span class="comment"># plus its own distance</span>    <span class="built_in">return</span> max(getdepth(clust.left),getdepth(clust.right))+clust.distance</code></pre><p>TestHClustering.py   </p><pre><code class="bash">import osfrom PIL import Image , ImageDrawfrom HierarchicalClustering import hclusterfrom HierarchicalClustering import getheightfrom HierarchicalClustering import getdepthimport numpy as npimport osdef drawdendrogram(clust,imlist, jpeg=<span class="string">'clusters.jpg'</span>):    h=getheight(clust)*20    w=1200    depth=getdepth(clust)    scaling=<span class="built_in">float</span>(w-150)/depth    img=Image.new(<span class="string">'RGB'</span>,(w,h),(255, 255, 255))    draw=ImageDraw.Draw(img)    draw.line((0,h/2,10,h/2),fill=(255,0,0))    drawnode(draw, clust, 10, int(h/2), scaling, imlist, img)    img.save(jpeg)def drawnode(draw,clust, x, y, scaling,imlist,img):    <span class="keyword">if</span> clust.id&lt;0:        h1=getheight(clust.left)*20        h2=getheight(clust.right)*20        top=y-(h1+h2)/2        bottom=y+(h1+h2)/2        ll=clust.distance*scaling        draw.line((x,top+h1/2,x,bottom-h2/2),fill=(255,0,0))        draw.line((x,top+h1/2,x+ll,top+h1/2),fill=(255,0,0))        draw.line((x,bottom-h2/2,x+ll,bottom-h2/2),fill=(255,0,0))        drawnode(draw,clust.left,x+ll,top+h1/2,scaling,imlist,img)        drawnode(draw,clust.right,x+ll,bottom-h2/2,scaling,imlist,img)    <span class="keyword">else</span>:        nodeim=Image.open(imlist[clust.id])        nodeim.thumbnail((20,20))        ns=nodeim.size        <span class="built_in">print</span> x,y-ns[1]//2        <span class="built_in">print</span> x+ns[0]        <span class="built_in">print</span>        img.paste(nodeim,(int(x),int(y-ns[1]//2),int(x+ns[0]),int(y+ns[1]-ns[1]//2))) imlist=[]folderPath=r<span class="string">'C:\Users\Administrator\Desktop\picture'</span><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(folderPath):    <span class="keyword">if</span> os.path.splitext(filename)[1]==<span class="string">'.jpg'</span>:        imlist.append(os.path.join(folderPath,filename))n=len(imlist)features = np.zeros((n,3))<span class="keyword">for</span> i <span class="keyword">in</span> range(n):    im=np.array(Image.open(imlist[i]))    R=np.mean(im[:,:,0].flatten())    G=np.mean(im[:,:,1].flatten())    B=np.mean(im[:,:,2].flatten())    features[i]=np.array([R,G,B])tree=hcluster(features)drawdendrogram(tree,imlist,jpeg=<span class="string">'clusters.jpg'</span>)</code></pre><p>归类结果：<br><img src="/2017-9-21-two/1.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hierarchical clustering聚类算法python代码：&lt;br&gt;HierarchicalClustering.py&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://www.dnblog.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
